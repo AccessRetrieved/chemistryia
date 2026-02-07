@@ -303,6 +303,12 @@ def run_server(html_content: str, host: str, port: int, open_browser: bool) -> N
             def __init__(self, *args: Any, **kwargs: Any):
                 super().__init__(*args, directory=str(root), **kwargs)
 
+            def end_headers(self):
+                self.send_header("Cache-Control", "no-cache, no-store, must-revalidate")
+                self.send_header("Pragma", "no-cache")
+                self.send_header("Expires", "0")
+                super().end_headers()
+
         server = ThreadingHTTPServer((host, port), Handler)
         display_host = "127.0.0.1" if host == "0.0.0.0" else host
         url = f"http://{display_host}:{port}"
@@ -324,7 +330,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Interactive pressure-vs-time analyzer for Raw Data sheet.")
     parser.add_argument("--xlsx", default="Data/Data.xlsx", help="Path to the Excel workbook.")
     parser.add_argument("--host", default="0.0.0.0", help="Host interface for web server.")
-    parser.add_argument("--port", type=int, default=8050, help="Local port for web server.")
+    parser.add_argument("--port", type=int, default=5000, help="Local port for web server.")
     parser.add_argument("--no-browser", action="store_true", help="Do not auto-open browser.")
     args = parser.parse_args()
 
