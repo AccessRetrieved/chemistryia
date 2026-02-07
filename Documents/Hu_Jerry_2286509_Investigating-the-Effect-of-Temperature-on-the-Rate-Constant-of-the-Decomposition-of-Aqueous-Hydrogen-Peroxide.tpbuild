@@ -1,0 +1,36 @@
+# --- WORD COUNT LOGIC START ---
+
+# 1. Calculate word count by running texcount and isolating the "Words in text" line
+# The output is piped to grep to find the line, and then to awk to print the 4th field (which is the number).
+WORD_COUNT=$(texcount "$TEXPAD_ROOTFILE" | grep "Words in text:" | awk '{print $4}')
+
+# 2. Write the number to wordcount.tex so LaTeX can read it
+echo "$WORD_COUNT" > wordcount.tex
+
+# 3. Check for the 3000 word limit and trigger AppleScript alert
+if [ "$WORD_COUNT" -gt 3000 ]; then
+    # We use a flag file to prevent the alert from popping up every time
+    if [ ! -f wordcount_flag.txt ]; then
+        osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words. Current count: '$WORD_COUNT'"'
+        touch wordcount_flag.txt
+    fi
+else
+    # Remove flag if count drops back below 3000
+    if [ -f wordcount_flag.txt ]; then
+        rm wordcount_flag.txt
+    fi
+fi
+# --- WORD COUNT LOGIC END ---
+
+# 4. Standard Compilation Chain
+pdflatex -shell-escape -synctex=1 -interaction=nonstopmode "$TEXPAD_ROOTFILE"
+bibtex "${TEXPAD_ROOTFILE%.*}"
+pdflatex -shell-escape -synctex=1 -interaction=nonstopmode "$TEXPAD_ROOTFILE"
+pdflatex -shell-escape -synctex=1 -interaction=nonstopmode "$TEXPAD_ROOTFILE"
+
+# 5. Cleanup (Optional - removes temporary files but keeps log/synctex)
+rm "${TEXPAD_ROOTFILE%.*}.aux"
+rm "${TEXPAD_ROOTFILE%.*}.bbl"
+rm "${TEXPAD_ROOTFILE%.*}.blg"
+rm "${TEXPAD_ROOTFILE%.*}.out"
+rm "${TEXPAD_ROOTFILE%.*}.toc"
