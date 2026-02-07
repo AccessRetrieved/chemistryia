@@ -1,18 +1,12 @@
 # Interactive Pressure-vs-Time Analyzer
 
-This includes `interactive_pressure_analysis.py`, which reads `Data/Data.xlsx` and serves a modern browser UI for the **Raw Data** sheet.
+This repository now includes `interactive_pressure_analysis.py`, a no-dependency Python script (standard library only) that:
 
-## What it does
-
-- Extracts all 40 trials from Raw Data.
-- Shows scatter points connected by lines (pressure vs time).
-- Uses a modern **Vue + Plotly** interface (served by Python stdlib).
-- Lets you:
-  - hover points for exact values,
-  - drag-select points directly on the graph,
-  - click any point to auto-analyze the following 15-second window,
-  - or manually enter a time range.
-- Calculates pressure rise rate (linear-fit slope, kPa/s) for selected ranges.
+- Loads `Data/Data.xlsx`
+- Reads the **Raw Data** sheet
+- Extracts all 40 trials (8 temperature levels × 5 trials)
+- Starts a local web app with an interactive chart (scatter points connected as a line)
+- Lets you drag-select a time range and calculates pressure rise rate (slope in kPa/s)
 
 ## Run
 
@@ -20,7 +14,16 @@ This includes `interactive_pressure_analysis.py`, which reads `Data/Data.xlsx` a
 python interactive_pressure_analysis.py
 ```
 
-Open: `http://127.0.0.1:8050`
+Then open: `http://127.0.0.1:8050`
+
+## Controls
+
+- Use the dropdown to switch between trials.
+- Use **Box Select** (plot toolbar) and drag across data points.
+- The panel below the graph shows:
+  - selected time range
+  - selected pressure range
+  - linear-fit pressure rise rate (kPa/s)
 
 ## Optional flags
 
@@ -28,6 +31,6 @@ Open: `http://127.0.0.1:8050`
 python interactive_pressure_analysis.py --host 0.0.0.0 --port 9000 --no-browser
 ```
 
-- `--host`: server interface (default `0.0.0.0`)
-- `--port`: server port
-- `--no-browser`: do not auto-open browser
+- `--host`: set server host/interface (default `0.0.0.0`).
+- `--port`: set web server port.
+- `--no-browser`: don't auto-open your browser.
