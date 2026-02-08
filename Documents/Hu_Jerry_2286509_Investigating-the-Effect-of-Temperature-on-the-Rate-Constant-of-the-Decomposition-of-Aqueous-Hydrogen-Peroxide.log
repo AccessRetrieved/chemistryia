@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  7 FEB 2026 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  7 FEB 2026 22:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -663,24 +663,24 @@ File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
 \openout1 = `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
+LaTeX Font Info:    ... okay on input line 43.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count348
@@ -734,7 +734,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 42.
+Package hyperref Info: Link coloring OFF on input line 43.
 (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out) (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out)
 \@outlinefile=\write4
 \openout4 = `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out'.
@@ -742,7 +742,7 @@ Package hyperref Info: Link coloring OFF on input line 42.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 42.
+Package chemgreek Info: Activating mapping `default' on line 43.
 
 runsystem(wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex)...disabled (restricted).
 
@@ -768,14 +768,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.66 \newpage
+l.67 \newpage
               [1]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.110 \end{equation}
+l.111 \end{equation}
                      [1]
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -783,10 +783,10 @@ l.110 \end{equation}
 [3]
 
 [4]
-<Resources/apparatus_setup.jpeg, id=207, 5733.42pt x 3225.04875pt>
+<Resources/apparatus_setup.jpeg, id=217, 5733.42pt x 3225.04875pt>
 File: Resources/apparatus_setup.jpeg Graphic file (type jpg)
 <use Resources/apparatus_setup.jpeg>
-Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 226.
+Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 227.
 (pdftex.def)             Requested size: 398.33858pt x 224.05412pt.
 
 
@@ -794,38 +794,40 @@ Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 226.
 
 [6]
 
-[7] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
+[7]
+
+[8] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 8.
 
 )
 
-[8]
+[9]
 
-[9] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
+[10] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out' has not changed.
-(rerunfilecheck)             Checksum: F946FAB5DEE70CA6480252758786FEE1;3541.
+(rerunfilecheck)             Checksum: 36EADE5ADD78FE66DDE9B40C4E3ED5D3;3934.
  ) 
 Here is how much of TeX's memory you used:
- 24858 strings out of 473190
- 466510 string characters out of 5715801
- 865635 words of memory out of 5000000
- 47594 multiletter control sequences out of 15000+600000
+ 24875 strings out of 473190
+ 466965 string characters out of 5715801
+ 865819 words of memory out of 5000000
+ 47606 multiletter control sequences out of 15000+600000
  568104 words of font info for 70 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,12n,87p,1073b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,15n,87p,1073b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (11 pages, 3160262 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (12 pages, 3163786 bytes).
 PDF statistics:
- 348 PDF objects out of 1000 (max. 8388607)
- 293 compressed objects within 3 object streams
- 76 named destinations out of 1000 (max. 500000)
- 234 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 366 PDF objects out of 1000 (max. 8388607)
+ 309 compressed objects within 4 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

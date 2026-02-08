@@ -25,6 +25,7 @@
 \usepackage{amssymb}
 \usepackage{pdflscape}
 \usepackage{soul}
+\usepackage{soul}
 \usetikzlibrary{calc}
 
 % Doc settings
@@ -158,8 +159,8 @@ As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant 
   \item (1x) $100\ \text{mL}$ beaker (for \ce{KI} solution)
   \item (1x) Glass bowl (for water bath)
   \item (1x) Rubber stoppers (with holes and pipes)
-  \item (1x) Vernier Gas Pressure sensor
-  \item (1x) Vernier Temperature Probe
+  \item (1x) Vernier Gas Pressure Sensor
+  \item (1x) Vernier Stainless Steel Temperature Probe
   \item (1x) Vernier LabQuest
   \item (1x) $25\ \text{mL}$ Pipette + suction bulb
   \item (1x) $10\ \text{mL}$ graduated cylinder (for measuring distilled water)
@@ -264,6 +265,39 @@ As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant 
 
 \section{Data Processing}
 \label{sec:data-processing}
+
+\subsection{Uncertainty Propagation}
+\label{sec:data-processing-uncertainty-propagation}
+\indent \indent The uncertainty values for temperature and pressure were obtained from specifications of the equipment used, and the smallest scale on the digital balance was used as the uncertainty of mass: $\pm 0.01\ \text{g}$. A $25\ \text{mL}$ volunmetric pipette was used to obtain the \ce{H2O2} for all trials, but the exact volumes delivered were not confirmed with a graduated cylinder. Thus, the pipette's tolerance was used as the volume uncertainty: $\pm 0.06\ \text{mL}$. Time was recorded automatically by the LabQuest, so its uncertainty was assumed negligible relative to pressure variation throughout the experiment.
+
+\begin{table}[H]
+	\centering
+	\resizebox{15cm}{!}{
+	\begin{tabular}{|>{\centering\arraybackslash}m{8cm}|
+	                  >{\centering\arraybackslash}m{6cm}|} \hline
+			
+			\textbf{Tool} & \textbf{Uncertainty} \\ \hline
+      Vernier Stainless Steel Temperature Probe & $\pm 0.1\ ^\circ \text{C}$ at $0\ ^\circ \text{C}$, $\pm 0.5\ ^\circ \text{C}$ at $100\ ^\circ \text{C}$ \\ \hline
+      Vernier Gas Pressure Sensor & $\pm 4\ \text{kPa}$ \\ \hline
+      Digital Balance & $\pm 0.01\ \text{g}$ \\ \hline
+      Volunmetric Pipette & $\pm 0.06\ \text{mL}$ \\ \hline
+		\end{tabular}
+	}
+	\caption{Summary of uncertainties by tool.}
+	\label{tab:data-processing-uncertainty-propagation-summary-of-uncertainties-by-tool}
+\end{table}
+
+Given that the Vernier documentation provides two uncertainty values for the temperature probe, linear interpolation was used for the uncertainty of the device:
+
+\begin{equation}
+  \Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x + 273.15
+\end{equation}
+
+\noindent Where $x$ is the measured temperature obtained from the temperature probe (in Celsius), and $\Delta{T}$ is the uncertainty in Kelvin.
+
+\subsubsection{Uncertainty in rate constant}
+\label{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}
+
 
 \subsection{Processed Data}
 \label{sec:data-processing-processed-data}
