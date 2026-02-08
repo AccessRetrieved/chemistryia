@@ -25,7 +25,7 @@
 \usepackage{amssymb}
 \usepackage{pdflscape}
 \usepackage{soul}
-\usepackage{soul}
+\usepackage{boldline} 
 \usetikzlibrary{calc}
 
 % Doc settings
@@ -290,24 +290,318 @@ As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant 
 Given that the Vernier documentation provides two uncertainty values for the temperature probe, linear interpolation was used for the uncertainty of the device:
 
 \begin{equation}
-  \Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x + 273.15
+  \Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x
 \end{equation}
 
-\noindent Where $x$ is the measured temperature obtained from the temperature probe (in Celsius), and $\Delta{T}$ is the uncertainty in Kelvin.
+\noindent Where $x$ is the measured temperature obtained from the temperature probe (in Celsius), and $\Delta{T}$ is the uncertainty in Kelvin \footnote{Uncertainty is not affected by the conversion between Celsius and Kelvin.}.
 
 \subsubsection{Uncertainty in rate constant}
 \label{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}
+\indent \indent The rate constant was calculated as the slope of a linear best-fit trendline to the pressure-time graph over a fixed \textit{15 second} interval, starting at the first continuous rise in pressure after the rubber stopper was replaced \footnote{\textbf{First continuous rise:} The first datapoint was counted as the start interval after a consecutive rise in the next adjacent 3 datapoints}. The reaction rate equation for the decomposition reaction of hydrogen peroxide (\ce{H2O2}) and potassium iodide (\ce{KI}) can be expressed in the general form, where $r$ is the reaction rate and $k$ is the rate constant:
 
+\begin{equation}
+  r = k[\ce{H2O2}]^{m}[\ce{I-}]^{n}
+\end{equation}
+
+\noindent Given that the moles of \ce{H2O2} and the amount of \ce{KI} were held constant for all trials, the reaction rate is directly proportional to the rate constant $k$ with temperature. Moreover, according to the ideal gas relationship ($PV = nRT$), pressure inside the sealed flask is proportional to the moles of \ce{O2} produced:
+
+\begin{equation}
+  P \propto n
+\end{equation}
+
+\noindent Thus, an apparent rate constant $k_{app}$ can be defined using the initial rate of pressure increase:
+
+\begin{equation}
+  k_{app} = \frac{\Delta{P}}{\Delta{t}}
+\end{equation}
+
+\begin{equation}
+  k_{app} \propto k
+\end{equation}
+
+\noindent As there are 5 trials per temperature level, a mean apparent rate constant was calculated to represent the rate constant at each temperature::
+
+\begin{equation}
+  \overline{k}_{\mathrm{app}} = (\frac{1}{n}) \cdot \sum_{i=1}^{n} k_{\mathrm{app},i}, \quad (n=5)
+\end{equation}
+
+\noindent The random uncertainty in the mean $k_{app}$ value was then calculated:
+
+\begin{equation}
+  \Delta{\overline{k}_{\mathrm{app}}} = \frac{s_k}{\sqrt{n}}
+\end{equation}
+
+\noindent Where $s_k$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials (5). This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette for all trials) does not average out.
 
 \subsection{Processed Data}
 \label{sec:data-processing-processed-data}
+\begin{table}[H]
+  \centering
+  \resizebox{18cm}{!}{
+  \begin{tabular}{!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{0.75cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.25cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{2.75cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+  } \hlineB{5}
+      \textbf{Temp ($^\circ \text{C}$)} &
+      \textbf{Trial} &
+      \textbf{Average Temp ($^\circ \text{C}$)} &
+      \textbf{Average Temp (K)} &
+      \textbf{Mass of \ce{KI} ($\text{g}$)} &
+      \textbf{Start Window ($\text{s}$)} &
+      \textbf{End Window ($\text{s}$)} &
+      \textbf{Initial Rate ($\text{kPa}/\text{s}$)} &
+      \textbf{Avg. Initial ($\text{kPa}/\text{s}$)} &
+      \textbf{Initial Rate SD ($\text{kPa}/\text{s}$)} \\
+      \hlineB{5}
+
+      \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{14.75} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{26.6} & \textcolor{red}{41.6} & \textcolor{red}{0.00594} & \multirow{5}{*}{\textcolor{red}{$0.01023 \pm 0.00194$}} & \multirow{5}{*}{\textcolor{red}{0.00434}} \\ \cline{2-8}
+                          & 2 & 15.70 & 288.85 & 0.29 & 40.4 & 55.4 & 0.00817 &  &  \\ \cline{2-8}
+                          & 3 & 14.35 & 287.50 & 0.32 & 30.0 & 45.0 & 0.01237 &  &  \\ \cline{2-8}
+                          & 4 & 15.10 & 288.25 & 0.32 & 30.0 & 45.0 & 0.01676 &  &  \\ \cline{2-8}
+                          & 5 & 14.86 & 288.01 & 0.31 & 20.2 & 35.2 & 0.00792 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{20}  & 1 & 19.00 & 292.15 & 0.30 & 31.8 & 46.8 & 0.01397 & \multirow{5}{*}{$0.01406 \pm 0.00223$} & \multirow{5}{*}{0.00498} \\ \cline{2-8}
+                          & 2 & 20.95 & 294.10 & 0.28 & 17.2 & 32.2 & 0.00864 &  &  \\ \cline{2-8}
+                          & 3 & 21.15 & 294.30 & 0.29 & 25.8 & 40.8 & 0.01510 &  &  \\ \cline{2-8}
+                          & 4 & 19.55 & 292.70 & 0.31 & 30.0 & 45.0 & 0.02171 &  &  \\ \cline{2-8}
+                          & 5 & 19.55 & 292.70 & 0.31 & 24.0 & 39.0 & 0.01089 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{25}  & 1 & 25.50 & 298.65 & 0.29 & 19.0 & 34.0 & 0.01867 & \multirow{5}{*}{$0.01782 \pm 0.00315$} & \multirow{5}{*}{0.00705} \\ \cline{2-8}
+                          & 2 & 25.55 & 298.70 & 0.29 & 20.0 & 35.0 & 0.02864 &  &  \\ \cline{2-8}
+                          & 3 & 26.20 & 299.35 & 0.29 & 27.2 & 42.2 & 0.01631 &  &  \\ \cline{2-8}
+                          & 4 & 24.65 & 297.80 & 0.28 & 24.0 & 39.0 & 0.01644 &  &  \\ \cline{2-8}
+                          & 5 & 25.65 & 298.80 & 0.30 & 20.0 & 35.0 & 0.00904 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{30}  & 1 & 30.10 & 303.25 & 0.33 & 5.6 & 20.6 & 0.03811 & \multirow{5}{*}{$0.03884 \pm 0.00870$} & \multirow{5}{*}{0.01944} \\ \cline{2-8}
+                          & 2 & 28.80 & 301.95 & 0.30 & 10.2 & 25.2 & 0.02327 &  &  \\ \cline{2-8}
+                          & 3 & 31.20 & 304.35 & 0.30 & 11.0 & 26.0 & 0.06776 &  &  \\ \cline{2-8}
+                          & 4 & 30.20 & 303.35 & 0.30 & 17.2 & 32.2 & 0.04581 &  &  \\ \cline{2-8}
+                          & 5 & 30.90 & 304.05 & 0.29 & 11.4 & 26.4 & 0.01924 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{35}  & 1 & 35.50 & 308.65 & 0.31 & 8.0 & 23.0 & 0.06992 & \multirow{5}{*}{$0.05442 \pm 0.00600$} & \multirow{5}{*}{0.01342} \\ \cline{2-8}
+                          & 2 & 35.55 & 308.70 & 0.31 & 16.8 & 31.8 & 0.05917 &  &  \\ \cline{2-8}
+                          & 3 & 34.20 & 307.35 & 0.32 & 13.2 & 28.2 & 0.06227 &  &  \\ \cline{2-8}
+                          & 4 & 35.00 & 308.15 & 0.31 & 6.2 & 21.2 & 0.04098 &  &  \\ \cline{2-8}
+                          & 5 & 35.90 & 309.05 & 0.29 & 21.4 & 36.4 & 0.03975 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{40}  & 1 & 40.35 & 313.50 & 0.28 & 11.6 & 26.6 & 0.06090 & \multirow{5}{*}{$0.04214 \pm 0.00826$} & \multirow{5}{*}{0.01847} \\ \cline{2-8}
+                          & 2 & 41.20 & 314.35 & 0.28 & 11.0 & 26.0 & 0.02914 &  &  \\ \cline{2-8}
+                          & 3 & 38.90 & 312.05 & 0.29 & 9.6 & 24.6 & 0.02469 &  &  \\ \cline{2-8}
+                          & 4 & 40.50 & 313.65 & 0.28 & 8.8 & 23.8 & 0.06334 &  &  \\ \cline{2-8}
+                          & 5 & 38.95 & 312.10 & 0.29 & 10.0 & 25.0 & 0.03264 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{45}  & 1 & 45.25 & 318.40 & 0.29 & 6.6 & 21.6 & 0.04139 & \multirow{5}{*}{$0.09427 \pm 0.03053$} & \multirow{5}{*}{0.06826} \\ \cline{2-8}
+                          & 2 & 43.85 & 317.00 & 0.30 & 16.2 & 31.2 & 0.06972 &  &  \\ \cline{2-8}
+                          & 3 & 44.80 & 317.95 & 0.29 & 4.8 & 19.8 & 0.19417 &  &  \\ \cline{2-8}
+                          & 4 & 44.60 & 317.75 & 0.29 & 8.0 & 23.0 & 0.13306 &  &  \\ \cline{2-8}
+                          & 5 & 44.65 & 317.80 & 0.29 & 12.4 & 27.4 & 0.03301 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{50}  & 1 & 49.30 & 322.45 & 0.31 & 4.6 & 19.6 & 0.17295 & \multirow{5}{*}{$0.10081 \pm 0.02089$} & \multirow{5}{*}{0.04672} \\ \cline{2-8}
+                          & 2 & 49.40 & 322.55 & 0.28 & 9.8 & 24.8 & 0.05932 &  &  \\ \cline{2-8}
+                          & 3 & 48.55 & 321.70 & 0.29 & 11.4 & 26.4 & 0.07183 &  &  \\ \cline{2-8}
+                          & 4 & 49.45 & 322.60 & 0.29 & 5.2 & 20.2 & 0.12192 &  &  \\ \cline{2-8}
+                          & 5 & 49.80 & 322.95 & 0.29 & 11.2 & 26.2 & 0.07802 &  &  \\ \hlineB{5}
+
+  \end{tabular}}
+  \caption{Processed data.}
+  \label{tab:processed-data}
+\end{table}
+
 
 \noindent \underline{\textbf{Note:}} The initial rate of pressure increase was calculated by finding the slope of the trendline of the pressure-time graph, using a fixed window of \textbf{\textit{15 seconds}} starting from the moment the pressure sensor settles and reaction begins.
+
 \subsection{Raw Data}
 \label{sec:data-processing-raw-data}
 
+\noindent \underline{\textbf{Note:}} The original raw data file obtained from the LabQuest is 300 rows by 80 columns. Due to the size of this, the raw data file can be found in the appendix, \textit{section \ref{sec:appendix-complete-raw-data}}.
+
+\begin{table}[H]
+  \centering
+  \resizebox{\linewidth}{!}{
+  \begin{tabular}{|
+    >{\centering\arraybackslash}m{1.0cm}|
+    >{\centering\arraybackslash}m{0.8cm}|
+    >{\centering\arraybackslash}m{1cm}|
+    >{\centering\arraybackslash}m{1cm}|
+    >{\centering\arraybackslash}m{1.8cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+    >{\centering\arraybackslash}m{1.6cm}|
+    >{\centering\arraybackslash}m{1.7cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+  } \hline
+    \textbf{Level} &
+    \textbf{Trial} &
+    \textbf{Target ($^\circ \text{C}$)} &
+    \textbf{Target (K)} &
+    \textbf{Run \# (LabQuest)} &
+    \textbf{Start Temp ($^\circ \text{C}$)} &
+    \textbf{End Temp ($^\circ \text{C}$)} &
+    \textbf{Average Temp ($^\circ \text{C}$)} &
+    \textbf{Volume of \ce{H2O2} (mL)} &
+    \textbf{Mass of \ce{KI} (g)}
+  \\ \hline
+
+    \multirow{5}{*}{1} & 1 & \multirow{5}{*}{15} & \multirow{5}{*}{288.15} & 4  & 14.4  & 15.1  & 14.75 & \multirow{5}{*}{25} & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 5  & 15.4  & 16    & 15.70 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 6  & 14.7  & 14    & 14.35 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 7  & 14.9  & 15.3  & 15.10 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 8  & 15.32 & 14.4  & 14.86 &                     & 0.31 \\ \hline
+
+    \multirow{5}{*}{2} & 1 & \multirow{5}{*}{20} & \multirow{5}{*}{293.15} & 48 & 19.3  & 18.7  & 19.00 & \multirow{5}{*}{25} & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 9  & 21.4  & 20.5  & 20.95 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 10 & 21    & 21.3  & 21.15 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 11 & 19.7  & 19.4  & 19.55 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 12 & 19.3  & 19.8  & 19.55 &                     & 0.31 \\ \hline
+
+    \multirow{5}{*}{3} & 1 & \multirow{5}{*}{25} & \multirow{5}{*}{298.15} & 13 & 25.2  & 25.8  & 25.50 & \multirow{5}{*}{25} & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 14 & 25.3  & 25.8  & 25.55 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 15 & 25.7  & 26.7  & 26.20 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 16 & 24.7  & 24.6  & 24.65 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 17 & 25.4  & 25.9  & 25.65 &                     & 0.30 \\ \hline
+
+    \multirow{5}{*}{4} & 1 & \multirow{5}{*}{30} & \multirow{5}{*}{303.15} & 18 & 29.6  & 30.6  & 30.10 & \multirow{5}{*}{25} & 0.33 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 19 & 29.1  & 28.5  & 28.80 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 20 & 30.9  & 31.5  & 31.20 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 21 & 30    & 30.4  & 30.20 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 22 & 30.8  & 31    & 30.90 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{5} & 1 & \multirow{5}{*}{35} & \multirow{5}{*}{308.15} & 23 & 35.6  & 35.4  & 35.50 & \multirow{5}{*}{25} & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 24 & 35.3  & 35.8  & 35.55 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 25 & 35.1  & 33.3  & 34.20 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 26 & 34.7  & 35.3  & 35.00 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 27 & 35.5  & 36.3  & 35.90 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{6} & 1 & \multirow{5}{*}{40} & \multirow{5}{*}{313.15} & 43 & 39.8  & 40.9  & 40.35 & \multirow{5}{*}{25} & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 44 & 41.3  & 41.1  & 41.20 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 45 & 40.5  & 37.3  & 38.90 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 46 & 40    & 41    & 40.50 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 47 & 39.1  & 38.8  & 38.95 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{7} & 1 & \multirow{5}{*}{45} & \multirow{5}{*}{318.15} & 33 & 45.6  & 44.9  & 45.25 & \multirow{5}{*}{25} & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 34 & 44.5  & 43.2  & 43.85 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 35 & 44.8  & 44.8  & 44.80 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 36 & 44.5  & 44.7  & 44.60 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 37 & 45.1  & 44.2  & 44.65 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{8} & 1 & \multirow{5}{*}{50} & \multirow{5}{*}{323.15} & 38 & 49.1  & 49.5  & 49.30 & \multirow{5}{*}{25} & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 39 & 49.8  & 49    & 49.40 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 40 & 49    & 48.1  & 48.55 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 41 & 49.2  & 49.7  & 49.45 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 42 & 49.7  & 49.9  & 49.80 &                     & 0.29 \\ \hline
+
+  \end{tabular}}
+  \caption{Temperature runs (raw data).}
+  \label{tab:temperature-runs}
+\end{table}
+
 \subsection{Example Calculation}
 \label{sec:data-processing-example-calculation}
+\indent \indent Consider the first trial of the first temperature level, $15 ^\circ \text{C}$ as an example (marked as \textcolor{red}{red}, in \textit{table \ref{tab:processed-data}}).
+
+\begin{center}
+  $\ast$~$\ast$~$\ast$
+\end{center}
+
+
+This section demonstrates one full calculation of the apparent rate constant $k_{\mathrm{app}}$ from raw pressure-time data, followed by the averaging and random uncertainty calculation for the $15~^{\circ}\mathrm{C}$ level. The same process was applied to all other trials, and the final results are summarized in Table~2.
+
+\subsubsection{Step 1: Convert average temperature to Kelvin}
+For Trial 1 at the $15~^{\circ}\mathrm{C}$ level, the recorded average temperature was:
+\[
+T = 14.75~^{\circ}\mathrm{C}
+\]
+\[
+T = 14.75 + 273.15 = 287.90~\mathrm{K}
+\]
+
+\subsubsection{Step 2: Identify the 15 s analysis window}
+The analysis window is 15.0~s long, starting at the first continuous pressure rise after the rubber stopper was replaced (defined as a rise sustained for the next 3 adjacent data points). For this trial, the selected interval was:
+\[
+t_{\text{start}} = 26.6~\mathrm{s}, \quad t_{\text{end}} = 41.6~\mathrm{s}
+\]
+\[
+\Delta t = 41.6 - 26.6 = 15.0~\mathrm{s}
+\]
+
+\subsubsection{Step 3: Extract raw pressure data within the window}
+Pressure readings $P_i$ (kPa) were taken from the LabQuest export for Run \#4 between $26.6$~s and $41.6$~s.
+To keep the sample calculation readable, one data point per second (every 5th data point from the 5~Hz dataset) was used in the table below for demonstration; the full 5~Hz dataset was used for the final slope in Table~2.
+
+\begin{table}[H]
+\centering
+\begin{tabular}{c c}
+\hline
+$t$ / s & $P$ / kPa \\
+\hline
+26.6 & \underline{\hspace{2cm}} \\
+27.6 & \underline{\hspace{2cm}} \\
+$\vdots$ & $\vdots$ \\
+41.6 & \underline{\hspace{2cm}} \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsubsection{Step 4: Determine $k_{\mathrm{app}}$ from the slope of $P$ vs. $t$}
+A linear regression was applied to the points in the selected time window:
+\[
+P = mt + b
+\]
+where the slope $m$ is the apparent rate constant:
+\[
+k_{\mathrm{app}} = m
+\]
+
+Using the regression slope from the $P$ vs. $t$ trendline over 26.6--41.6~s:
+\[
+k_{\mathrm{app},1} = 0.00594~\mathrm{kPa\,s^{-1}}
+\]
+(This matches the value reported for 15~$^{\circ}$C, Trial 1 in Table~2.)
+
+\subsubsection{Step 5: Calculate the mean $k_{\mathrm{app}}$ at 15$^{\circ}$C}
+The five trial values at 15~$^{\circ}$C were:
+\[
+0.00594,\ 0.00817,\ 0.01237,\ 0.01676,\ 0.00792\ \ (\mathrm{kPa\,s^{-1}})
+\]
+\[
+\overline{k_{\mathrm{app}}} = \frac{0.00594 + 0.00817 + 0.01237 + 0.01676 + 0.00792}{5}
+\]
+\[
+\overline{k_{\mathrm{app}}} = \frac{0.05116}{5} = 0.01023~\mathrm{kPa\,s^{-1}}
+\]
+
+\subsubsection{Step 6: Random uncertainty of the mean (standard error)}
+The standard deviation of the five trial values at 15~$^{\circ}$C was:
+\[
+s_k = 0.00434~\mathrm{kPa\,s^{-1}}
+\]
+The random uncertainty in the mean (standard error) is:
+\[
+\Delta \overline{k_{\mathrm{app}}} = \frac{s_k}{\sqrt{n}} = \frac{0.00434}{\sqrt{5}} = 0.00194~\mathrm{kPa\,s^{-1}}
+\]
+Therefore, the rate constant for 15~$^{\circ}$C is:
+\[
+\overline{k_{\mathrm{app}}} = 0.01023 \pm 0.00194~\mathrm{kPa\,s^{-1}}
+\]
+
+\subsubsection{(Optional, if used later) Arrhenius variables}
+For Arrhenius analysis using the mean rate constant:
+\[
+\ln(\overline{k_{\mathrm{app}}}) = \ln(0.01023) = -4.58
+\]
+Using $T = 287.90~\mathrm{K}$:
+\[
+\frac{1}{T} = \frac{1}{287.90} = 3.47 \times 10^{-3}~\mathrm{K^{-1}}
+\]
+
 
 \section{Data Analysis}
 \label{sec:data-analysis}
@@ -336,6 +630,9 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 \appendix
 \section{Appendix}
 \label{sec:appendix}
+
+\subsection{Complete Raw Data }
+\label{sec:appendix-complete-raw-data}
 
 \subsection{Source Code}
 \label{sec:appendix-ia-cam-recorder-fan}

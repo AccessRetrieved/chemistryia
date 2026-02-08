@@ -17,13 +17,21 @@
 \contentsline {section}{\numberline {4}Data Processing}{7}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Uncertainty Propagation}{7}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}Uncertainty in rate constant}{7}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Processed Data}{7}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Raw Data}{8}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Example Calculation}{8}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Data Analysis}{8}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{8}{section.6}%
-\contentsline {section}{\numberline {7}Evaluation}{8}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Strengths}{8}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Weaknesses \& Limitations}{8}{subsection.7.2}%
-\contentsline {section}{\numberline {A}Appendix}{10}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Source Code}{10}{subsection.A.1}%
+\contentsline {subsection}{\numberline {4.2}Processed Data}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Raw Data}{9}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Example Calculation}{10}{subsection.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.1}Step 1: Convert average temperature to Kelvin}{11}{subsubsection.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.2}Step 2: Identify the 15 s analysis window}{11}{subsubsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.3}Step 3: Extract raw pressure data within the window}{11}{subsubsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.4}Step 4: Determine $k_{\mathrm {app}}$ from the slope of $P$ vs. $t$}{11}{subsubsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.5}Step 5: Calculate the mean $k_{\mathrm {app}}$ at 15$^{\circ }$C}{12}{subsubsection.4.4.5}%
+\contentsline {subsubsection}{\numberline {4.4.6}Step 6: Random uncertainty of the mean (standard error)}{12}{subsubsection.4.4.6}%
+\contentsline {subsubsection}{\numberline {4.4.7}(Optional, if used later) Arrhenius variables}{12}{subsubsection.4.4.7}%
+\contentsline {section}{\numberline {5}Data Analysis}{13}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{13}{section.6}%
+\contentsline {section}{\numberline {7}Evaluation}{13}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Strengths}{13}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Weaknesses \& Limitations}{13}{subsection.7.2}%
+\contentsline {section}{\numberline {A}Appendix}{15}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Complete Raw Data }{15}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Source Code}{15}{subsection.A.2}%

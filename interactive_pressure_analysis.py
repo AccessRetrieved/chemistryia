@@ -199,8 +199,7 @@ def build_html(trials: list[TrialSeries]) -> str:
 <div id=\"app\" class=\"wrap\">
   <div class=\"grid\">
     <section class=\"card\">
-      <h1>Pressure Rise Explorer</h1>
-      <div class=\"sub\">Vue + Plotly interactive analysis for Raw Data trials.</div>
+      <h1>Chemistry IA Data</h1>
 
       <label>Temperature level</label>
       <select v-model=\"selectedLevel\">
@@ -223,13 +222,12 @@ def build_html(trials: list[TrialSeries]) -> str:
       <div class=\"metric\"><b>{{{{ stats.timeRange }}}}</b><span>Time range</span></div>
       <div class=\"metric\"><b>{{{{ stats.pressureRange }}}}</b><span>Pressure range</span></div>
       <div class=\"metric\"><b>{{{{ stats.slope }}}} kPa/s</b><span>Linear-fit pressure rise rate</span></div>
-      <p class=\"sub\" style=\"margin-top:.7rem\">Tip: choose Box Select in chart toolbar and drag over points.</p>
     </section>
 
     <section class=\"card\">
       <div id=\"plot\"></div>
       <div class=\"bottom-panel\">
-        <div class=\"bottom-title\">15-second auto-window stats (click any point)</div>
+        <div class=\"bottom-title\">Stats:</div>
         <div class=\"bottom-grid\">
           <div><strong>Start time:</strong> {{{{ clickStats.startTime }}}}</div>
           <div><strong>End time:</strong> {{{{ clickStats.endTime }}}}</div>
