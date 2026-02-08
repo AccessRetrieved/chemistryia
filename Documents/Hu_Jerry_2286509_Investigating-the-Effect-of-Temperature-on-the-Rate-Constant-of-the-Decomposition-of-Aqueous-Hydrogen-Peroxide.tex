@@ -328,10 +328,10 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 \noindent The random uncertainty in the mean $k_{app}$ value was then calculated:
 
 \begin{equation}
-  \Delta{\overline{k}_{\mathrm{app}}} = \frac{s_k}{\sqrt{n}}
+  \Delta{\overline{k}_{\mathrm{app}}} = \frac{\sigma}{\sqrt{n}}
 \end{equation}
 
-\noindent Where $s_k$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials (5). This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette for all trials) does not average out.
+\noindent Where $\sigma$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials (5). This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette for all trials) does not average out.
 
 \subsection{Processed Data}
 \label{sec:data-processing-processed-data}
@@ -352,14 +352,14 @@ Given that the Vernier documentation provides two uncertainty values for the tem
   } \hlineB{5}
       \textbf{Temp ($^\circ \text{C}$)} &
       \textbf{Trial} &
-      \textbf{Average Temp ($^\circ \text{C}$)} &
-      \textbf{Average Temp (K)} &
+      \textbf{Average temp ($^\circ \text{C}$)} &
+      \textbf{Average temp (K)} &
       \textbf{Mass of \ce{KI} ($\text{g}$)} &
-      \textbf{Start Window ($\text{s}$)} &
-      \textbf{End Window ($\text{s}$)} &
-      \textbf{Initial Rate ($\text{kPa}/\text{s}$)} &
-      \textbf{Avg. Initial ($\text{kPa}/\text{s}$)} &
-      \textbf{Initial Rate SD ($\text{kPa}/\text{s}$)} \\
+      \textbf{Start window ($\text{s}$)} &
+      \textbf{End window ($\text{s}$)} &
+      \textbf{Initial rate ($\text{kPa}/\text{s}$)} &
+      \textbf{Avg. initial rate ($\text{kPa}/\text{s}$)} &
+      \textbf{Initial rate SD ($\text{kPa}/\text{s}$)} \\
       \hlineB{5}
 
       \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{14.75} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{26.6} & \textcolor{red}{41.6} & \textcolor{red}{0.00594} & \multirow{5}{*}{\textcolor{red}{$0.01023 \pm 0.00194$}} & \multirow{5}{*}{\textcolor{red}{0.00434}} \\ \cline{2-8}
@@ -443,9 +443,9 @@ Given that the Vernier documentation provides two uncertainty values for the tem
     \textbf{Target ($^\circ \text{C}$)} &
     \textbf{Target (K)} &
     \textbf{Run \# (LabQuest)} &
-    \textbf{Start Temp ($^\circ \text{C}$)} &
-    \textbf{End Temp ($^\circ \text{C}$)} &
-    \textbf{Average Temp ($^\circ \text{C}$)} &
+    \textbf{Start temp ($^\circ \text{C}$)} &
+    \textbf{End temp ($^\circ \text{C}$)} &
+    \textbf{Average temp ($^\circ \text{C}$)} &
     \textbf{Volume of \ce{H2O2} (mL)} &
     \textbf{Mass of \ce{KI} (g)}
   \\ \hline
@@ -505,103 +505,92 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 
 \subsection{Example Calculation}
 \label{sec:data-processing-example-calculation}
-\indent \indent Consider the first trial of the first temperature level, $15 ^\circ \text{C}$ as an example (marked as \textcolor{red}{red}, in \textit{table \ref{tab:processed-data}}).
+\indent \indent Consider the first trial of the first temperature level, $15 ^\circ \text{C}$ as an example (marked as \textcolor{red}{red}, in \textit{table \ref{tab:processed-data}}). For this trial, the average temperature (taken from the start + end temperature) was $14.75 ^\circ \text{C}$:
+
+\begin{equation}
+  T = 14.75 ^\circ \text{C} + 274.15 = 287.9 \text{K}
+\end{equation}
+
+\noindent Given that the analysis window for the pressure-time graph is 15 seconds starting at the first continuous rise after the rubber stopper was replaced, using the data helper I programmed \footnote{To speed up data processing for all 40 trials, I programmed a helper that loaded all data and autoamtically generated graphs and stats using \textit{Python} and the \textit{Plotly.js} library.}, the selected interval was:
+
+\begin{equation}
+  t_{\text{start}} = 26.6\ \text{s}, \quad t_{\text{end}} = 41.6\ \text{s}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{Resources/example_calculation_data_helper.png}
+	\caption{Data helper.}
+	\label{fig:data-processing-example-calculation-data-helper}
+\end{figure}
+
+\noindent A linear regression was then fitted to the 76 datapoints in the selected window, using the linear trendline formula $P = mt + b$ in Excel, where the slope $m$ is the apparent rate constant $k_{\mathrm{app}}$:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{Resources/example_calculation_time_snapshot.png}
+	\caption{15-second snapshot.}
+	\label{fig:data-processing-example-calculation-15-second-snapshot}
+\end{figure}
+
+\noindent As shown in the graph above, the slope value over the time interval $26.6\ \text{s}$ to $41.6\ \text{s}$ was $0.0059\ \text{kPa}\ \text{s}^{-1}$. This matches the value reported for $15\ ^{\circ} \text{C}$, \textit{trial 1} in \textit{table \ref{tab:processed-data}}. The average apparent rate constant can then be calculated:
+
+\begin{equation}
+  \overline{k_{app}} = \frac{0.00594\ \text{kPa}\ \text{s}^{-1} + 0.00817\ \text{kPa}\ \text{s}^{-1} + 0.01237\ \text{kPa}\ \text{s}^{-1} + 0.01676\ \text{kPa}\ \text{s}^{-1} + 0.00792\ \text{kPa}\ \text{s}^{-1}}{5}
+\end{equation}
+
+\begin{equation}
+  \overline{k_{app}} = \frac{0.05116\ \text{kPa}\ \text{s}^{-1}}{5} = 0.010232\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent The standard deviation of the five trials is 0.00434:
+
+\begin{equation}
+	\sigma = \sqrt{\frac{1}{5}(-0.004292)^2 + (-0.002062)^2 + (0.002138)^2 + (0.006528)^2 + (-0.002312)^2}
+\end{equation}
+
+\begin{equation}
+  \sigma = 0.004234\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent The random uncertainty in the mean can then be calculated:
+
+\begin{equation}
+  \Delta{\overline{k_{app}}} = \frac{0.00434\ \text{kPa}\ \text{s}^{-1}}{\sqrt{5}} = 0.00194\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent Thus, the rate constant for the first trial of $15\ ^\circ \text{C}$ is:
+
+\begin{equation}
+  k_{app} = 0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
 
 \begin{center}
   $\ast$~$\ast$~$\ast$
 \end{center}
 
-
-This section demonstrates one full calculation of the apparent rate constant $k_{\mathrm{app}}$ from raw pressure-time data, followed by the averaging and random uncertainty calculation for the $15~^{\circ}\mathrm{C}$ level. The same process was applied to all other trials, and the final results are summarized in Table~2.
-
-\subsubsection{Step 1: Convert average temperature to Kelvin}
-For Trial 1 at the $15~^{\circ}\mathrm{C}$ level, the recorded average temperature was:
-\[
-T = 14.75~^{\circ}\mathrm{C}
-\]
-\[
-T = 14.75 + 273.15 = 287.90~\mathrm{K}
-\]
-
-\subsubsection{Step 2: Identify the 15 s analysis window}
-The analysis window is 15.0~s long, starting at the first continuous pressure rise after the rubber stopper was replaced (defined as a rise sustained for the next 3 adjacent data points). For this trial, the selected interval was:
-\[
-t_{\text{start}} = 26.6~\mathrm{s}, \quad t_{\text{end}} = 41.6~\mathrm{s}
-\]
-\[
-\Delta t = 41.6 - 26.6 = 15.0~\mathrm{s}
-\]
-
-\subsubsection{Step 3: Extract raw pressure data within the window}
-Pressure readings $P_i$ (kPa) were taken from the LabQuest export for Run \#4 between $26.6$~s and $41.6$~s.
-To keep the sample calculation readable, one data point per second (every 5th data point from the 5~Hz dataset) was used in the table below for demonstration; the full 5~Hz dataset was used for the final slope in Table~2.
+\noindent The approach from above was used to calculate the apparent rate constant for the other 8 temperature levels:
 
 \begin{table}[H]
-\centering
-\begin{tabular}{c c}
-\hline
-$t$ / s & $P$ / kPa \\
-\hline
-26.6 & \underline{\hspace{2cm}} \\
-27.6 & \underline{\hspace{2cm}} \\
-$\vdots$ & $\vdots$ \\
-41.6 & \underline{\hspace{2cm}} \\
-\hline
-\end{tabular}
+	\centering
+	\resizebox{15cm}{!}{
+	\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|
+	                  >{\centering\arraybackslash}m{8cm}|} \hline
+			
+			\textbf{Temperature level ($^\circ \text{C}$)} & \textbf{Apparent rate constant, $k_{app}$ ($\text{kPa}\ \text{s}^{-1}$)} \\ \hline
+      15 & $0.01023 \pm 0.00194$ \\ \hline
+      20 & $0.01406 \pm 0.00223$ \\ \hline
+      25 & $0.01782 \pm 0.00315$ \\ \hline
+      30 & $0.03884 \pm 0.00870$ \\ \hline
+      35 & $0.05442 \pm 0.00600$ \\ \hline
+      40 & $0.04214 \pm 0.00826$ \\ \hline
+      45 & $0.09427 \pm 0.03053$ \\ \hline
+      50 & $0.10081 \pm 0.02089$ \\ \hline
+		\end{tabular}
+	}
+	\caption{Apparent rate constant.}
+	\label{tab:data-processing-example-calculation-apparent-rate-constant}
 \end{table}
-
-\subsubsection{Step 4: Determine $k_{\mathrm{app}}$ from the slope of $P$ vs. $t$}
-A linear regression was applied to the points in the selected time window:
-\[
-P = mt + b
-\]
-where the slope $m$ is the apparent rate constant:
-\[
-k_{\mathrm{app}} = m
-\]
-
-Using the regression slope from the $P$ vs. $t$ trendline over 26.6--41.6~s:
-\[
-k_{\mathrm{app},1} = 0.00594~\mathrm{kPa\,s^{-1}}
-\]
-(This matches the value reported for 15~$^{\circ}$C, Trial 1 in Table~2.)
-
-\subsubsection{Step 5: Calculate the mean $k_{\mathrm{app}}$ at 15$^{\circ}$C}
-The five trial values at 15~$^{\circ}$C were:
-\[
-0.00594,\ 0.00817,\ 0.01237,\ 0.01676,\ 0.00792\ \ (\mathrm{kPa\,s^{-1}})
-\]
-\[
-\overline{k_{\mathrm{app}}} = \frac{0.00594 + 0.00817 + 0.01237 + 0.01676 + 0.00792}{5}
-\]
-\[
-\overline{k_{\mathrm{app}}} = \frac{0.05116}{5} = 0.01023~\mathrm{kPa\,s^{-1}}
-\]
-
-\subsubsection{Step 6: Random uncertainty of the mean (standard error)}
-The standard deviation of the five trial values at 15~$^{\circ}$C was:
-\[
-s_k = 0.00434~\mathrm{kPa\,s^{-1}}
-\]
-The random uncertainty in the mean (standard error) is:
-\[
-\Delta \overline{k_{\mathrm{app}}} = \frac{s_k}{\sqrt{n}} = \frac{0.00434}{\sqrt{5}} = 0.00194~\mathrm{kPa\,s^{-1}}
-\]
-Therefore, the rate constant for 15~$^{\circ}$C is:
-\[
-\overline{k_{\mathrm{app}}} = 0.01023 \pm 0.00194~\mathrm{kPa\,s^{-1}}
-\]
-
-\subsubsection{(Optional, if used later) Arrhenius variables}
-For Arrhenius analysis using the mean rate constant:
-\[
-\ln(\overline{k_{\mathrm{app}}}) = \ln(0.01023) = -4.58
-\]
-Using $T = 287.90~\mathrm{K}$:
-\[
-\frac{1}{T} = \frac{1}{287.90} = 3.47 \times 10^{-3}~\mathrm{K^{-1}}
-\]
-
 
 \section{Data Analysis}
 \label{sec:data-analysis}
