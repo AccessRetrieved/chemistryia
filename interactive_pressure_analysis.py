@@ -1,8 +1,5 @@
 #!/usr/bin/env python3
-"""Modern interactive pressure-vs-time analyzer for Data/Data.xlsx Raw Data sheet."""
-
 from __future__ import annotations
-
 import argparse
 import json
 import re
@@ -17,7 +14,6 @@ from typing import Any
 from zipfile import ZipFile
 
 NS_MAIN = {"m": "http://schemas.openxmlformats.org/spreadsheetml/2006/main"}
-
 
 @dataclass
 class TrialSeries:
