@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  9 FEB 2026 00:01
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  9 FEB 2026 00:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -796,18 +796,18 @@ l.68 \newpage
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.118 \end{center}
-                   [1]
+l.110 \end{equation}
+                     [1]
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [3]
 
 [4]
-<Resources/apparatus_setup.jpeg, id=229, 5733.42pt x 3225.04875pt>
+<Resources/apparatus_setup.jpeg, id=226, 5733.42pt x 3225.04875pt>
 File: Resources/apparatus_setup.jpeg Graphic file (type jpg)
 <use Resources/apparatus_setup.jpeg>
-Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 227.
+Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 229.
 (pdftex.def)             Requested size: 398.33858pt x 224.05412pt.
 
 
@@ -820,164 +820,16 @@ Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 227.
 [8]
 
 [9]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 503--503
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 505--505
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
-Overfull \hbox (11.69649pt too wide) in paragraph at lines 430--504
+Overfull \hbox (11.69649pt too wide) in paragraph at lines 432--506
  [][] 
  []
 
 
 
 [10]
-Overfull \hbox (0.99452pt too wide) in paragraph at lines 591--591
- []|\OT1/cmr/bx/n/10 Trial| 
- []
-
-
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 591--591
- []|\OT1/cmr/bx/n/10 Target 
- []
-
-
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 591--591
- []|\OT1/cmr/bx/n/10 Target 
- []
-
-
-Overfull \hbox (5.93184pt too wide) in paragraph at lines 591--591
- \OT1/cmr/bx/n/10 (LabQuest)| 
- []
-
-
-
-[11]
-
-[12]
-<Resources/example_calculation_data_helper.png, id=310, 1276.77pt x 816.04875pt>
-File: Resources/example_calculation_data_helper.png Graphic file (type png)
-<use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 612.
-(pdftex.def)             Requested size: 455.24408pt x 290.9632pt.
-<Resources/example_calculation_time_snapshot.png, id=312, 1006.743pt x 656.343pt>
-File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
-<use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 621.
-(pdftex.def)             Requested size: 398.33858pt x 259.6983pt.
-
-
-[13 <./Resources/example_calculation_data_helper.png>]
-
-[14 <./Resources/example_calculation_time_snapshot.png>]
-<Resources/data_analysis_main_graph.png, id=336, 743.724pt x 498.663pt>
-File: Resources/data_analysis_main_graph.png Graphic file (type png)
-<use Resources/data_analysis_main_graph.png>
-Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 692.
-(pdftex.def)             Requested size: 455.24408pt x 305.23402pt.
-
-
-[15 <./Resources/data_analysis_main_graph.png>]
-<Resources/data_analysis_arrhenius_plot.png, id=351, 731.679pt x 500.853pt>
-File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
-<use Resources/data_analysis_arrhenius_plot.png>
-Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 731.
-(pdftex.def)             Requested size: 500.484pt x 342.60077pt.
-
-
-[16]
-
-[17 <./Resources/data_analysis_arrhenius_plot.png>]
-<Resources/data_analysis_ki_mass.png, id=375, 840.96pt x 463.623pt>
-File: Resources/data_analysis_ki_mass.png Graphic file (type png)
-<use Resources/data_analysis_ki_mass.png>
-Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 764.
-(pdftex.def)             Requested size: 500.484pt x 275.91924pt.
-
-
-[18 <./Resources/data_analysis_ki_mass.png>]
-<Resources/evaluation_weakness_water_bath.png, id=390, 380.42125pt x 379.4175pt>
-File: Resources/evaluation_weakness_water_bath.png Graphic file (type png)
-<use Resources/evaluation_weakness_water_bath.png>
-Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 802.
-(pdftex.def)             Requested size: 170.71652pt x 170.26735pt.
-<Resources/evaluation_weakness_immersion_circulator.png, id=391, 357.335pt x 361.35pt>
-File: Resources/evaluation_weakness_immersion_circulator.png Graphic file (type png)
-<use Resources/evaluation_weakness_immersion_circulator.png>
-Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 809.
-(pdftex.def)             Requested size: 170.71652pt x 172.6355pt.
-
-
-[19]
-
-[20 <./Resources/evaluation_weakness_water_bath.png> <./Resources/evaluation_weakness_immersion_circulator.png>] (./draft.bbl
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
-
-Underfull \hbox (badness 2856) in paragraph at lines 25--27
-[]\OT1/cmr/m/n/10 Immersion Cir-cu-la-tors, Baths, Im-mer-sion Cir-cu-la-tors.  https://www.fishersci.ca/shop/products/sc100-
- []
-
-
-Overfull \hbox (676.72409pt too wide) in paragraph at lines 29--31
-[]\OT1/cmr/m/n/10 4.4: Cat-a-lysts and En-ergy of Ac-ti-va-tion.  https://chem.libretexts.org/Bookshelves/Physical[]and[]Theoretical[]Chemistry[]Textbook[]Maps/Supplemental[]Modules[](Physical[]and[]Theoretical[]Chemistry)/Kinetics/04%3A[]Reaction[]Mechanisms/4.04%3A[]Ea[]and[]Catalysts,
- []
-
-
-Overfull \hbox (795.52432pt too wide) in paragraph at lines 33--35
-[]\OT1/cmr/m/n/10 6.1.6: The Col-li-sion The-ory.  https://chem.libretexts.org/Bookshelves/Physical[]and[]Theoretical[]Chemistry[]Textbook[]Maps/Supplemental[]Modules[](Physical[]and[]Theoretical[]Chemistry)/Kinetics/06%3A[]Modeling[]Reaction[]Kinetics/6.01%3A[]Collision[]Theory/6.1.06%3A[]The[]Collision[]Theory,
- []
-
-
-Overfull \hbox (21.94478pt too wide) in paragraph at lines 37--39
-[]\OT1/cmr/m/n/10 The Cat-alytic De-com-po-si-tion of Hy-dro-gen Per-ox-ide.  https://chemed.chem.purdue.edu/demos/demosheets/19.6.html. 
- []
-
-)
-
-[21]
-
-[22] (./draft.aux)
- ***********
-LaTeX2e <2024-11-01> patch level 2
-L3 programming layer <2025-01-18>
- ***********
-Package rerunfilecheck Info: File `draft.out' has not changed.
-(rerunfilecheck)             Checksum: F117C35E3A5353BA38C338419BA076D1;4337.
- ) 
-Here is how much of TeX's memory you used:
- 25920 strings out of 473190
- 494788 string characters out of 5715801
- 1049639 words of memory out of 5000000
- 48552 multiletter control sequences out of 15000+600000
- 571757 words of font info for 83 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 84i,20n,89p,1307b,684s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.4} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
-
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on draft.pdf (24 pages, 4625623 bytes).
-PDF statistics:
- 562 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 143 named destinations out of 1000 (max. 500000)
- 301 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+Overfull \hbox (0.99452pt too wide) in parag
