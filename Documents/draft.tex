@@ -1,0 +1,837 @@
+% Imports
+\documentclass[hyphens]{article}
+\usepackage{graphicx, float}
+\graphicspath{{Images/}}
+\usepackage[letterpaper, top=2cm, bottom=2cm, left=2cm, right=2cm, heightrounded]{geometry}
+\usepackage[numbers]{natbib}
+\usepackage{url}
+\usepackage{hyperref}
+\hypersetup{breaklinks=true}
+\usepackage{caption}
+\usepackage[utf8]{inputenc}
+\usepackage[version=4]{mhchem}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{titling}
+\usepackage{amsmath}
+\usepackage{setspace}
+\usepackage{xcolor}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tablefootnote}
+\newlist{titemize}{itemize}{1}
+\setlist[titemize]{nosep, label=--}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{soul}
+\usepackage{boldline} 
+\usetikzlibrary{calc}
+
+% Doc settings
+\title{\textbf{Investigating the Effect of Temperature on the Rate Constant of the Decomposition of Aqueous Hydrogen Peroxide.}}
+\date{January 28, 2026}
+\setlength{\parindent}{3em}
+
+% Word count automation & reminder
+\newcommand{\realwordcount}{
+  \immediate\write18{wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex}
+  \input{wordcount.tex}
+}
+
+% Document
+\begin{document}
+
+\begin{titlepage}
+  \centering
+  \vspace*{2.75in}
+
+  {\huge\textbf{Investigating the Effect of Temperature on the Rate Constant of the Decomposition of Aqueous Hydrogen Peroxide.}}
+  \vspace{0.35in}
+
+  \large January 29, 2026 \\
+  \vspace{0.2in}
+
+  \large IB  Chemistry HL \\
+  \textit{Internal Assessment}
+
+  \vspace{2.5in}
+  \small \textit{I assert that this assessment is solely my authentic work. I understand that if this work does not meet the standards of my school's Academic Honesty Policy, it will not be submitted to the eCoursework system and I will receive no grade from the IBO.}
+
+  \vspace{1in}
+  \small Word count:\realwordcount / 3000
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+\doublespacing
+\setcounter{page}{1}
+
+\section{Introduction}
+\label{sec:introduction}
+\indent \indent The reaction of hydrogen peroxide, \ce{H2O2}, decomposes to form oxygen gas and water. Although this reaction is thermodynamically favourable to the products side, it will proceed at an extremely-slow rate at room temperature, unless catalyzed:
+
+\begin{center}
+  \ce{2H2O2_{(aq)} -> 2H2O_{(l)} + O2_{(g)}}
+\end{center}
+
+\noindent In this investigation, potassium iodide (\ce{KI}) was used as a catalyst so that the reaction (specifically, the formation of oxygen gas) inside the system can occur at a measurable rate within a practical time frame. This investigation aims to explore how temperature impacts the rate constant for the catalyzed decomposition reaction of aqeuous hydrogen peroxide. The rate of the reaction is observed indirectly by measuring the initial rate of increase in gas pressure inside a sealed flask, as oxygen gas (\ce{O2_{(g)}}) builds up.
+
+\begin{equation}
+  \ce{2H2O2_{(aq)} ->[\ce{KI}] 2H2O_{(l)} + O2_{(g)}}
+\end{equation}
+
+\subsection{Background Concepts}
+\label{sec:introduction-background-concepts}
+% \subsubsection{The Collision Theory.}
+% \label{sec:introduction-background-concepts-collision-theory}
+\indent \indent The collision theory states that a chemical reaction can only occur when particles collide with sufficient energy and the correct orientation. As the temperature of the reaction increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction and the reaction constant. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
+
+\begin{equation}
+  k = A \cdot e^{- \frac{E_{A}}{RT}}
+\label{eq:arrhenius-equation}
+\end{equation}
+
+\noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature, in Kelvins.
+
+Taking the natural logarithm on both sides of the equation will yield a linear graph:
+
+\begin{equation}
+  \ln{K} = - \frac{E_{A}}{RT} + \ln{A}
+\end{equation}
+
+\noindent Where the slope of the linear graph is $- \frac{E_{A}}{R}$, and the y-intercept is $\ln{A}$. As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant gas volume, the pressure increases. Assuming ideal gas behaviour, the pressure should increase as $n$ (the number of moles of gas) increases, but $V$ (volume) stays constant:
+
+\begin{equation}
+  PV = nRT
+\end{equation}
+
+\begin{equation}
+  \therefore P \propto n
+\end{equation}
+
+\noindent Given that the initial concentration of \ce{H2O2} and the amount of catalyst added were held constant across all trials, the calculated rate constant can be compared across temperature levels.
+
+\begin{center}
+  $\ast$~$\ast$~$\ast$
+\end{center}
+
+\noindent As a result, the research question for this investigation is:
+
+\begin{center}
+  \textit{How does the temperature affect the rate constant for the decomposition of aqueous hydrogen peroxide, determined from the initial rate of increase of gas pressure in a sealed flask?}
+\end{center}
+
+\subsection{Hypothesis}
+\label{sec:introduction-hypothesis}
+\indent \indent Given that the Arrhenius rate constant is dependent on the temperature, I hypothesize that increasing the temperature will cause the rate constant for the decomposition of aqueous hydrogen peroxide, \ce{H2O2}, to increase exponentially.
+
+\section{Research Design}
+\label{sec:research-design}
+
+\subsection{Variables}
+\label{sec:research-design-variables}
+\noindent \underline{\textbf{Independent variable:}} Temperature of the reaction system. The \ce{H2O2} in the sealed flask was equilibrated to the target temperature using a water bath before the start of each trial. The temperature was monitored using a Vernier Temperature Probe before and during the trials. Trials were only started once the water bath temperature reached within $1\ ^\circ\text{C}$ of the target temperature.
+
+\
+
+\noindent \underline{\textbf{Dependent variable:}} Rate of the decomposition reaction of \ce{H2O2} and \ce{KI}.
+
+\
+
+\noindent \underline{\textbf{Controlled variable:}} Initial amount of reactants, total volume of gas space in the sealed flask, environmental conditions (temperature, humidity), time interval between pressure readings, the same apparatus setup (same Vernier pressure sensor used for all measurements), and data-collection settings.
+
+\subsection{Materials}
+\label{sec:research-design-materials}
+\begin{itemize}
+  \item (1x) Bottle of 3\% hydrogen peroxide, \ce{H2O2} (aqueous)
+  \item (1x) Bottle of potassium iodide, \ce{KI} (solid)
+  \item (1x) Jug of distilled water
+  \item (1x) $1000\ \text{mL}$ beaker (waste beaker)
+  \item (2x) $600\ \text{mL}$ beakers
+  \begin{enumerate}
+	\item (1x) for ice bath
+	\item (1x) for \ce{H2O2} solution
+  \end{enumerate}
+  \item (1x) $250\ \text{mL}$ flask (for experiment, to be placed in water bath) 
+  \item (1x) $250\ \text{mL}$ beaker (for \ce{H2O2} solution)
+  \item (1x) $100\ \text{mL}$ beaker (for \ce{KI} solution)
+  \item (1x) Glass bowl (for water bath)
+  \item (1x) Rubber stoppers (with holes and pipes)
+  \item (1x) Vernier Gas Pressure Sensor
+  \item (1x) Vernier Stainless Steel Temperature Probe
+  \item (1x) Vernier LabQuest
+  \item (1x) $25\ \text{mL}$ Pipette + suction bulb
+  \item (1x) $10\ \text{mL}$ graduated cylinder (for measuring distilled water)
+  \item (1x) Digital balance
+  \item (1x) Metal stick from ring stand
+  \item (1x) Safety goggles
+  \item (1x) Lab coat
+\end{itemize}
+
+\subsection{Experimental Design}
+\label{sec:research-design-experimental-design}
+\indent \indent This experiment was designed to isolate the temperature of the water bath as the sole independent variable affecting the rate constant for the \ce{KI}-catalyzed decomposition reaction of aqueous hydrogen peroxide. Oxygen gas produced during the reaction increased the pressure inside a sealed $250\ \text{mL}$ flask. Thus, the increase in the rate of the initial pressure value was used to determine the rate constant at each temperature. A water bath was used to equilibrate the reaction system to within $1 ^\circ \text{C}$ of the target temperature, with ice available in a beaker nearby to lower the temperature when required. The masses of \ce{KI} were pre-measured and recorded before data collection, and sealed with plastic wrap and rubber band.
+
+\subsection{Procedure}
+\label{sec:research-design-procedure}
+
+\subsubsection{Part I: Setup}
+\label{sec:research-design-procedure-setup}
+\begin{enumerate}
+  \item Obtain safety goggles and lab coat.
+  \item Gather the required items from \textit{section \ref{sec:research-design-materials}} to work station.
+  \item Assemble the pressure measurement setup:
+  \begin{itemize}
+    \item Connect the Vernier Gas Pressure sensor to the LabQuest
+    \item Connect the airtight plastic tube to the pressure sensor.
+    \item Connect the plastic tubing to the rubber stopper.
+    \item Close the valve on the rubber stopper.
+  \end{itemize}
+  \item Secure the $250\ \text{mL}$ flask on the ring stand using a ring clamp, so that it remains stable during the data collection.
+  \item Add $25\ \text{mL}$ of distilled water to the $250\ \text{mL}$ flask for setup purposes.
+  \item To prepare the water bath, place the glass bowl on the hot plate and add water to a level so that it just submerges the $25\ \text{mL}$ water inside the flask. This will represent the hydrogen peroxide during the experiment.
+  \item Draw a horizontal line on the neck of the reaction flask using a marker to standardize the insertion depth of the rubber stopper in every trial.
+  \begin{itemize}
+    \item \underline{\textbf{Note:}} Before inserting the rubber stopper each time, add a few drops of water on fingers, and rub the sides of the rubber stopper to improve the sealing.
+  \end{itemize}
+  \item Ensure the temperature probe is not touching the bottom of the glass bowl or the sides of the flask. Secure the temperature probe using a ring clamp (to standardize the placement between trials)
+  \item Set the LabQuest to record at \textit{5 samples / second}, for a total of \textit{60 seconds} for each trial.
+\end{enumerate}
+
+\subsubsection{Part II: Preparation of materials}
+\label{sec:research-design-procedure-preparation-of-materials}
+\begin{enumerate}
+  \item Pour a large amount of aqueous \ce{H2O2} into a clean $600\ \text{mL}$ beaker to use as the master solution for all trials. Excess can be poured back laterusing a funnel.
+  \item Prepare potassium iodide portions for each trial:
+  \begin{enumerate}
+    \item Using a digital scale, weigh $0.30\ \text{g}$ of solid \ce{KI} into individual plastic cups.
+    \item Label each cup with its corresponding temperature level and trial number.
+    \item Seal each cup using a piece of plastic film, and secure it with rubber band to reduce exposure to moisture from air.
+  \end{enumerate}
+  \item Fill another clean $600\ \text{mL}$ beaker with ice. This will be used to lower the temperature of the water bath for lower temperature levels.
+\end{enumerate}
+
+\subsubsection{Part III: Calibration}
+\label{sec:research-design-procedure-Calibration}
+\begin{enumerate}
+  \item With the apparatus assembled, open the valve on the rubber stopper so that the pressure sensor is open to the atmosphere. Record the atmospheric pressure for $10\ \text{seconds}$ and record the average pressure in $\text{kPa}$.
+  \item Rinse the $25\ \text{mL}$ pipette with aqueous \ce{H2O2} to avoid contaminatino, then dispose into the waste beaker.
+\end{enumerate}
+
+\noindent \underline{\textbf{Note:}}  An airtight-sealing calibration was not conducted because the experiment relies on finding the change in pressure over time. In the case of a minor leak, the pressure readings would be consistently lower than the actual pressure, which does not affect the rate of change in pressure.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Resources/apparatus_setup.jpeg}
+	\caption{Apparatus setup.}
+	\label{fig:research-design-procedure-apparatus_setup}
+\end{figure}
+
+\subsubsection{Part IV: Experiment}
+\label{sec:research-design-procedure-experiment}
+\begin{enumerate}
+  \item Adjust the water bath temperature to the target temperature, either by using the hot plate or by adding ice (depending on temperature level).
+  \item Pipette $25\ \text{mL}$ of \ce{H2O2} to a clean $250\ \text{mL}$ beaker. Once the temperature of the water bath reaches within $1\ ^\circ\text{C}$ of the target temperature, pour the \ce{H2O2} into the reaction flask. Keep the reaction flask in the water bath to maintain consistency.
+  \item Measure $5\ \text{mL}$ of distilled water using a $10\ \text{mL}$ graduated cylinder, and pour into the plastic cup containing the pre-weighed \ce{KI} for the trial. Stir to dissolve the \ce{KI}. Repeat twice, so that there is a total of $10\ \text{mL}$ of \ce{KI} solution.
+  \item Start the data collection and collect a $3\ \text{second}$ baseline with the flask sealed. Then, remove the rubber stopper, and quickly add the \ce{KI} solution into the reactino flask, and immediately seal the flask with the rubber stopper (with water on sides of flask to improve seal).
+  \item Swirl the flask gently for \textit{5\ \text{seconds}}, then keep the flask still for the remainder of the run.
+  \item After data collection ends, save the run, and record the LabQuest run number in the data table with the corresponding trial.
+  \item Dispose the solution into the waste beaker, and rinse the reaction flask once using tap water, then rinse again with distilled water.
+  \item Repeat \textit{steps 1-7} for each trial at each temperature level, for a total of \textit{40 trials}.
+\end{enumerate}
+
+\subsubsection{Part V: Cleanup}
+\label{sec:research-design-procedure-cleanup}
+\begin{enumerate}
+  \item Disconnect the gas pressure sensor and temperature probe from the LabQuest.
+  \item Save the file on the LabQuest, and download the data to a computer.
+  \item Neutralize the waste solution by adding a small amount of sodium thiosulfate, then dispose the waste solution down the drain with running water.
+  \item Return used glassware to the dirty bin, and return all equipment.
+\end{enumerate}
+
+\noindent \underline{\textbf{Note:}} If table turns yellow, wipe down with a paper towel, some water, and a few crystals of sodium thiosulfate.
+
+\section{Data Collection}
+\label{sec:data-collection}
+
+\subsection{Data Tables}
+\label{sec:data-collection-data-tables}
+
+\begin{table}[H]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Level} & \textbf{Trial} & \textbf{Target ($^\circ$C)} & \textbf{Run \#} & \textbf{Hot plate ($^\circ$C)} & \textbf{Start temp ($^\circ$C)} & \textbf{End temp ($^\circ$C)} & \textbf{Mass of \ce{KI} (g)} \\ \hline
+
+    \multirow{5}{*}{1} & 1 & \multirow{5}{*}{15} & 4 & \multirow{5}{*}{45} & 14.4 & 15.1 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 5 &  & 15.4 & 16.0 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 6 &  & 14.7 & 14.0 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 7 &  & 14.9 & 15.3 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 8 &  & 15.32 & 14.4 & 0.31 \\ \hline
+
+    \multirow{5}{*}{2} & 1 & \multirow{5}{*}{20} & 48 & \multirow{5}{*}{55} & 19.3 & 18.7 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 9 &  & 21.4 & 20.5 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 10 &  & 21.0 & 21.3 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 11 &  & 19.7 & 19.4 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 12 &  & 19.3 & 19.8 & 0.31 \\ \hline
+
+    \multirow{5}{*}{3} & 1 & \multirow{5}{*}{25} & 13 & \multirow{5}{*}{65} & 25.2 & 25.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 14 &  & 25.3 & 25.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 15 &  & 25.7 & 26.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 16 &  & 24.7 & 24.6 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 17 &  & 25.4 & 25.9 & 0.30 \\ \hline
+
+    \multirow{5}{*}{4} & 1 & \multirow{5}{*}{30} & 18 & \multirow{5}{*}{85} & 29.6 & 30.6 & 0.33 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 19 &  & 29.1 & 28.5 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 20 &  & 30.9 & 31.5 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 21 &  & 30.0 & 30.4 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 22 &  & 30.8 & 31.0 & 0.29 \\ \hline
+
+    \multirow{5}{*}{5} & 1 & \multirow{5}{*}{35} & 23 & \multirow{5}{*}{100} & 35.6 & 35.4 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 24 &  & 35.3 & 35.8 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 25 &  & 35.1 & 33.3 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 26 &  & 34.7 & 35.3 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 27 &  & 35.5 & 36.3 & 0.29 \\ \hline
+
+    \multirow{5}{*}{6} & 1 & \multirow{5}{*}{40} & 43 & \multirow{5}{*}{125} & 39.8 & 40.9 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 44 &  & 41.3 & 41.1 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 45 &  & 40.5 & 37.3 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 46 &  & 40.0 & 41.0 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 47 &  & 39.1 & 38.8 & 0.29 \\ \hline
+
+    \multirow{5}{*}{7} & 1 & \multirow{5}{*}{45} & 33 & \multirow{5}{*}{160} & 45.6 & 44.9 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 34 &  & 44.5 & 43.2 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 35 &  & 44.8 & 44.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 36 &  & 44.5 & 44.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 37 &  & 45.1 & 44.2 & 0.29 \\ \hline
+
+    \multirow{5}{*}{8} & 1 & \multirow{5}{*}{50} & 38 & \multirow{5}{*}{200} & 49.1 & 49.5 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 39 &  & 49.8 & 49.0 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 40 &  & 49.0 & 48.1 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 41 &  & 49.2 & 49.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 42 &  & 49.7 & 49.9 & 0.29 \\ \hline
+  \end{tabular}
+  \caption{Raw temperature and setup data for all trials at each temperature level.}
+  \label{tab:data-collection-temperature-table}
+\end{table}
+
+\subsection{Sources of Uncertainty}
+\label{sec:data-collection-sources-of-uncertainty}
+\indent \indent To reduce random errors, 5 trials were conducted at each temperature level and averaged. Other variables, such as initial \ce{H2O2} concentration and volume, mass of \ce{KI}, apparatus setup, and sealing method were all kept constant across all runs so that differences in the initial pressure-increase rate can be attributed primary to temperature.
+
+\section{Data Processing}
+\label{sec:data-processing}
+
+\subsection{Uncertainty Propagation}
+\label{sec:data-processing-uncertainty-propagation}
+\indent \indent The uncertainty values for temperature and pressure were obtained from specifications of the equipment used, and the smallest scale on the digital balance was used as the uncertainty of mass: $\pm 0.01\ \text{g}$. A $25\ \text{mL}$ volunmetric pipette was used to obtain the \ce{H2O2} for all trials, but the exact volumes delivered were not confirmed with a graduated cylinder. Thus, the pipette's tolerance was used as the volume uncertainty: $\pm 0.06\ \text{mL}$. Time was recorded automatically by the LabQuest, so its uncertainty was assumed negligible relative to pressure variation throughout the experiment.
+
+\begin{table}[H]
+	\centering
+	\resizebox{15cm}{!}{
+	\begin{tabular}{|>{\centering\arraybackslash}m{8cm}|
+	                  >{\centering\arraybackslash}m{6cm}|} \hline
+			
+			\textbf{Tool} & \textbf{Uncertainty} \\ \hline
+      Vernier Stainless Steel Temperature Probe & $\pm 0.1\ ^\circ \text{C}$ at $0\ ^\circ \text{C}$, $\pm 0.5\ ^\circ \text{C}$ at $100\ ^\circ \text{C}$ \\ \hline
+      Vernier Gas Pressure Sensor & $\pm 4\ \text{kPa}$ \\ \hline
+      Digital Balance & $\pm 0.01\ \text{g}$ \\ \hline
+      Volunmetric Pipette (Class A TD) & $\pm 0.06\ \text{mL}$ \\ \hline
+		\end{tabular}
+	}
+	\caption{Summary of uncertainties by tool.}
+	\label{tab:data-processing-uncertainty-propagation-summary-of-uncertainties-by-tool}
+\end{table}
+
+Given that the Vernier documentation provides two uncertainty values for the temperature probe, linear interpolation was used for the uncertainty of the device:
+
+\begin{equation}
+  \Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x
+\end{equation}
+
+\noindent Where $x$ is the measured temperature obtained from the temperature probe (in Celsius), and $\Delta{T}$ is the uncertainty in Kelvin \footnote{Uncertainty is not affected by the conversion between Celsius and Kelvin.}.
+
+\subsubsection{Uncertainty in rate constant}
+\label{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}
+\indent \indent The rate constant was calculated as the slope of a linear best-fit trendline to the pressure-time graph over a fixed \textit{15 second} interval, starting at the first continuous rise in pressure after the rubber stopper was replaced \footnote{\textbf{First continuous rise:} The first datapoint was counted as the start interval after a consecutive rise in the next adjacent 3 datapoints}. The reaction rate equation for the decomposition reaction of hydrogen peroxide (\ce{H2O2}) and potassium iodide (\ce{KI}) can be expressed in the general form, where $r$ is the reaction rate and $k$ is the rate constant:
+
+\begin{equation}
+  r = k[\ce{H2O2}]^{m}[\ce{I-}]^{n}
+\end{equation}
+
+\noindent Given that the moles of \ce{H2O2} and the amount of \ce{KI} were held constant for all trials, the reaction rate is directly proportional to the rate constant $k$ with temperature. Moreover, according to the ideal gas relationship ($PV = nRT$), pressure inside the sealed flask is proportional to the moles of \ce{O2} produced:
+
+\begin{equation}
+  P \propto n
+\end{equation}
+
+\noindent Thus, an apparent rate constant $k_{app}$ can be defined using the initial rate of pressure increase:
+
+\begin{equation}
+  k_{app} = \frac{\Delta{P}}{\Delta{t}}
+\label{eq:k_app-equation}
+\end{equation}
+
+\begin{equation}
+  k_{app} \propto k
+\end{equation}
+
+\noindent As there are 5 trials per temperature level, a mean apparent rate constant was calculated to represent the rate constant at each temperature::
+
+\begin{equation}
+  \overline{k}_{\mathrm{app}} = (\frac{1}{n}) \cdot \sum_{i=1}^{n} k_{\mathrm{app},i}, \quad (n=5)
+\end{equation}
+
+\noindent The random uncertainty in the mean $k_{app}$ value was then calculated:
+
+\begin{equation}
+  \Delta{\overline{k}_{\mathrm{app}}} = \frac{\sigma}{\sqrt{n}}
+\end{equation}
+
+\noindent Where $\sigma$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials. This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette) does not average out.
+
+\
+
+\noindent \underline{\textbf{Note:}} The apparent rate constant is the same as the initial rate of pressure increase.
+
+\subsubsection{Uncertainty in the Arrhenius plot}
+\label{sec:data-processing-uncertainty-propagation-uncertainty-in-arrhenius-plot}
+\noindent The vertical error bars (uncertainty in $\ln{k_{app}}$) was propagated using $\Delta{\ln{k_{app}}} = \frac{\Delta{k_{app}}}{k_{app}}$:
+
+\begin{equation}
+  k_{app} \pm \Delta{k_{app}} = k_{app} \cdot (1 \pm \frac{\Delta{k_{app}}}{k_{app}})
+\end{equation}
+
+\noindent The logarithmic rule of addition was then used:
+
+\begin{equation}
+  \ln{(k_{app} \cdot (1 \pm \frac{\Delta{k_app}}{k_app}))} = \ln{(k_{app})} + \ln{(1 \pm \frac{\Delta{k_{app}}}{k_{app}})}
+\end{equation}
+
+\begin{equation}
+  \therefore \Delta{\ln{k_{app}}} = |\ln{(1 \pm \frac{\Delta{k_{app}}}{k_{app}})}|
+\end{equation}
+
+\noindent However, given the size of the uncertainty relative to the $k_{app}$ values, the approximation $\ln{(1 \pm x)} \approx x$ for small $x$ can be used, where $x = \frac{\Delta{k_{app}}}{k_{app}}$. Thus:
+
+\begin{equation}
+  \Delta{\ln{(k_{app})}} \approx \frac{\Delta{k_{app}}}{k_{app}}
+\end{equation}
+
+\subsection{Processed Data}
+\label{sec:data-processing-processed-data}
+\begin{table}[H]
+  \centering
+  \resizebox{18cm}{!}{
+  \begin{tabular}{!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{0.75cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.25cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{2.75cm}!{\vrule width 1pt}
+    >{\centering\arraybackslash}m{1.5cm}!{\vrule width 1.8pt}
+  } \hlineB{5}
+      \textbf{Temp ($^\circ \text{C}$)} &
+      \textbf{Trial} &
+      \textbf{Average temp ($^\circ \text{C}$)} &
+      \textbf{Average temp (K)} &
+      \textbf{Mass of \ce{KI} ($\text{g}$)} &
+      \textbf{Start window ($\text{s}$)} &
+      \textbf{End window ($\text{s}$)} &
+      \textbf{Initial rate ($\text{kPa}/\text{s}$)} &
+      \textbf{Avg. initial rate ($\text{kPa}/\text{s}$)} &
+      \textbf{Initial rate SD ($\text{kPa}/\text{s}$)} \\
+      \hlineB{5}
+
+      \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{14.75} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{26.6} & \textcolor{red}{41.6} & \textcolor{red}{0.00594} & \multirow{5}{*}{\textcolor{red}{$0.01023 \pm 0.00194$}} & \multirow{5}{*}{\textcolor{red}{0.00434}} \\ \cline{2-8}
+                          & 2 & 15.70 & 288.85 & 0.29 & 40.4 & 55.4 & 0.00817 &  &  \\ \cline{2-8}
+                          & 3 & 14.35 & 287.50 & 0.32 & 30.0 & 45.0 & 0.01237 &  &  \\ \cline{2-8}
+                          & 4 & 15.10 & 288.25 & 0.32 & 30.0 & 45.0 & 0.01676 &  &  \\ \cline{2-8}
+                          & \underline{5} & \underline{14.86} & \underline{288.01} & \underline{0.31} & \underline{20.2} & \underline{35.2} & \underline{0.00792} &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{20}  & 1 & 19.00 & 292.15 & 0.30 & 31.8 & 46.8 & 0.01397 & \multirow{5}{*}{$0.01406 \pm 0.00223$} & \multirow{5}{*}{0.00498} \\ \cline{2-8}
+                          & 2 & 20.95 & 294.10 & 0.28 & 17.2 & 32.2 & 0.00864 &  &  \\ \cline{2-8}
+                          & 3 & 21.15 & 294.30 & 0.29 & 25.8 & 40.8 & 0.01510 &  &  \\ \cline{2-8}
+                          & 4 & 19.55 & 292.70 & 0.31 & 30.0 & 45.0 & 0.02171 &  &  \\ \cline{2-8}
+                          & 5 & 19.55 & 292.70 & 0.31 & 24.0 & 39.0 & 0.01089 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{25}  & 1 & 25.50 & 298.65 & 0.29 & 19.0 & 34.0 & 0.01867 & \multirow{5}{*}{$0.01782 \pm 0.00315$} & \multirow{5}{*}{0.00705} \\ \cline{2-8}
+                          & 2 & 25.55 & 298.70 & 0.29 & 20.0 & 35.0 & 0.02864 &  &  \\ \cline{2-8}
+                          & 3 & 26.20 & 299.35 & 0.29 & 27.2 & 42.2 & 0.01631 &  &  \\ \cline{2-8}
+                          & 4 & 24.65 & 297.80 & 0.28 & 24.0 & 39.0 & 0.01644 &  &  \\ \cline{2-8}
+                          & 5 & 25.65 & 298.80 & 0.30 & 20.0 & 35.0 & 0.00904 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{30}  & 1 & 30.10 & 303.25 & 0.33 & 5.6 & 20.6 & 0.03811 & \multirow{5}{*}{$0.03884 \pm 0.00870$} & \multirow{5}{*}{0.01944} \\ \cline{2-8}
+                          & 2 & 28.80 & 301.95 & 0.30 & 10.2 & 25.2 & 0.02327 &  &  \\ \cline{2-8}
+                          & 3 & 31.20 & 304.35 & 0.30 & 11.0 & 26.0 & 0.06776 &  &  \\ \cline{2-8}
+                          & 4 & 30.20 & 303.35 & 0.30 & 17.2 & 32.2 & 0.04581 &  &  \\ \cline{2-8}
+                          & 5 & 30.90 & 304.05 & 0.29 & 11.4 & 26.4 & 0.01924 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{35}  & 1 & 35.50 & 308.65 & 0.31 & 8.0 & 23.0 & 0.06992 & \multirow{5}{*}{$0.05442 \pm 0.00600$} & \multirow{5}{*}{0.01342} \\ \cline{2-8}
+                          & 2 & 35.55 & 308.70 & 0.31 & 16.8 & 31.8 & 0.05917 &  &  \\ \cline{2-8}
+                          & 3 & 34.20 & 307.35 & 0.32 & 13.2 & 28.2 & 0.06227 &  &  \\ \cline{2-8}
+                          & 4 & 35.00 & 308.15 & 0.31 & 6.2 & 21.2 & 0.04098 &  &  \\ \cline{2-8}
+                          & 5 & 35.90 & 309.05 & 0.29 & 21.4 & 36.4 & 0.03975 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{40}  & 1 & 40.35 & 313.50 & 0.28 & 11.6 & 26.6 & 0.06090 & \multirow{5}{*}{$0.04214 \pm 0.00826$} & \multirow{5}{*}{0.01847} \\ \cline{2-8}
+                          & 2 & 41.20 & 314.35 & 0.28 & 11.0 & 26.0 & 0.02914 &  &  \\ \cline{2-8}
+                          & 3 & 38.90 & 312.05 & 0.29 & 9.6 & 24.6 & 0.02469 &  &  \\ \cline{2-8}
+                          & 4 & 40.50 & 313.65 & 0.28 & 8.8 & 23.8 & 0.06334 &  &  \\ \cline{2-8}
+                          & 5 & 38.95 & 312.10 & 0.29 & 10.0 & 25.0 & 0.03264 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{45}  & 1 & 45.25 & 318.40 & 0.29 & 6.6 & 21.6 & 0.04139 & \multirow{5}{*}{$0.09427 \pm 0.03053$} & \multirow{5}{*}{0.06826} \\ \cline{2-8}
+                          & 2 & 43.85 & 317.00 & 0.30 & 16.2 & 31.2 & 0.06972 &  &  \\ \cline{2-8}
+                          & 3 & 44.80 & 317.95 & 0.29 & 4.8 & 19.8 & 0.19417 &  &  \\ \cline{2-8}
+                          & 4 & 44.60 & 317.75 & 0.29 & 8.0 & 23.0 & 0.13306 &  &  \\ \cline{2-8}
+                          & 5 & 44.65 & 317.80 & 0.29 & 12.4 & 27.4 & 0.03301 &  &  \\ \hlineB{5}
+
+      \multirow{5}{*}{50}  & 1 & 49.30 & 322.45 & 0.31 & 4.6 & 19.6 & 0.17295 & \multirow{5}{*}{$0.10081 \pm 0.02089$} & \multirow{5}{*}{0.04672} \\ \cline{2-8}
+                          & 2 & 49.40 & 322.55 & 0.28 & 9.8 & 24.8 & 0.05932 &  &  \\ \cline{2-8}
+                          & 3 & 48.55 & 321.70 & 0.29 & 11.4 & 26.4 & 0.07183 &  &  \\ \cline{2-8}
+                          & 4 & 49.45 & 322.60 & 0.29 & 5.2 & 20.2 & 0.12192 &  &  \\ \cline{2-8}
+                          & 5 & 49.80 & 322.95 & 0.29 & 11.2 & 26.2 & 0.07802 &  &  \\ \hlineB{5}
+
+  \end{tabular}}
+  \caption{Processed data.}
+  \label{tab:processed-data}
+\end{table}
+
+
+\noindent \underline{\textbf{Note:}} Trial 5 of $15 ^\circ \text{C}$ (\underline{underlined}) was removed from calculations because the source data could not be located on the LabQuest. Run 8 from the LabQuest indicated a target temperature of $20 ^\circ \text{C}$.
+
+\subsection{Raw Data}
+\label{sec:data-processing-raw-data}
+\indent \indent The original raw data file obtained from the LabQuest is 300 rows by 80 columns. Due to the size of this, the raw data file can be found in the appendix, \textit{section \ref{sec:appendix-complete-raw-data}}.
+
+\begin{table}[H]
+  \centering
+  \resizebox{\linewidth}{!}{
+  \begin{tabular}{|
+    >{\centering\arraybackslash}m{1.0cm}|
+    >{\centering\arraybackslash}m{0.8cm}|
+    >{\centering\arraybackslash}m{1cm}|
+    >{\centering\arraybackslash}m{1cm}|
+    >{\centering\arraybackslash}m{1.8cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+    >{\centering\arraybackslash}m{1.6cm}|
+    >{\centering\arraybackslash}m{1.7cm}|
+    >{\centering\arraybackslash}m{1.4cm}|
+  } \hline
+    \textbf{Level} &
+    \textbf{Trial} &
+    \textbf{Target ($^\circ \text{C}$)} &
+    \textbf{Target (K)} &
+    \textbf{Run \# (LabQuest)} &
+    \textbf{Start temp ($^\circ \text{C}$)} &
+    \textbf{End temp ($^\circ \text{C}$)} &
+    \textbf{Average temp ($^\circ \text{C}$)} &
+    \textbf{Volume of \ce{H2O2} (mL)} &
+    \textbf{Mass of \ce{KI} (g)}
+  \\ \hline
+
+    \multirow{5}{*}{1} & 1 & \multirow{5}{*}{15} & \multirow{5}{*}{288.15} & 4  & 14.4  & 15.1  & 14.75 & \multirow{5}{*}{25} & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 5  & 15.4  & 16    & 15.70 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 6  & 14.7  & 14    & 14.35 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 7  & 14.9  & 15.3  & 15.10 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 8  & 15.32 & 14.4  & 14.86 &                     & 0.31 \\ \hline
+
+    \multirow{5}{*}{2} & 1 & \multirow{5}{*}{20} & \multirow{5}{*}{293.15} & 48 & 19.3  & 18.7  & 19.00 & \multirow{5}{*}{25} & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 9  & 21.4  & 20.5  & 20.95 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 10 & 21    & 21.3  & 21.15 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 11 & 19.7  & 19.4  & 19.55 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 12 & 19.3  & 19.8  & 19.55 &                     & 0.31 \\ \hline
+
+    \multirow{5}{*}{3} & 1 & \multirow{5}{*}{25} & \multirow{5}{*}{298.15} & 13 & 25.2  & 25.8  & 25.50 & \multirow{5}{*}{25} & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 14 & 25.3  & 25.8  & 25.55 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 15 & 25.7  & 26.7  & 26.20 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 16 & 24.7  & 24.6  & 24.65 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 17 & 25.4  & 25.9  & 25.65 &                     & 0.30 \\ \hline
+
+    \multirow{5}{*}{4} & 1 & \multirow{5}{*}{30} & \multirow{5}{*}{303.15} & 18 & 29.6  & 30.6  & 30.10 & \multirow{5}{*}{25} & 0.33 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 19 & 29.1  & 28.5  & 28.80 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 20 & 30.9  & 31.5  & 31.20 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 21 & 30    & 30.4  & 30.20 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 22 & 30.8  & 31    & 30.90 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{5} & 1 & \multirow{5}{*}{35} & \multirow{5}{*}{308.15} & 23 & 35.6  & 35.4  & 35.50 & \multirow{5}{*}{25} & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 24 & 35.3  & 35.8  & 35.55 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 25 & 35.1  & 33.3  & 34.20 &                     & 0.32 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 26 & 34.7  & 35.3  & 35.00 &                     & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 27 & 35.5  & 36.3  & 35.90 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{6} & 1 & \multirow{5}{*}{40} & \multirow{5}{*}{313.15} & 43 & 39.8  & 40.9  & 40.35 & \multirow{5}{*}{25} & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 44 & 41.3  & 41.1  & 41.20 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 45 & 40.5  & 37.3  & 38.90 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 46 & 40    & 41    & 40.50 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 47 & 39.1  & 38.8  & 38.95 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{7} & 1 & \multirow{5}{*}{45} & \multirow{5}{*}{318.15} & 33 & 45.6  & 44.9  & 45.25 & \multirow{5}{*}{25} & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 34 & 44.5  & 43.2  & 43.85 &                     & 0.30 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 35 & 44.8  & 44.8  & 44.80 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 36 & 44.5  & 44.7  & 44.60 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 37 & 45.1  & 44.2  & 44.65 &                     & 0.29 \\ \hline
+
+    \multirow{5}{*}{8} & 1 & \multirow{5}{*}{50} & \multirow{5}{*}{323.15} & 38 & 49.1  & 49.5  & 49.30 & \multirow{5}{*}{25} & 0.31 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 2 &                    &                     & 39 & 49.8  & 49    & 49.40 &                     & 0.28 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 3 &                    &                     & 40 & 49    & 48.1  & 48.55 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 4 &                    &                     & 41 & 49.2  & 49.7  & 49.45 &                     & 0.29 \\ \cline{2-2}\cline{5-5}\cline{6-8}\cline{10-10}
+                        & 5 &                    &                     & 42 & 49.7  & 49.9  & 49.80 &                     & 0.29 \\ \hline
+
+  \end{tabular}}
+  \caption{Temperature runs (raw data).}
+  \label{tab:temperature-runs}
+\end{table}
+
+\subsection{Example Calculation}
+\label{sec:data-processing-example-calculation}
+\indent \indent Consider the first trial of the first temperature level, $15 ^\circ \text{C}$ as an example (marked as \textcolor{red}{red}, in \textit{table \ref{tab:processed-data}}). For this trial, the average temperature (taken from the start \& end temperature) was $14.75 ^\circ \text{C}$:
+
+\begin{equation}
+  T = 14.75 ^\circ \text{C} + 274.15 = 287.9 \text{K}
+\end{equation}
+
+\noindent Given that the analysis window for the pressure-time graph is 15 seconds starting at the first continuous rise after the rubber stopper was replaced, using the data helper I programmed \footnote{To speed up data processing for all 40 trials, I programmed a helper that loaded all data and autoamtically generated graphs and stats using \textit{Python} and the \textit{Plotly.js} library. Source code available in appendix.}, the selected interval was:
+
+\begin{equation}
+  t_{\text{start}} = 26.6\ \text{s}, \quad t_{\text{end}} = 41.6\ \text{s}
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{Resources/example_calculation_data_helper.png}
+	\caption{Data helper.}
+	\label{fig:data-processing-example-calculation-data-helper}
+\end{figure}
+
+\noindent A linear regression was then fitted to the 76 datapoints in the selected window, using the linear trendline formula $P = mt + b$ in Excel, where the slope $m$ is the initial rate (or apparent rate constant $k_{\mathrm{app}}$):
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=14cm]{Resources/example_calculation_time_snapshot.png}
+	\caption{15-second snapshot.}
+	\label{fig:data-processing-example-calculation-15-second-snapshot}
+\end{figure}
+
+\noindent As shown in the graph above, the slope value over the time interval $26.6\ \text{s}$ to $41.6\ \text{s}$ was $0.0059\ \text{kPa}\ \text{s}^{-1}$. This matches the value reported for $15\ ^{\circ} \text{C}$, \textit{trial 1} in \textit{table \ref{tab:processed-data}}. The average apparent rate constant can then be calculated:
+
+\begin{equation}
+  \overline{k_{app}} = \frac{0.00594\ \text{kPa}\ \text{s}^{-1} + 0.00817\ \text{kPa}\ \text{s}^{-1} + 0.01237\ \text{kPa}\ \text{s}^{-1} + 0.01676\ \text{kPa}\ \text{s}^{-1} + 0.00792\ \text{kPa}\ \text{s}^{-1}}{5}
+\end{equation}
+
+\begin{equation}
+  \overline{k_{app}} = \frac{0.05116\ \text{kPa}\ \text{s}^{-1}}{5} = 0.010232\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent The standard deviation of the five trials is 0.00434:
+
+\begin{equation}
+	\sigma = \sqrt{\frac{1}{5}(-0.004292)^2 + (-0.002062)^2 + (0.002138)^2 + (0.006528)^2 + (-0.002312)^2}
+\end{equation}
+
+\begin{equation}
+  \sigma = 0.004234\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent The random uncertainty in the mean can then be calculated:
+
+\begin{equation}
+  \Delta{\overline{k_{app}}} = \frac{0.00434\ \text{kPa}\ \text{s}^{-1}}{\sqrt{5}} = 0.00194\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\noindent Thus, the initial rate for the first trial of $15\ ^\circ \text{C}$ is:
+
+\begin{equation}
+  k_{app} = 0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}
+\end{equation}
+
+\begin{center}
+  $\ast$~$\ast$~$\ast$
+\end{center}
+
+\noindent The approach from above was used to calculate the apparent rate constant for the other 8 temperature levels:
+
+\begin{table}[H]
+	\centering
+	\resizebox{15cm}{!}{
+	\begin{tabular}{|>{\centering\arraybackslash}m{4.5cm}|
+                    >{\centering\arraybackslash}m{4cm}|
+	                  >{\centering\arraybackslash}m{7cm}|} \hline
+			
+			\textbf{Temperature level ($^\circ \text{C}$)} & \textbf{Temperature level ($\text{K}$)} & \textbf{Apparent rate constant, $k_{app}$ ($\text{kPa}\ \text{s}^{-1}$)} \\ \hline
+      15 & 288.15 & $0.01023 \pm 0.00194$ \\ \hline
+      20 & 293.15 & $0.01406 \pm 0.00223$ \\ \hline
+      25 & 298.15 & $0.01782 \pm 0.00315$ \\ \hline
+      30 & 303.15 & $0.03884 \pm 0.00870$ \\ \hline
+      35 & 308.15 & $0.05442 \pm 0.00600$ \\ \hline
+      40 & 313.15 & $0.04214 \pm 0.00826$ \\ \hline
+      45 & 318.15 & $0.09427 \pm 0.03053$ \\ \hline
+      50 & 323.15 & $0.10081 \pm 0.02089$ \\ \hline
+		\end{tabular}
+	}
+	\caption{Apparent rate constant.}
+	\label{tab:data-processing-example-calculation-apparent-rate-constant}
+\end{table}
+
+\section{Data Analysis}
+\label{sec:data-analysis}
+\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}} were used to create an average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{Resources/data_analysis_main_graph.png}
+	\caption{Graph of average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature level ($\text{K}$).}
+	\label{fig:data-analysis-main-graph}
+\end{figure}
+
+As shown in \textit{figure \ref{fig:data-analysis-main-graph}} above, there is an increasing exponential relationship between the apparent rate constant $k_{app}$ and the temperature of the reaction:
+
+\begin{equation}
+  f(x) = 0.0005e^{0.0768x}
+\end{equation}
+
+The apparent rate constant $k_{app}$ was defined in \textit{section \ref{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}} to represent the initial rate of the reaction within the first 15 seconds after the reaction begins. Given that the initial amounts of \ce{H2O2} and \ce{I-} were held constant across all trials (with minor variations in the mass of \ce{KI}), $k_{app}$ is proportional to the actual rate constant $k$ for the reaction, by a constant scale factor difference:
+
+\begin{equation}
+  k_{app} = C \cdot k,
+\end{equation}
+
+\noindent Where $C$ is the constant scaling factor between the apparent rate constant and the true rate constant. As shown in \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}}, the apparent rate constant increases from an average of $0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}$ at $15 ^\circ \text{C}$ ($288.15 \text{K}$) to an average of $0.10081 \pm 0.02089\ \text{kPa}\ \text{s}^{-1}$ at $50 ^\circ \text{C}$ ($323.15 \text{K}$), which is an increase by a factor of $9.85$. This supports my initial hypothesis that higher temperature increases the frequency of collisions and the fraction of molecules with energy $\geq \text{E}_{A}$. To better model how the reaction temperature impacts the rate constant, the Arrhenius equation from \textit{equation \ref{eq:arrhenius-equation}} was used to analyze the data, given that $k_{app} \propto k$:
+
+\begin{equation}
+  k_{app} = A_{app} \cdot e^{-\frac{E_{A}}{RT}}
+\end{equation}
+
+\noindent An Arrhenius plot of $\ln{(k_{app})}$ vs. $\frac{1}{T}$ was created by taking the natural logarithms on both sides:
+
+\begin{equation}
+  \ln{(k_{app})} = -\frac{E_{A}}{R} \cdot (\frac{1}{T}) + \ln{(A_{app})}
+\end{equation}
+
+\noindent Recall from \textit{section \ref{sec:introduction-background-concepts}} that the slope of the Arrhenius plot is $-\frac{E_{A}}{R}$ and the y-intercept is $\ln{(A)}$. The Arrhenius equation can then be rearranged, where $m$ is the slope of the Arrhenius plot, and $b$ is the y-intercept:
+
+\begin{equation}
+  \ln{k_{app}} = m \cdot (\frac{1}{T}) + b
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/data_analysis_arrhenius_plot.png}
+	\caption{Arrhenius plot, graph of $\ln{k_{app}}$ vs. $\frac{1}{T} \cdot 10^{3}$.}
+	\label{fig:data-analysis-arrhenius-plot}
+\end{figure}
+
+\noindent However, because the x-axis of the graph uses $\frac{1}{T} \cdot 10^{-3}$ rather than $\frac{1}{T}$, the slope must be multiplied by $1000$ to be correct:
+
+\begin{equation}
+  \ln{(k_{app})} = (m \cdot 1000) \cdot (\frac{1}{T}) + b
+\end{equation}
+
+\noindent Plugging in the values from \textit{figure \ref{fig:data-analysis-arrhenius-plot}}:
+
+\begin{equation}
+  \ln{(k_{app})} = (-7.2974 \cdot 10^{3}) \cdot (\frac{1}{T}) + 18.815
+\end{equation}
+
+\noindent Given that the slope $m = -\frac{E_{A}}{R}$, the activation energy $E_{A}$ can be calculated using $R = 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} \footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}$:
+
+\begin{equation}
+  E_{A} = |-m \cdot R| = 7.2974 \cdot 10^{3} \cdot 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} = 60641.4\ \text{J}\ \text{mol}^{-1}
+\end{equation}
+
+\begin{equation}
+  \therefore E_{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}
+\end{equation}
+
+\noindent Thus, the $\text{E}_{A}$ for the \ce{KI}-catalyzed decomposition reaction is $60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$. Note that the uncertainty for activation energy was obtained from Excel's LINEST function.
+
+A graph of the mass of \ce{KI} vs. $k_{app}$ was also plotted to check whether small variations in the mass of \ce{KI} had an effect on the apparent rate constant. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary cause of the observed temperature dependence of $k_{app}$:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/data_analysis_ki_mass.png}
+	\caption{Graph of mass of \ce{KI} vs. $k_{app}$ for all trials.}
+	\label{fig:data-analysis-ki-mass}
+\end{figure}
+
+\section{Conclusion}
+\label{sec:conclusion}
+\indent \indent This investigation aims to examine the relationship between reaction temperature and the initial rate of the \ce{KI}-catalyzed decomposition reaction of hydrogen peroxide, \ce{H2O2}, where the initial rate ($k_{app}$) was determined from the initial slope of pressure ($\text{kPa}$) vs. time ($\text{s}$) in a sealed flask. The experimental data showed that higher temperatures increased both the collision frequency and the fraction of molecules with kinetic energy $\text{KE} \geq \text{E}_{A}$, leading to a larger initial pressure-rise rate as oxygen is produced. The hypothesis in \textit{section \ref{sec:introduction-hypothesis}} predicting an \textbf{exponential relationship} between temperature and the apparent rate constant was \textbf{supported} by the data.
+
+Moreover, given that the apparent rate constant is proportional to the actual rate constant as apparatus setup and initial reactant amounts were held constant, the Arrhenius plot and graph was used, which resulted in an activation energy of $\text{E}_{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$ for the \ce{KI}-catalyzed pathway. This value is consistent with accepted scientific values online: a lab published by MIT OpenCourseware and the Chemistry LibreTexts reports an uncatalyzed $\text{E}_{A}$ at about $75\ \text{kJ}\ \text{mol}^{-1}$, while iodide catalysts lowers it to about $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$ \cite{MIT_OCW_SteamingGun2}\cite{Purdue_Chemed_H2O2}, which is consistent with the experimental data within uncertainty.
+
+Overall, increasing the reaction temperature does increase the measured rate constant for this reaction, as the \ce{KI} provides an alternative reaction pathway that requires less energy.
+
+\section{Evaluation}
+\label{sec:evaluation}
+
+\subsection{Strengths}
+\label{sec:evaluation-strengths}
+\indent \indent A key strength of this investigation was the control of experimental variables; same apparatus setup (flask, stopper, tubing, pressure sensor) was maintained throughout all trials, and the initial reactant amounts were held constant, so that changes in the reaction rate can be primarily attributed to changes in temperature. Though there are minor fluctuations in the mass of \ce{KI}, \textit{figure \ref{fig:data-analysis-ki-mass}} has proved the small variations to not be the primary impact on the apparent rate constant.
+
+Another strength lies in replication and averaging. Learning from past mistakes in other IB Science investigations, conducting five trials per temperature level in this investigation and using mean values reduced the impact of random variations between trials and increased stability when a trial needs to be excluded (i.e. due to missing source data or other experimental errors), compared to relying on single or double trials per temperature level.
+
+% \indent \indent A further strength is the use of continuous sensor-based data collection to determine $k_{\text{app}}$ from a defined early-time window. Because the pressure sensor produced many datapoints over the measurement interval, the calculated slopes were less dependent on individual noisy readings and could better represent a consistent rate proxy than a simple two-point calculation.
+
+\subsection{Weaknesses \& Limitations}
+\label{sec:evaluation-weaknesses-and-limitations}
+\indent \indent One major methodological limitation lies in the difficulty of maintaining the water bath temperature through the entire $60\ \text{seconds}$ data collection period. While most trials started and ended within $1 ^\circ \text{C}$ of the target temperature, the bath temperature could drift amidst the collection period due to heat loss to surroundings. Moreover, from personal experience, the temperature probe may not have perfectly represented the temperature of the entire water bath; readings often drifted when blocks of ice drifted nearby. To reduce this limitation, a laboratory thermostatic water bath with internal circulation would provide a more uniform temperature control. However, the high cost of such equipment made it impractical for this investigation.
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=6cm]{Resources/evaluation_weakness_water_bath.png}
+    \caption{Fisherbrand Isotemp General Purpose Deluxe Water Baths}
+    \label{fig:evaluation-weakness-water-bath}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.48\textwidth}
+    \centering
+    \includegraphics[width=6cm]{Resources/evaluation_weakness_immersion_circulator.png}
+    \caption{Thermo Scientific Immersion Circulators}
+    \label{fig:evaluation-weakness-immersion-circulator}
+  \end{minipage}
+\end{figure}
+
+A second major methodological limitation was in the control of the reaction temperature within the flask. While the temperature probe in the water bath reported temperatures within $1 ^\circ \text{C}$ of the target temperature during data collection, the reacting solution inside the beaker may not have matched the bath temperature during the fitted interval due to the addition of the catalyst, especially when $10\ \text{mL}$ of room-temperature water was mixed with solid \ce{KI} before being added to the flask. Though this impact may be small, any mismatch in the temperature would directly increase the spread of data in $k_{app}$. To reduce this source of error, the \ce{KI} solution should be pre-equilibrated in the same water bath, and its temperature should be measured inside the flask, by using a 3-hole rubber stopper with a temperature probe inserted through a sealed port. Temperatures from within the flask would drastically improve the accuracy of teh temperature assigned to each trial and reduce variations in $k_{app}$, as well as bias caused by uneven water bath temperature.
+
+Lastly, there's a limitation in the procedure in the addition of the catalyst. While the rubber stopper was replaced to the flask as fast as possible, the reactions in higher temperatures may have already begun before the flask was sealed, which would lead to an underestimation of the initial rate. To reduce this variability, the catalyst should be added without opening the system, by injecting the catalyst using a syringe through the valve hole, which would allow for a more consistent start time across trials and a more proper seal on the rubber stopper.
+
+By implementing these improvements in future iterations, a more complete characterization of how the reaction temperature influences the inital reaction rate of the decomposition reaction of hydrogen peroxide.
+
+%Bibliography
+%TC:ignore
+\newpage
+\nocite{*}
+\bibliographystyle{unsrtnat}
+\bibliography{ref}
+
+%Appendix
+\newpage
+\appendix
+\section{Appendix}
+\label{sec:appendix}
+
+\subsection{Complete Raw Data }
+\label{sec:appendix-complete-raw-data}
+
+\subsection{Source Code}
+\label{sec:appendix-ia-cam-recorder-fan}
+\indent \indent All source code and raw data are open-source, available to view on GitHub.
+
+%End
+%TC:endignore
+\thispagestyle{empty}
+\end{document}
