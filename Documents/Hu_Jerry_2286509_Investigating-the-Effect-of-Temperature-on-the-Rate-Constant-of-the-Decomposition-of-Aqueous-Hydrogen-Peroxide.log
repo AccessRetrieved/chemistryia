@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 FEB 2026 01:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 FEB 2026 19:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -615,7 +615,28 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \tikz@expandcount=\count343
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
-))) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
+))) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+File: pgflibraryarrows.meta.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowinset=\dimen298
+\pgfarrowlength=\dimen299
+\pgfarrowwidth=\dimen300
+\pgfarrowlinewidth=\dimen301
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarypositioning.code.tex
+File: tikzlibrarypositioning.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+\pgfdecoratedcompleteddistance=\dimen302
+\pgfdecoratedremainingdistance=\dimen303
+\pgfdecoratedinputsegmentcompleteddistance=\dimen304
+\pgfdecoratedinputsegmentremainingdistance=\dimen305
+\pgf@decorate@distancetomove=\dimen306
+\pgf@decorate@repeatstate=\count344
+\pgfdecorationsegmentamplitude=\dimen307
+\pgfdecorationsegmentlength=\dimen308
+)
+\tikz@lib@dec@box=\box117
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
@@ -642,59 +663,57 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@cmds=\toks45
 \SOUL@buffer=\toks46
 \SOUL@token=\toks47
-\SOUL@syllgoal=\dimen298
-\SOUL@syllwidth=\dimen299
-\SOUL@charkern=\dimen300
-\SOUL@hyphkern=\dimen301
-\SOUL@dimen=\dimen302
-\SOUL@dimeni=\dimen303
-\SOUL@minus=\count344
-\SOUL@comma=\count345
-\SOUL@apo=\count346
-\SOUL@grave=\count347
+\SOUL@syllgoal=\dimen309
+\SOUL@syllwidth=\dimen310
+\SOUL@charkern=\dimen311
+\SOUL@hyphkern=\dimen312
+\SOUL@dimen=\dimen313
+\SOUL@dimeni=\dimen314
+\SOUL@minus=\count345
+\SOUL@comma=\count346
+\SOUL@apo=\count347
+\SOUL@grave=\count348
 \SOUL@spaceskip=\skip80
-\SOUL@ttwidth=\dimen304
-\SOUL@uldp=\dimen305
-\SOUL@ulht=\dimen306
+\SOUL@ttwidth=\dimen315
+\SOUL@uldp=\dimen316
+\SOUL@ulht=\dimen317
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/shipunov/boldline.sty
 Package: boldline 2008/02/04 v0.2 Adjust line width in tables
-) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
-File: tikzlibrarycalc.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ) (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
 \openout1 = `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 43.
-LaTeX Font Info:    ... okay on input line 43.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
  (/usr/local/texlive/2025/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count348
-\scratchdimen=\dimen307
-\scratchbox=\box117
-\nofMPsegments=\count349
-\nofMParguments=\count350
+\scratchcounter=\count349
+\scratchdimen=\dimen318
+\scratchbox=\box118
+\nofMPsegments=\count350
+\nofMParguments=\count351
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count351
-\MPscratchDim=\dimen308
-\MPnumerator=\count352
-\makeMPintoPDFobject=\count353
+\MPscratchCnt=\count352
+\MPscratchDim=\dimen319
+\MPnumerator=\count353
+\makeMPintoPDFobject=\count354
 \everyMPtoPDFconversion=\toks49
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -736,7 +755,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 43.
+Package hyperref Info: Link coloring OFF on input line 44.
 (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out) (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out)
 \@outlinefile=\write4
 \openout4 = `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out'.
@@ -744,7 +763,7 @@ Package hyperref Info: Link coloring OFF on input line 43.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 
-Package chemgreek Info: Activating mapping `default' on line 43.
+Package chemgreek Info: Activating mapping `default' on line 44.
 
 runsystem(wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex)...disabled (restricted).
 
@@ -770,14 +789,14 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.67 \newpage
+l.68 \newpage
               [1]
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \end{equation}
+l.112 \end{equation}
                      [1]
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -785,7 +804,7 @@ l.111 \end{equation}
 [3]
 
 [4]
-<Resources/apparatus_setup.jpeg, id=222, 5733.42pt x 3225.04875pt>
+<Resources/apparatus_setup.jpeg, id=227, 5733.42pt x 3225.04875pt>
 File: Resources/apparatus_setup.jpeg Graphic file (type jpg)
 <use Resources/apparatus_setup.jpeg>
 Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 227.
@@ -797,80 +816,123 @@ Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 227.
 [6]
 
 [7]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 413--413
+
+[8]
+
+[9]
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 503--503
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
-Overfull \hbox (11.69649pt too wide) in paragraph at lines 340--414
+Overfull \hbox (11.69649pt too wide) in paragraph at lines 430--504
  [][] 
  []
 
 
 
-[8]
-Overfull \hbox (0.99452pt too wide) in paragraph at lines 501--501
+[10]
+Overfull \hbox (0.99452pt too wide) in paragraph at lines 591--591
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 501--501
+Overfull \hbox (4.40819pt too wide) in paragraph at lines 591--591
  []|\OT1/cmr/bx/n/10 Target 
  []
 
 
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 501--501
+Overfull \hbox (4.40819pt too wide) in paragraph at lines 591--591
  []|\OT1/cmr/bx/n/10 Target 
  []
 
 
-Overfull \hbox (5.93184pt too wide) in paragraph at lines 501--501
+Overfull \hbox (5.93184pt too wide) in paragraph at lines 591--591
  \OT1/cmr/bx/n/10 (LabQuest)| 
  []
 
 
 
-[9]
+[11]
 
-[10]
-<Resources/example_calculation_data_helper.png, id=288, 1276.77pt x 816.04875pt>
+[12]
+<Resources/example_calculation_data_helper.png, id=309, 1276.77pt x 816.04875pt>
 File: Resources/example_calculation_data_helper.png Graphic file (type png)
 <use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 522.
+Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 612.
 (pdftex.def)             Requested size: 455.24408pt x 290.9632pt.
-<Resources/example_calculation_time_snapshot.png, id=290, 1006.743pt x 656.343pt>
+<Resources/example_calculation_time_snapshot.png, id=311, 1006.743pt x 656.343pt>
 File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
 <use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 531.
-(pdftex.def)             Requested size: 455.24408pt x 296.79376pt.
+Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 621.
+(pdftex.def)             Requested size: 398.33858pt x 259.6983pt.
 
 
-[11 <./Resources/example_calculation_data_helper.png>]
+[13 <./Resources/example_calculation_data_helper.png>]
 
-[12 <./Resources/example_calculation_time_snapshot.png>]
+[14 <./Resources/example_calculation_time_snapshot.png>]
+<Resources/data_analysis_main_graph.png, id=335, 743.724pt x 498.663pt>
+File: Resources/data_analysis_main_graph.png Graphic file (type png)
+<use Resources/data_analysis_main_graph.png>
+Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 692.
+(pdftex.def)             Requested size: 455.24408pt x 305.23402pt.
 
-[13] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 
-Package natbib Warning: Empty `thebibliography' environment on input line 8.
+[15 <./Resources/data_analysis_main_graph.png>]
+<Resources/data_analysis_arrhenius_plot.png, id=350, 731.679pt x 500.853pt>
+File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
+<use Resources/data_analysis_arrhenius_plot.png>
+Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 731.
+(pdftex.def)             Requested size: 500.484pt x 342.60077pt.
+
+
+[16]
+
+[17 <./Resources/data_analysis_arrhenius_plot.png>]
+<Resources/data_analysis_ki_mass.png, id=372, 840.96pt x 463.623pt>
+File: Resources/data_analysis_ki_mass.png Graphic file (type png)
+<use Resources/data_analysis_ki_mass.png>
+Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 764.
+(pdftex.def)             Requested size: 500.484pt x 275.91924pt.
+
+
+[18 <./Resources/data_analysis_ki_mass.png>]
+
+[19] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+
+Overfull \hbox (795.52432pt too wide) in paragraph at lines 21--23
+[]\OT1/cmr/m/n/10 6.1.6: The Col-li-sion The-ory.  https://chem.libretexts.org/Bookshelves/Physical[]and[]Theoretical[]Chemistry[]Textbook[]Maps/Supplemental[]Modules[](Physical[]and[]Theoretical[]Chemistry)/Kinetics/06%3A[]Modeling[]Reaction[]Kinetics/6.01%3A[]Collision[]Theory/6.1.06%3A[]The[]Collision[]Theory,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+\OT1/cmtt/m/n/10 Bookshelves / Physical _ and _ Theoretical _ Chemistry _ Textbook _ Maps / Supplemental _ Modules _ (Physical _
+ []
 
 )
 
-[14]
+[20]
 
-[15] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
+[21] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out' has not changed.
-(rerunfilecheck)             Checksum: 5E1D1D9A1C6BF68D7D570AD7FA5F9DC6;4092.
+(rerunfilecheck)             Checksum: F117C35E3A5353BA38C338419BA076D1;4337.
  ) 
 Here is how much of TeX's memory you used:
- 24969 strings out of 473190
- 469098 string characters out of 5715801
- 1029364 words of memory out of 5000000
- 47664 multiletter control sequences out of 15000+600000
- 569384 words of font info for 74 fonts, out of 8000000 for 9000
+ 25884 strings out of 473190
+ 496971 string characters out of 5715801
+ 1050058 words of memory out of 5000000
+ 48523 multiletter control sequences out of 15000+600000
+ 571059 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,87p,1073b,706s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -885,11 +947,11 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (17 pages, 3746036 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (23 pages, 4463429 bytes).
 PDF statistics:
- 451 PDF objects out of 1000 (max. 8388607)
- 377 compressed objects within 4 object streams
- 109 named destinations out of 1000 (max. 500000)
- 268 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 542 PDF objects out of 1000 (max. 8388607)
+ 451 compressed objects within 5 object streams
+ 137 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

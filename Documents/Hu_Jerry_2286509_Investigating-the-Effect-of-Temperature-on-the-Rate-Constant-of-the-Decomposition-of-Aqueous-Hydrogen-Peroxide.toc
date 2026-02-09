@@ -11,20 +11,21 @@
 \contentsline {subsubsection}{\numberline {2.4.3}Part III: Calibration}{5}{subsubsection.2.4.3}%
 \contentsline {subsubsection}{\numberline {2.4.4}Part IV: Experiment}{5}{subsubsection.2.4.4}%
 \contentsline {subsubsection}{\numberline {2.4.5}Part V: Cleanup}{6}{subsubsection.2.4.5}%
-\contentsline {section}{\numberline {3}Data Collection}{6}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Data Tables}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Sources of Uncertainty}{6}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Data Processing}{7}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Uncertainty Propagation}{7}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Uncertainty in rate constant}{7}{subsubsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.2}Processed Data}{9}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Raw Data}{9}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Example Calculation}{10}{subsection.4.4}%
-\contentsline {section}{\numberline {5}Data Analysis}{13}{section.5}%
-\contentsline {section}{\numberline {6}Conclusion}{13}{section.6}%
-\contentsline {section}{\numberline {7}Evaluation}{13}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Strengths}{13}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Weaknesses \& Limitations}{13}{subsection.7.2}%
-\contentsline {section}{\numberline {A}Appendix}{15}{appendix.A}%
-\contentsline {subsection}{\numberline {A.1}Complete Raw Data }{15}{subsection.A.1}%
-\contentsline {subsection}{\numberline {A.2}Source Code}{15}{subsection.A.2}%
+\contentsline {section}{\numberline {3}Data Collection}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Data Tables}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Sources of Uncertainty}{8}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Data Processing}{8}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Uncertainty Propagation}{8}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Uncertainty in rate constant}{8}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Uncertainty in the Arrhenius plot}{9}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}Processed Data}{11}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Raw Data}{11}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Example Calculation}{12}{subsection.4.4}%
+\contentsline {section}{\numberline {5}Data Analysis}{15}{section.5}%
+\contentsline {section}{\numberline {6}Conclusion}{18}{section.6}%
+\contentsline {section}{\numberline {7}Evaluation}{19}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Strengths}{19}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Weaknesses \& Limitations}{19}{subsection.7.2}%
+\contentsline {section}{\numberline {A}Appendix}{21}{appendix.A}%
+\contentsline {subsection}{\numberline {A.1}Complete Raw Data }{21}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}Source Code}{21}{subsection.A.2}%

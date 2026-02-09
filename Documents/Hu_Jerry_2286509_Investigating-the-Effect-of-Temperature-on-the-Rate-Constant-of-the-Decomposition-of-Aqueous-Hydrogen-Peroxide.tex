@@ -22,6 +22,7 @@
 \newlist{titemize}{itemize}{1}
 \setlist[titemize]{nosep, label=--}
 \usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,decorations.pathreplacing}
 \usepackage{amssymb}
 \usepackage{pdflscape}
 \usepackage{soul}
@@ -81,13 +82,13 @@
 
 \subsection{Background Concepts}
 \label{sec:introduction-background-concepts}
-
 % \subsubsection{The Collision Theory.}
 % \label{sec:introduction-background-concepts-collision-theory}
 \indent \indent The collision theory states that for a chemical reaction can only occur when particles collide with energy and the correct orientation. As the temperature of the reaction system increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction and the reaction constant. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
 
 \begin{equation}
   k = A \cdot e^{- \frac{E_{A}}{RT}}
+\label{eq:arrhenius-equation}
 \end{equation}
 
 \noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature, in Kelvins.
@@ -95,10 +96,10 @@
 Taking the natural logarithm on both sides of the equation will yield a linear graph:
 
 \begin{equation}
-  ln(K) = - \frac{E_{A}}{RT} + ln(A)
+  \ln{K} = - \frac{E_{A}}{RT} + \ln{A}
 \end{equation}
 
-\noindent Where the slope of the linear graph is $- \frac{E_{A}}{R}$, and the y-intercept is $ln(A)$.
+\noindent Where the slope of the linear graph is $- \frac{E_{A}}{R}$, and the y-intercept is $\ln{A}$.
 
 As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant gas volume, the pressure increases. Assuming ideal gas behaviour, the pressure should increase as $n$ (the number of moles of gas) increases, but $V$ (volume) stays constant:
 
@@ -131,7 +132,6 @@ As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant 
 
 \subsection{Variables}
 \label{sec:research-design-variables}
-
 \noindent \underline{\textbf{Independent variable:}} Temperature of the reaction system. The \ce{H2O2} in the sealed flask was equilibrated to the target temperature using a water bath and heat plate before the start of each trial. The temperature was monitored using a Vernier Temperature Probe before and during the trials. The trials were only started once the water bath temperature reached within $1\ ^\circ\text{C}$ of the target temperature.
 
 \
@@ -259,6 +259,67 @@ As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant 
 \subsection{Data Tables}
 \label{sec:data-collection-data-tables}
 
+\begin{table}[H]
+  \centering
+  \small
+  \setlength{\tabcolsep}{4pt}
+  \renewcommand{\arraystretch}{1.15}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+    \textbf{Level} & \textbf{Trial} & \textbf{Target ($^\circ$C)} & \textbf{Run} & \textbf{Hot plate ($^\circ$C)} & \textbf{Start temp ($^\circ$C)} & \textbf{End temp ($^\circ$C)} & \textbf{Mass of \ce{KI} (g)} \\ \hline
+
+    \multirow{5}{*}{1} & 1 & \multirow{5}{*}{15} & 4 & \multirow{5}{*}{45} & 14.4 & 15.1 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 5 &  & 15.4 & 16.0 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 6 &  & 14.7 & 14.0 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 7 &  & 14.9 & 15.3 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 8 &  & 15.32 & 14.4 & 0.31 \\ \hline
+
+    \multirow{5}{*}{2} & 1 & \multirow{5}{*}{20} & 48 & \multirow{5}{*}{55} & 19.3 & 18.7 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 9 &  & 21.4 & 20.5 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 10 &  & 21.0 & 21.3 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 11 &  & 19.7 & 19.4 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 12 &  & 19.3 & 19.8 & 0.31 \\ \hline
+
+    \multirow{5}{*}{3} & 1 & \multirow{5}{*}{25} & 13 & \multirow{5}{*}{65} & 25.2 & 25.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 14 &  & 25.3 & 25.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 15 &  & 25.7 & 26.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 16 &  & 24.7 & 24.6 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 17 &  & 25.4 & 25.9 & 0.30 \\ \hline
+
+    \multirow{5}{*}{4} & 1 & \multirow{5}{*}{30} & 18 & \multirow{5}{*}{85} & 29.6 & 30.6 & 0.33 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 19 &  & 29.1 & 28.5 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 20 &  & 30.9 & 31.5 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 21 &  & 30.0 & 30.4 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 22 &  & 30.8 & 31.0 & 0.29 \\ \hline
+
+    \multirow{5}{*}{5} & 1 & \multirow{5}{*}{35} & 23 & \multirow{5}{*}{100} & 35.6 & 35.4 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 24 &  & 35.3 & 35.8 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 25 &  & 35.1 & 33.3 & 0.32 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 26 &  & 34.7 & 35.3 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 27 &  & 35.5 & 36.3 & 0.29 \\ \hline
+
+    \multirow{5}{*}{6} & 1 & \multirow{5}{*}{40} & 43 & \multirow{5}{*}{125} & 39.8 & 40.9 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 44 &  & 41.3 & 41.1 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 45 &  & 40.5 & 37.3 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 46 &  & 40.0 & 41.0 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 47 &  & 39.1 & 38.8 & 0.29 \\ \hline
+
+    \multirow{5}{*}{7} & 1 & \multirow{5}{*}{45} & 33 & \multirow{5}{*}{160} & 45.6 & 44.9 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 34 &  & 44.5 & 43.2 & 0.30 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 35 &  & 44.8 & 44.8 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 36 &  & 44.5 & 44.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 37 &  & 45.1 & 44.2 & 0.29 \\ \hline
+
+    \multirow{5}{*}{8} & 1 & \multirow{5}{*}{50} & 38 & \multirow{5}{*}{200} & 49.1 & 49.5 & 0.31 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 2 &  & 39 &  & 49.8 & 49.0 & 0.28 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 3 &  & 40 &  & 49.0 & 48.1 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 4 &  & 41 &  & 49.2 & 49.7 & 0.29 \\ \cline{2-2}\cline{4-4}\cline{6-7}\cline{8-8}
+    & 5 &  & 42 &  & 49.7 & 49.9 & 0.29 \\ \hline
+  \end{tabular}
+  \caption{Raw temperature and setup data for all trials at each temperature level.}
+  \label{tab:data-collection-temperature-table}
+\end{table}
+
 \subsection{Sources of Uncertainty}
 \label{sec:data-collection-sources-of-uncertainty}
 \indent \indent To reduce random errors, 5 trials were conducted at each temperature level and averaged. Other variables, such as initial \ce{H2O2} concentration and volume, mass of \ce{KI}, apparatus setup, and sealing method were all kept constant across all runs so that differences in the initial pressure-increase rate can be attributed primary to temperature.
@@ -313,6 +374,7 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 
 \begin{equation}
   k_{app} = \frac{\Delta{P}}{\Delta{t}}
+\label{eq:k_app-equation}
 \end{equation}
 
 \begin{equation}
@@ -332,6 +394,34 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 \end{equation}
 
 \noindent Where $\sigma$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials (5). This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette for all trials) does not average out.
+
+\
+
+\noindent \underline{\textbf{Note:}} As shown in \textit{equation \ref{eq:k_app-equation}}, the apparent rate constant is the same as the initial rate of pressure increase.
+
+\subsubsection{Uncertainty in the Arrhenius plot}
+\label{sec:data-processing-uncertainty-propagation-uncertainty-in-arrhenius-plot}
+\noindent The vertical error bars (uncertainty in $\ln{k_{app}}$) was propagated using $\Delta{\ln{k_{app}}} = \frac{\Delta{k_{app}}}{k_{app}}$:
+
+\begin{equation}
+  k_{app} \pm \Delta{k_{app}} = k_{app} \cdot (1 \pm \frac{\Delta{k_{app}}}{k_{app}})
+\end{equation}
+
+\noindent The logarithmic rule of addition was then used:
+
+\begin{equation}
+  \ln{(k_{app} \cdot (1 \pm \frac{\Delta{k_app}}{k_app}))} = \ln{(k_{app})} + \ln{(1 \pm \frac{\Delta{k_{app}}}{k_{app}})}
+\end{equation}
+
+\begin{equation}
+  \therefore \Delta{\ln{k_{app}}} = |\ln{(1 \pm \frac{\Delta{k_{app}}}{k_{app}})}|
+\end{equation}
+
+\noindent However, given the size of the uncertainty relative to the $k_{app}$ values, the approximation $\ln{(1 \pm x)} \approx x$ for small $x$ can be used, where $x = \frac{\Delta{k_{app}}}{k_{app}}$. Thus:
+
+\begin{equation}
+  \Delta{\ln{(k_{app})}} \approx \frac{\Delta{k_{app}}}{k_{app}}
+\end{equation}
 
 \subsection{Processed Data}
 \label{sec:data-processing-processed-data}
@@ -416,7 +506,7 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 \end{table}
 
 
-\noindent \underline{\textbf{Note:}} The initial rate of pressure increase was calculated by finding the slope of the trendline of the pressure-time graph, using a fixed window of \textbf{\textit{15 seconds}} starting from the moment the pressure sensor settles and reaction begins.
+\noindent \underline{\textbf{Note:}} Trial 5 of $15 ^\circ \text{C}$ was removed from calculations because the source data could not be located on the LabQuest. Run 8 from the LabQuest indicated a target temperature of $20 ^\circ \text{C}$.
 
 \subsection{Raw Data}
 \label{sec:data-processing-raw-data}
@@ -524,11 +614,11 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 	\label{fig:data-processing-example-calculation-data-helper}
 \end{figure}
 
-\noindent A linear regression was then fitted to the 76 datapoints in the selected window, using the linear trendline formula $P = mt + b$ in Excel, where the slope $m$ is the apparent rate constant $k_{\mathrm{app}}$:
+\noindent A linear regression was then fitted to the 76 datapoints in the selected window, using the linear trendline formula $P = mt + b$ in Excel, where the slope $m$ is the initial rate (or apparent rate constant $k_{\mathrm{app}}$):
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{Resources/example_calculation_time_snapshot.png}
+	\includegraphics[width=14cm]{Resources/example_calculation_time_snapshot.png}
 	\caption{15-second snapshot.}
 	\label{fig:data-processing-example-calculation-15-second-snapshot}
 \end{figure}
@@ -559,7 +649,7 @@ Given that the Vernier documentation provides two uncertainty values for the tem
   \Delta{\overline{k_{app}}} = \frac{0.00434\ \text{kPa}\ \text{s}^{-1}}{\sqrt{5}} = 0.00194\ \text{kPa}\ \text{s}^{-1}
 \end{equation}
 
-\noindent Thus, the rate constant for the first trial of $15\ ^\circ \text{C}$ is:
+\noindent Thus, the initial rate for the first trial of $15\ ^\circ \text{C}$ is:
 
 \begin{equation}
   k_{app} = 0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}
@@ -574,18 +664,19 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 \begin{table}[H]
 	\centering
 	\resizebox{15cm}{!}{
-	\begin{tabular}{|>{\centering\arraybackslash}m{5cm}|
-	                  >{\centering\arraybackslash}m{8cm}|} \hline
+	\begin{tabular}{|>{\centering\arraybackslash}m{4.5cm}|
+                    >{\centering\arraybackslash}m{4cm}|
+	                  >{\centering\arraybackslash}m{7cm}|} \hline
 			
-			\textbf{Temperature level ($^\circ \text{C}$)} & \textbf{Apparent rate constant, $k_{app}$ ($\text{kPa}\ \text{s}^{-1}$)} \\ \hline
-      15 & $0.01023 \pm 0.00194$ \\ \hline
-      20 & $0.01406 \pm 0.00223$ \\ \hline
-      25 & $0.01782 \pm 0.00315$ \\ \hline
-      30 & $0.03884 \pm 0.00870$ \\ \hline
-      35 & $0.05442 \pm 0.00600$ \\ \hline
-      40 & $0.04214 \pm 0.00826$ \\ \hline
-      45 & $0.09427 \pm 0.03053$ \\ \hline
-      50 & $0.10081 \pm 0.02089$ \\ \hline
+			\textbf{Temperature level ($^\circ \text{C}$)} & \textbf{Temperature level ($\text{K}$)} & \textbf{Apparent rate constant, $k_{app}$ ($\text{kPa}\ \text{s}^{-1}$)} \\ \hline
+      15 & 288.15 & $0.01023 \pm 0.00194$ \\ \hline
+      20 & 293.15 & $0.01406 \pm 0.00223$ \\ \hline
+      25 & 298.15 & $0.01782 \pm 0.00315$ \\ \hline
+      30 & 303.15 & $0.03884 \pm 0.00870$ \\ \hline
+      35 & 308.15 & $0.05442 \pm 0.00600$ \\ \hline
+      40 & 313.15 & $0.04214 \pm 0.00826$ \\ \hline
+      45 & 318.15 & $0.09427 \pm 0.03053$ \\ \hline
+      50 & 323.15 & $0.10081 \pm 0.02089$ \\ \hline
 		\end{tabular}
 	}
 	\caption{Apparent rate constant.}
@@ -594,9 +685,101 @@ Given that the Vernier documentation provides two uncertainty values for the tem
 
 \section{Data Analysis}
 \label{sec:data-analysis}
+\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}} were used to create an average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=16cm]{Resources/data_analysis_main_graph.png}
+	\caption{Graph of average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature level ($\text{K}$).}
+	\label{fig:data-analysis-main-graph}
+\end{figure}
+
+As shown in \textit{figure \ref{fig:data-analysis-main-graph}} above, there is an increasing exponential relationship between the apparent rate constant $k_{app}$ and the temperature of the reaction:
+
+\begin{equation}
+  f(x) = 0.0005e^{0.0768x}
+\end{equation}
+
+The apparent rate constant $k_{app}$ was defined in \textit{section \ref{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}} to represent the initial rate of the reaction within the first 15 secodns after the reaction begins. Given that the initial amounts of \ce{H2O2} and \ce{I-} were held constant across all trials (with minor variations in the mass of \ce{KI}), $k_{app}$ is proportional to the actual rate constant $k$ for the reaction, by a constant scale factor difference:
+
+\begin{equation}
+  k_{app} = C \cdot k,
+\end{equation}
+
+\noindent Where $C$ is the constant scaling factor between the apparent rate constant and the true rate constant. As shown in \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}}, the apparent rate constant increases from an average of $0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}$ at $15 ^\circ \text{C}$ ($288.15 \text{K}$) to an average of $0.10081 \pm 0.02089\ \text{kPa}\ \text{s}^{-1}$ at $50 ^\circ \text{C}$ ($323.15 \text{K}$), which is an increase by a factor of $9.85$. This supports my initial hypothesis that higher temperature increases the frequency of collisions and the fraction of molecules with energy $\geq \text{E}_{A}$.
+
+To better model how the reaction temperature impacts the rate constant, the Arrhenius equation from \textit{equation \ref{eq:arrhenius-equation}} was used to analyze the data, given that $k_{app} \propto k$:
+
+\begin{equation}
+  k_{app} = A_{app} \cdot e^{-\frac{E_{A}}{RT}}
+\end{equation}
+
+\noindent An Arrhenius plot of $\ln{k_{app}}$ vs. $\frac{1}{T}$ was created by taking the natural logarithms on both sides:
+
+\begin{equation}
+  \ln{k_{app}} = -\frac{E_{A}}{R} \cdot (\frac{1}{T}) + \ln{A_{app}}
+\end{equation}
+
+\noindent Recall from \textit{section \ref{sec:introduction-background-concepts}} that the slope of the Arrhenius plot is $-\frac{E_{A}}{R}$ and the y-intercept is $ln(A)$. The Arrhenius equation can then be rearranged, where $m$ is the slope of the Arrhenius plot, and $b$ is the y-intercept:
+
+\begin{equation}
+  \ln{k_{app}} = m \cdot (\frac{1}{T}) + b
+\end{equation}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/data_analysis_arrhenius_plot.png}
+	\caption{Arrhenius plot, graph of $\ln{k_{app}}$ vs. $\frac{1}{T} \cdot 10^{3}$.}
+	\label{fig:data-analysis-arrhenius-plot}
+\end{figure}
+
+\noindent However, because the x-axis of the graph uses $\frac{1}{T} \cdot 10^{-3}$ rather than $\frac{1}{T}$, the slope must be multiplied by $1000$ to be correct:
+
+\begin{equation}
+  \ln{k_{app}} = (m \cdot 1000) \cdot (\frac{1}{T}) + b
+\end{equation}
+
+\noindent Plugging in the values from \textit{figure \ref{fig:data-analysis-arrhenius-plot}}:
+
+\begin{equation}
+  \ln{(k_{app})} = (-7.2974 \cdot 10^{3}) \cdot (\frac{1}{T}) + 18.815
+\end{equation}
+
+\noindent Given that the slope $m = -\frac{E_{A}}{R}$, the activation energy $E_{A}$ can be calculated using $R = 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$:
+
+\begin{equation}
+  E_{A} = |-m \cdot R| = 7.2974 \cdot 10^{3} \cdot 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} = 60641.4\ \text{J}\ \text{mol}^{-1}
+\end{equation}
+
+\begin{equation}
+  \therefore E_{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}
+\end{equation}
+
+\noindent Thus, the activation energy for the \ce{KI}-catalyzed decomposition reaction is $60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$. Note that the uncertainty for activation energy obtained from Excel's LINEST function.
+
+A graph of the mass of \ce{KI} vs. $k_app$ was also plotted to check whether small variations in the mass of \ce{KI} had an effect on the apparent rate constant. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary driver of the observed temperature dependence of $k_{app}$:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/data_analysis_ki_mass.png}
+	\caption{Graph of mass of \ce{KI} vs. $k_{app}$ for all trials.}
+	\label{fig:data-analysis-ki-mass}
+\end{figure}
+
+
+% \subsection{Answering the research question}
+
+% Overall, increasing temperature increases the apparent rate constant for the decomposition of aqueous hydrogen peroxide measured from the initial pressure-rise rate. The Arrhenius plot is approximately linear ($R^2 = 0.941$), supporting an exponential temperature dependence consistent with collision theory. The activation energy extracted from the Arrhenius slope was $(53.5 \pm 5.5)\ \mathrm{kJ\,mol^{-1}}$, which quantifies the sensitivity of the KI-catalyzed decomposition rate to temperature under the conditions of this investigation.
+
+
 
 \section{Conclusion}
 \label{sec:conclusion}
+This investigation aims to examine the relationship between reaction temperature and the initial rate of the \ce{KI}-catalyze decomposition reaction of hydrogen peroxide, \ce{H2O2}, where the initial rate ($k_{app}$) was determined from the initial slope of pressure ($\text{kPa}$) vs. time ($\text{s}$) in a sealed flask. The experimental data showed that higher temperatures increase both the collision frequency and the fraction of molecules with kinetic energy $\text{KE} \geq \text{E}_{A}$, leading to a larger initial pressure-rise rate as oxygen is produced. The hypothesis in \textit{section \ref{sec:introduction-hypothesis}} predicting an \textbf{exponential relationship} between temperature and the apparent rate constant was supported by the data.
+
+Moreover, given that the apparent rate constant is proportional to the actual rate constant as apparatus setup and initial reactant amounts were held constant, the Arrhenius plot and graph was used, which produced an activation energy of $\text{E}_{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$ for the \ce{KI}-catalyzed pathway. This value is consistent with accepted scientific values online: a lab published by MIT OpenCourseware and the Chemistry LibreTexts reports an uncatalyzed $\text{E}_{A}$ of about $75\ \text{kJ}\ \text{mol}^{-1}$, while iodide catalysis lowers it to about $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$ \cite{MIT_OCW_SteamingGun2}\cite{Purdue_Chemed_H2O2}, which is consistent with the experimental data within uncertainty.
+
+Overall, increasing the reaction temperature does increase the measured rate constant for this reaction, as the \ce{KI} provides an alternative reaction pathway that requires less energy.
 
 \section{Evaluation}
 \label{sec:evaluation}
