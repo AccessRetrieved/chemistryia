@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 FEB 2026 22:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  8 FEB 2026 23:06
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex"
 (/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex
@@ -122,8 +123,7 @@ Now handling font encoding PD1 ...
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count279
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -448,8 +448,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
@@ -502,8 +501,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operation=\toks39
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count331
-))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen261
 \pgf@picmaxx=\dimen262
@@ -579,8 +577,7 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepend=\dimen286
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen287
 \pgffor@skip=\dimen288
@@ -680,8 +677,7 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen315
 \SOUL@uldp=\dimen316
 \SOUL@ulht=\dimen317
-)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/shipunov/boldline.sty
 Package: boldline 2008/02/04 v0.2 Adjust line width in tables
@@ -769,7 +765,7 @@ Package caption Info: End \AtBeginDocument code.
 
 Package chemgreek Info: Activating mapping `default' on line 44.
 
-runsystem(wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex)...executed.
+runsystem(wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex)...disabled (restricted).
 
  (./wordcount.tex)
 
@@ -800,7 +796,7 @@ l.68 \newpage
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.112 \end{equation}
+l.110 \end{equation}
                      [1]
 
 [2{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
@@ -811,7 +807,7 @@ l.112 \end{equation}
 <Resources/apparatus_setup.jpeg, id=226, 5733.42pt x 3225.04875pt>
 File: Resources/apparatus_setup.jpeg Graphic file (type jpg)
 <use Resources/apparatus_setup.jpeg>
-Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 231.
+Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 229.
 (pdftex.def)             Requested size: 398.33858pt x 224.05412pt.
 
 
@@ -824,34 +820,34 @@ Package pdftex.def Info: Resources/apparatus_setup.jpeg  used on input line 231.
 [8]
 
 [9]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 507--507
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 505--505
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
-Overfull \hbox (11.69649pt too wide) in paragraph at lines 434--508
+Overfull \hbox (11.69649pt too wide) in paragraph at lines 432--506
  [][] 
  []
 
 
 
 [10]
-Overfull \hbox (0.99452pt too wide) in paragraph at lines 595--595
+Overfull \hbox (0.99452pt too wide) in paragraph at lines 592--592
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 595--595
+Overfull \hbox (4.40819pt too wide) in paragraph at lines 592--592
  []|\OT1/cmr/bx/n/10 Target 
  []
 
 
-Overfull \hbox (4.40819pt too wide) in paragraph at lines 595--595
+Overfull \hbox (4.40819pt too wide) in paragraph at lines 592--592
  []|\OT1/cmr/bx/n/10 Target 
  []
 
 
-Overfull \hbox (5.93184pt too wide) in paragraph at lines 595--595
+Overfull \hbox (5.93184pt too wide) in paragraph at lines 592--592
  \OT1/cmr/bx/n/10 (LabQuest)| 
  []
 
@@ -860,60 +856,56 @@ Overfull \hbox (5.93184pt too wide) in paragraph at lines 595--595
 [11]
 
 [12]
-<Resources/example_calculation_data_helper.png, id=310, 1276.77pt x 816.04875pt>
+<Resources/example_calculation_data_helper.png, id=309, 1276.77pt x 816.04875pt>
 File: Resources/example_calculation_data_helper.png Graphic file (type png)
 <use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 616.
+Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 613.
 (pdftex.def)             Requested size: 455.24408pt x 290.9632pt.
-<Resources/example_calculation_time_snapshot.png, id=312, 1006.743pt x 656.343pt>
+<Resources/example_calculation_time_snapshot.png, id=311, 1006.743pt x 656.343pt>
 File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
 <use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 625.
+Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 622.
 (pdftex.def)             Requested size: 398.33858pt x 259.6983pt.
 
 
 [13 <./Resources/example_calculation_data_helper.png>]
 
 [14 <./Resources/example_calculation_time_snapshot.png>]
-<Resources/data_analysis_main_graph.png, id=336, 743.724pt x 498.663pt>
+<Resources/data_analysis_main_graph.png, id=335, 743.724pt x 498.663pt>
 File: Resources/data_analysis_main_graph.png Graphic file (type png)
 <use Resources/data_analysis_main_graph.png>
-Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 696.
+Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 693.
 (pdftex.def)             Requested size: 455.24408pt x 305.23402pt.
 
 
 [15 <./Resources/data_analysis_main_graph.png>]
-<Resources/data_analysis_arrhenius_plot.png, id=351, 731.679pt x 500.853pt>
+<Resources/data_analysis_arrhenius_plot.png, id=350, 731.679pt x 500.853pt>
 File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
 <use Resources/data_analysis_arrhenius_plot.png>
-Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 735.
+Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 730.
 (pdftex.def)             Requested size: 500.484pt x 342.60077pt.
 
 
 [16]
 
 [17 <./Resources/data_analysis_arrhenius_plot.png>]
-<Resources/data_analysis_ki_mass.png, id=375, 840.96pt x 463.623pt>
+<Resources/data_analysis_ki_mass.png, id=374, 840.96pt x 463.623pt>
 File: Resources/data_analysis_ki_mass.png Graphic file (type png)
 <use Resources/data_analysis_ki_mass.png>
-Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 768.
+Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 763.
 (pdftex.def)             Requested size: 500.484pt x 275.91924pt.
 
 
-Package natbib Warning: Citation `Purdue_Chemed_H2O2' on page 18 undefined on input line 783.
-
-
-
 [18 <./Resources/data_analysis_ki_mass.png>]
-<Resources/evaluation_weakness_water_bath.png, id=388, 380.42125pt x 379.4175pt>
+<Resources/evaluation_weakness_water_bath.png, id=387, 380.42125pt x 379.4175pt>
 File: Resources/evaluation_weakness_water_bath.png Graphic file (type png)
 <use Resources/evaluation_weakness_water_bath.png>
-Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 806.
+Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 795.
 (pdftex.def)             Requested size: 170.71652pt x 170.26735pt.
-<Resources/evaluation_weakness_immersion_circulator.png, id=389, 357.335pt x 361.35pt>
+<Resources/evaluation_weakness_immersion_circulator.png, id=388, 357.335pt x 361.35pt>
 File: Resources/evaluation_weakness_immersion_circulator.png Graphic file (type png)
 <use Resources/evaluation_weakness_immersion_circulator.png>
-Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 813.
+Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 802.
 (pdftex.def)             Requested size: 170.71652pt x 172.6355pt.
 
 
@@ -927,32 +919,28 @@ File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
 
-Underfull \hbox (badness 2856) in paragraph at lines 19--21
-[]\OT1/cmr/m/n/10 Immersion Cir-cu-la-tors, Baths, Im-mer-sion Cir-cu-la-tors.  https://www.fishersci.ca/shop/products/sc100-
- []
-
-
-Overfull \hbox (676.72409pt too wide) in paragraph at lines 23--25
+Overfull \hbox (676.72409pt too wide) in paragraph at lines 21--23
 []\OT1/cmr/m/n/10 4.4: Cat-a-lysts and En-ergy of Ac-ti-va-tion.  https://chem.libretexts.org/Bookshelves/Physical[]and[]Theoretical[]Chemistry[]Textbook[]Maps/Supplemental[]Modules[](Physical[]and[]Theoretical[]Chemistry)/Kinetics/04%3A[]Reaction[]Mechanisms/4.04%3A[]Ea[]and[]Catalysts,
  []
 
 
-Overfull \hbox (795.52432pt too wide) in paragraph at lines 27--29
+Overfull \hbox (795.52432pt too wide) in paragraph at lines 25--27
 []\OT1/cmr/m/n/10 6.1.6: The Col-li-sion The-ory.  https://chem.libretexts.org/Bookshelves/Physical[]and[]Theoretical[]Chemistry[]Textbook[]Maps/Supplemental[]Modules[](Physical[]and[]Theoretical[]Chemistry)/Kinetics/06%3A[]Modeling[]Reaction[]Kinetics/6.01%3A[]Collision[]Theory/6.1.06%3A[]The[]Collision[]Theory,
  []
 
 
-Overfull \hbox (21.94478pt too wide) in paragraph at lines 31--33
+Overfull \hbox (21.94478pt too wide) in paragraph at lines 33--35
 []\OT1/cmr/m/n/10 The Cat-alytic De-com-po-si-tion of Hy-dro-gen Per-ox-ide.  https://chemed.chem.purdue.edu/demos/demosheets/19.6.html. 
+ []
+
+
+Underfull \hbox (badness 2856) in paragraph at lines 37--39
+[]\OT1/cmr/m/n/10 Immersion Cir-cu-la-tors, Baths, Im-mer-sion Cir-cu-la-tors.  https://www.fishersci.ca/shop/products/sc100-
  []
 
 )
 
 [21]
-
-Package natbib Warning: There were undefined citations.
-
-
 
 [22] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
  ***********
@@ -963,13 +951,13 @@ Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-
 (rerunfilecheck)             Checksum: F117C35E3A5353BA38C338419BA076D1;4337.
  ) 
 Here is how much of TeX's memory you used:
- 25914 strings out of 473190
- 498203 string characters out of 5715801
- 1050194 words of memory out of 5000000
- 48547 multiletter control sequences out of 15000+600000
+ 25918 strings out of 473190
+ 498304 string characters out of 5715801
+ 1050252 words of memory out of 5000000
+ 48550 multiletter control sequences out of 15000+600000
  571059 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,20n,89p,1429b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,20n,89p,1375b,704s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.5} has been referenced but does not exist, replaced by a fixed one
 
@@ -986,10 +974,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (24 pages, 4617076 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (24 pages, 4617039 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  459 compressed objects within 5 object streams
- 143 named destinations out of 1000 (max. 500000)
+ 144 named destinations out of 1000 (max. 500000)
  301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
