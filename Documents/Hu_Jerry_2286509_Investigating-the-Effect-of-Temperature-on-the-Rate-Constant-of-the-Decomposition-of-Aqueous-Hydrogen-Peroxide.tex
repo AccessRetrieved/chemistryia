@@ -119,6 +119,7 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
 
 \begin{equation}
   \Delta{n(\ce{O2})} = \frac{V_\text{gas}}{RT} \cdot \Delta{P}
+\label{eq:oxygen-production-relationship}
 \end{equation}
 
 % \noindent Given that the initial concentration of \ce{H2O2} and the amount of catalyst added were held constant across all trials, the calculated rate constant can be compared across temperature levels.
@@ -632,75 +633,75 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
 \indent \indent Consider $15\ ^\circ$C trial 1 as an example (marked as \textcolor{red}{red}) in \textit{table \ref{tab:processed-data}}. The average temperature for this trial was:
 
 \begin{equation}
-  T = 14.75 ^\circ \text{C} + 273.15 = 288.9 \text{K}
+  T = 14.75 ^\circ \text{C} + 273.15 = 287.9 \text{K}
 \end{equation}
 
-
-\
-
-\hrule
-
-\
-
-\indent \indent Consider the first trial of the first temperature level, $15 ^\circ \text{C}$ as an example (marked as \textcolor{red}{red}, in \textit{table \ref{tab:processed-data}}). For this trial, the average temperature (taken from the start \& end temperature) was $14.75 ^\circ \text{C}$:
+\noindent The headspace gas volume was calculated as the difference between the flask volume and the solution volume:
 
 \begin{equation}
-  T = 14.75 ^\circ \text{C} + 274.15 = 287.9 \text{K}
+  V_\text{gas} = 250\ \text{mL} - 25\ \text{mL} = 225\ \text{mL} \rightarrow 2.25 \cdot 10^{-4}\ \text{m}^3
 \end{equation}
 
-\noindent Given that the analysis window for the pressure-time graph is 15 seconds starting at the first continuous rise after the rubber stopper was replaced, using the data helper I programmed \footnote{To speed up data processing for all 40 trials, I programmed a helper that loaded all data and autoamtically generated graphs and stats using \textit{Python} and the \textit{Plotly.js} library. Source code available in appendix.}, the selected interval was:
-
-\begin{equation}
-  t_{\text{start}} = 26.6\ \text{s}, \quad t_{\text{end}} = 41.6\ \text{s}
-\end{equation}
+\noindent The analysis window for the pressure-time graph was selected as the main region where pressure increased (from the start of sustained pressure increase to the end of the rise). For this trial, the selected interval was $37.8\ \text{s}$ to $60\ \text{s}$:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{Resources/example_calculation_data_helper.png}
+	\includegraphics[width=12cm]{Resources/example_calculation_data_helper.png}
 	\caption{Data helper.}
 	\label{fig:data-processing-example-calculation-data-helper}
 \end{figure}
 
-\noindent A linear regression was then fitted to the 76 datapoints in the selected window, using the linear trendline formula $P = mt + b$ in Excel, where the slope $m$ is the initial rate (or apparent rate constant $k_{\mathrm{app}}$):
+This window was chosen because the pressure before $t_\text{start} = 37.8\ \text{s}$ showed negligible change in pressure, while the pressure after $t_\text{start}$ increased consistently, due to \ce{O2_{(g)}} production. A linear regression with $y = mx + b$ was then fitted to the 111 datapoints in the selected window:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=14cm]{Resources/example_calculation_time_snapshot.png}
+	\includegraphics[width=\textwidth]{Resources/example_calculation_time_snapshot.png}
 	\caption{15-second snapshot.}
 	\label{fig:data-processing-example-calculation-15-second-snapshot}
 \end{figure}
 
-\noindent As shown in the graph above, the slope value over the time interval $26.6\ \text{s}$ to $41.6\ \text{s}$ was $0.0059\ \text{kPa}\ \text{s}^{-1}$. This matches the value reported for $15\ ^{\circ} \text{C}$, \textit{trial 1} in \textit{table \ref{tab:processed-data}}. The average apparent rate constant can then be calculated:
+\noindent Note that the slope $m$ was recorded as $0.01486\ \text{kPa}\ \text{s}^{-1}$, which converts to $14.86\ \text{Pa}\ \text{s}^{-1}$. The rate of \ce{O2} production was then calculated from the ideal gas relationship. For a constant headspace volume:
 
 \begin{equation}
-  \overline{k_{app}} = \frac{0.00594\ \text{kPa}\ \text{s}^{-1} + 0.00817\ \text{kPa}\ \text{s}^{-1} + 0.01237\ \text{kPa}\ \text{s}^{-1} + 0.01676\ \text{kPa}\ \text{s}^{-1} + 0.00792\ \text{kPa}\ \text{s}^{-1}}{5}
+  r = \frac{\Delta{n(\ce{O2})}}{\Delta{t}} = \frac{V_\text{gas}}{RT} \cdot (\frac{\Delta{P}}{\Delta{t}}) = \frac{V_\text{gas}}{RT} \cdot m
 \end{equation}
 
 \begin{equation}
-  \overline{k_{app}} = \frac{0.05116\ \text{kPa}\ \text{s}^{-1}}{5} = 0.010232\ \text{kPa}\ \text{s}^{-1}
+  r = \frac{2.25 \cdot 10^{-4}\ \text{m}^3}{(8.31\ \text{J}\ \text{K}\ \text{mol}^{-1})(288.15\ \text{K})} \cdot 14.86\ \text{Pa}\ \text{s}^{-1} 
 \end{equation}
 
-\noindent The standard deviation of the five trials is 0.00434:
+\begin{center}
+  $r = 1.40 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$
+\end{center}
+
+\noindent The process above was repeated to calculated the average rate for the other 4 trials at $15\ ^\circ$C:
 
 \begin{equation}
-	\sigma = \sqrt{\frac{1}{5}(-0.004292)^2 + (-0.002062)^2 + (0.002138)^2 + (0.006528)^2 + (-0.002312)^2}
+  \overline{r} = \frac{1}{n} \sum_{i=1}^{n=5} r_i
 \end{equation}
 
 \begin{equation}
-  \sigma = 0.004234\ \text{kPa}\ \text{s}^{-1}
+  \overline{r} = \frac{(1.40 \cdot 10^{-6}) + (1.94 \cdot 10^{-6}) + (2.41 \cdot 10^{-6}) + (1.95 \cdot 10^{-6})}{4} = 1.88 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
-\noindent The random uncertainty in the mean can then be calculated:
+\noindent \underline{\textbf{Note:}} Trial 5 was not included in the calculations and justified in \textit{section \ref{sec:data-processing}}.
+
+\
+
+\noindent The standard deviation and the uncertainty in average rate can then be calculated:
 
 \begin{equation}
-  \Delta{\overline{k_{app}}} = \frac{0.00434\ \text{kPa}\ \text{s}^{-1}}{\sqrt{5}} = 0.00194\ \text{kPa}\ \text{s}^{-1}
+  \sigma = \sqrt{\frac{1}{4}(-0.48 \cdot 10^{-6})^2 + (0.06 \cdot 10^{-6})^2 + (0.53 \cdot 10^{-6})^2 + (0.07 \cdot 10^{-6})^2}
 \end{equation}
 
-\noindent Thus, the initial rate for the first trial of $15\ ^\circ \text{C}$ is:
+\begin{center}
+  $\sigma = 3.69 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}$
+\end{center}
 
 \begin{equation}
-  k_{app} = 0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}
+  \Delta{\overline{r}} = \frac{\sigma}{\sqrt{4}} = 1.65 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
+
 
 \begin{center}
   $\ast$~$\ast$~$\ast$
@@ -715,24 +716,24 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
                     >{\centering\arraybackslash}m{4cm}|
 	                  >{\centering\arraybackslash}m{7cm}|} \hline
 			
-			\textbf{Temperature level ($^\circ \text{C}$)} & \textbf{Temperature level ($\text{K}$)} & \textbf{Apparent rate constant, $k_{app}$ ($\text{kPa}\ \text{s}^{-1}$)} \\ \hline
-      15 & 288.15 & $0.01023 \pm 0.00194$ \\ \hline
-      20 & 293.15 & $0.01406 \pm 0.00223$ \\ \hline
-      25 & 298.15 & $0.01782 \pm 0.00315$ \\ \hline
-      30 & 303.15 & $0.03884 \pm 0.00870$ \\ \hline
-      35 & 308.15 & $0.05442 \pm 0.00600$ \\ \hline
-      40 & 313.15 & $0.04214 \pm 0.00826$ \\ \hline
-      45 & 318.15 & $0.09427 \pm 0.03053$ \\ \hline
-      50 & 323.15 & $0.10081 \pm 0.02089$ \\ \hline
+			\textbf{Temperature level / $^\circ \text{C}$} & \textbf{Temperature level / $\text{K}$} & \textbf{Mean \ce{O2} production rate, $\overline{r}$ / $\text{mol}\ \text{s}^{-1}$} \\ \hline
+      15 & 288.15 & $(1.887 \pm 0.165) \cdot 10^{-6} $ \\ \hline
+      20 & 293.15 & $(1.885 \pm 0.442) \cdot 10^{-6}$ \\ \hline
+      25 & 298.15 & $(3.390 \pm 0.285) cdot 10^{-6}$ \\ \hline
+      30 & 303.15 & $(7.543 \pm 1.193) cdot 10^{-6}$ \\ \hline
+      35 & 308.15 & $(8.594 \pm 0.926) cdot 10^{-6}$ \\ \hline
+      40 & 313.15 & $(8.886 \pm 1.208) cdot 10^{-6}$ \\ \hline
+      45 & 318.15 & $(1.291 \pm 0.271) cdot 10^{-5}$ \\ \hline
+      50 & 323.15 & $(1.843 \pm 0.382) cdot 10^{-5}$ \\ \hline
 		\end{tabular}
 	}
-	\caption{Apparent rate constant.}
-	\label{tab:data-processing-example-calculation-apparent-rate-constant}
+	\caption{Mean oxygen production rate.}
+	\label{tab:data-processing-example-calculation-oxygen-production-rate}
 \end{table}
 
 \section{Data Analysis}
 \label{sec:data-analysis}
-\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}} were used to create an average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
+\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}} were used to create an average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
 
 \begin{figure}[H]
 	\centering
@@ -753,7 +754,7 @@ The apparent rate constant $k_{app}$ was defined in \textit{section \ref{sec:dat
   k_{app} = C \cdot k,
 \end{equation}
 
-\noindent Where $C$ is the constant scaling factor between the apparent rate constant and the true rate constant. As shown in \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-apparent-rate-constant}}, the apparent rate constant increases from an average of $0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}$ at $15 ^\circ \text{C}$ ($288.15 \text{K}$) to an average of $0.10081 \pm 0.02089\ \text{kPa}\ \text{s}^{-1}$ at $50 ^\circ \text{C}$ ($323.15 \text{K}$), which is an increase by a factor of $9.85$. This supports my initial hypothesis that higher temperature increases the frequency of collisions and the fraction of molecules with energy $\geq \text{E}_\text{A}$. To better model how the reaction temperature impacts the rate constant, the Arrhenius equation from \textit{equation \ref{eq:arrhenius-equation}} was used to analyze the data, given that $k_{app} \propto k$:
+\noindent Where $C$ is the constant scaling factor between the apparent rate constant and the true rate constant. As shown in \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}, the apparent rate constant increases from an average of $0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}$ at $15 ^\circ \text{C}$ ($288.15 \text{K}$) to an average of $0.10081 \pm 0.02089\ \text{kPa}\ \text{s}^{-1}$ at $50 ^\circ \text{C}$ ($323.15 \text{K}$), which is an increase by a factor of $9.85$. This supports my initial hypothesis that higher temperature increases the frequency of collisions and the fraction of molecules with energy $\geq \text{E}_\text{A}$. To better model how the reaction temperature impacts the rate constant, the Arrhenius equation from \textit{equation \ref{eq:arrhenius-equation}} was used to analyze the data, given that $k_{app} \propto k$:
 
 \begin{equation}
   k_{app} = A_{app} \cdot e^{-\frac{E_{A}}{RT}}
