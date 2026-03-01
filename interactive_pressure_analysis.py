@@ -173,7 +173,7 @@ def build_html(trials: list[TrialSeries]) -> str:
   <script src=\"https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js\"></script>
   <script src=\"https://cdn.plot.ly/plotly-2.35.2.min.js\"></script>
   <style>
-    :root {{ --bg:#f4f6fb; --card:#fff; --ink:#182236; --muted:#5d6980; --accent:#405cf5; --accent-soft:#eef1ff; --warn:#a15a00; }}
+    :root {{ --bg:#f4f6fb; --card:#fff; --ink:#182236; --muted:#5d6980; --accent:#405cf5; --accent-soft:#eef1ff; }}
     * {{ box-sizing:border-box; }}
     body {{ margin:0; background:var(--bg); color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; }}
     .wrap {{ max-width:1300px; margin:1.25rem auto; padding:0 1rem; }}
@@ -181,16 +181,10 @@ def build_html(trials: list[TrialSeries]) -> str:
     .card {{ background:var(--card); border-radius:12px; box-shadow:0 6px 20px rgba(18,25,38,.08); padding:1rem; }}
     h1 {{ margin:0 0 .75rem; font-size:1.35rem; }}
     .sub {{ color:var(--muted); font-size:.9rem; margin-bottom:1rem; }}
-    .warn {{ color:var(--warn); font-size:.85rem; margin-top:.45rem; }}
     label {{ display:block; font-size:.85rem; color:var(--muted); margin:.6rem 0 .25rem; }}
     select,input {{ width:100%; padding:.55rem .65rem; border:1px solid #d7ddea; border-radius:8px; }}
     .row2 {{ display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }}
-    .btnrow {{ display:grid; grid-template-columns:1fr 1fr; gap:.5rem; margin-top:.5rem; }}
-    button {{ padding:.55rem .7rem;border:none;border-radius:8px;background:var(--accent);color:white;cursor:pointer; }}
-    .ghost {{ background:#667084; }}
-    .metric {{ border:1px solid #e8edf7; border-radius:10px; padding:.55rem .65rem; margin-top:.5rem; }}
-    .metric b {{ display:block; font-size:1.05rem; word-break:break-word; }}
-    .metric span {{ font-size:.8rem; color:var(--muted); }}
+    button {{ padding:.55rem .7rem;border:none;border-radius:8px;background:var(--accent);color:white;cursor:pointer; margin-top:.5rem; width:100%; }}
     #plot {{ height:620px; }}
     .bottom-panel {{ margin-top:.75rem; border:1px solid #dbe3f6; border-radius:10px; padding:.8rem; background:var(--accent-soft); }}
     .bottom-title {{ font-weight:600; margin-bottom:.45rem; }}
@@ -204,119 +198,56 @@ def build_html(trials: list[TrialSeries]) -> str:
   <div class=\"grid\">
     <section class=\"card\">
       <h1>Pressure Rise Explorer</h1>
-      <div class=\"sub\">Vue + Plotly interactive analysis for Raw Data trials.</div>
-
+      <div class=\"sub\">Drag horizontally to select a time window. All points in that time range are included.</div>
       <label>Temperature level</label>
       <select v-model=\"selectedLevel\">
         <option v-for=\"lv in levels\" :key=\"lv\" :value=\"lv\">{{{{ lv }}}}</option>
       </select>
-
       <label>Trial</label>
       <select v-model.number=\"selectedTrialId\">
         <option v-for=\"t in filteredTrials\" :key=\"t.id\" :value=\"t.id\">{{{{ t.label }}}}</option>
       </select>
-
       <label>Manual range (seconds)</label>
       <div class=\"row2\">
         <input type=\"number\" step=\"0.2\" v-model.number=\"manualStart\" />
         <input type=\"number\" step=\"0.2\" v-model.number=\"manualEnd\" />
       </div>
-      <button @click=\"applyManualRange\" style=\"margin-top:.5rem;\">Calculate from range</button>
-
-      <label>Headspace gas volume V_gas (mL)</label>
-      <div class=\"row2\">
-        <input type=\"number\" step=\"0.1\" v-model.number=\"gasVolumeMl\" />
-        <input type=\"number\" step=\"0.1\" v-model.number=\"gasVolumeUncMl\" placeholder=\"Uncertainty (mL)\" />
-      </div>
-      <div v-if=\"!isPositive(gasVolumeMl)\" class=\"warn\">Enter V_gas > 0 mL to compute molar rate.</div>
-
-      <label>Temperature setpoint T_set (°C)</label>
-      <input type=\"number\" step=\"0.1\" v-model.number=\"tempSetC\" />
-
-      <label>Temperature uncertainty ΔT (°C)</label>
-      <div class=\"row2\">
-        <input type=\"number\" step=\"0.01\" v-model.number=\"tempUncC\" />
-        <button @click=\"useAutoTempUnc\" class=\"ghost\">Use auto</button>
-      </div>
-
-      <div class=\"btnrow\">
-        <button @click=\"copyWindowResults\">Copy window results</button>
-        <button @click=\"downloadCsv\" class=\"ghost\">Download CSV</button>
-      </div>
-
-      <div class=\"metric\"><b>{{{{ stats.points }}}}</b><span>Selected points</span></div>
-      <div class=\"metric\"><b>{{{{ stats.timeRange }}}}</b><span>Time range</span></div>
-      <div class=\"metric\"><b>{{{{ stats.pressureRange }}}}</b><span>Pressure range</span></div>
-      <div class=\"metric\"><b>{{{{ stats.slope }}}} ± {{{{ stats.slopeStdErr }}}} kPa/s</b><span>dP/dt from linear fit</span></div>
-      <div class=\"metric\"><b>{{{{ stats.r0mol }}}} ± {{{{ stats.r0uncMol }}}} mol/s</b><span>Initial rate r0 (ideal gas law)</span></div>
-      <div class=\"metric\"><b>{{{{ stats.r0mmol }}}} ± {{{{ stats.r0uncMmol }}}} mmol/s</b><span>Initial rate r0 (readable units)</span></div>
-      <p class=\"sub\" style=\"margin-top:.7rem\">Tip: choose Box Select in chart toolbar and drag over points.</p>
+      <button @click=\"applyManualRange\">Calculate from range</button>
+      <div class=\"sub\" style=\"margin-top:1rem\">Headspace volume is fixed at 225 mL. Use equation: Δn = (V_gas / RT) × (ΔP/Δt).</div>
     </section>
-
     <section class=\"card\">
       <div id=\"plot\"></div>
       <div class=\"bottom-panel\">
-        <div class=\"bottom-title\">Window stats</div>
+        <div class=\"bottom-title\">Selected window stats</div>
         <div class=\"bottom-grid\">
-          <div><strong>Mode:</strong> {{{{ clickStats.mode }}}}</div>
-          <div><strong>Start time:</strong> {{{{ clickStats.startTime }}}}</div>
-          <div><strong>End time:</strong> {{{{ clickStats.endTime }}}}</div>
-          <div><strong>Points:</strong> {{{{ clickStats.points }}}}</div>
-          <div><strong>Δt:</strong> {{{{ clickStats.deltaT }}}}</div>
-          <div><strong>Pressure range:</strong> {{{{ clickStats.pressureRange }}}}</div>
-          <div><strong>ΔP:</strong> {{{{ clickStats.deltaP }}}}</div>
-          <div><strong>Fit slope:</strong> {{{{ clickStats.slope }}}} ± {{{{ clickStats.slopeStdErr }}}} kPa/s</div>
-          <div><strong>Fit equation:</strong> {{{{ clickStats.fit }}}}</div>
-          <div><strong>T_set:</strong> {{{{ clickStats.tSet }}}}</div>
-          <div><strong>T range:</strong> {{{{ clickStats.tempRange }}}}</div>
-          <div><strong>ΔT used:</strong> {{{{ clickStats.tempUnc }}}}</div>
-          <div><strong>r0:</strong> {{{{ clickStats.r0mol }}}} ± {{{{ clickStats.r0uncMol }}}} mol/s</div>
-          <div><strong>r0:</strong> {{{{ clickStats.r0mmol }}}} ± {{{{ clickStats.r0uncMmol }}}} mmol/s</div>
-          <div><strong>ln(r0):</strong> {{{{ clickStats.lnR0 }}}}</div>
-          <div><strong>1/T:</strong> {{{{ clickStats.invT }}}} K^-1</div>
-          <div class=\"muted\">Drag on the plot to select a time window across the full y-axis.</div>
+          <div><strong>Start time:</strong> {{{{ stats.startTime }}}}</div>
+          <div><strong>End time:</strong> {{{{ stats.endTime }}}}</div>
+          <div><strong>ΔP/Δt:</strong> {{{{ stats.dpdt }}}}</div>
+          <div><strong>Δt:</strong> {{{{ stats.deltaT }}}}</div>
+          <div><strong>ΔP:</strong> {{{{ stats.deltaP }}}}</div>
+          <div><strong>Pressure range:</strong> {{{{ stats.pressureRange }}}}</div>
+          <div><strong>ΔT:</strong> {{{{ stats.deltaTemp }}}}</div>
+          <div><strong>Temperature range:</strong> {{{{ stats.tempRange }}}}</div>
+          <div><strong>Equation:</strong> {{{{ stats.equation }}}}</div>
+          <div class=\"muted\">Use drag or manual range to update values.</div>
         </div>
       </div>
     </section>
   </div>
 </div>
-
 <script>
 const trialData = {json.dumps(payload)};
-const R_GAS = 8.314462618;
 
 const blankStats = () => ({{
-  points: 0,
-  timeRange: '—',
-  pressureRange: '—',
-  slope: '—',
-  slopeStdErr: '—',
-  r0mol: '—',
-  r0uncMol: '—',
-  r0mmol: '—',
-  r0uncMmol: '—'
-}});
-
-const blankClickStats = () => ({{
-  mode: '—',
   startTime: '—',
   endTime: '—',
-  points: 0,
+  dpdt: '—',
   deltaT: '—',
-  pressureRange: '—',
   deltaP: '—',
-  slope: '—',
-  slopeStdErr: '—',
-  fit: '—',
-  tSet: '—',
+  pressureRange: '—',
+  deltaTemp: '—',
   tempRange: '—',
-  tempUnc: '—',
-  r0mol: '—',
-  r0uncMol: '—',
-  r0mmol: '—',
-  r0uncMmol: '—',
-  lnR0: '—',
-  invT: '—'
+  equation: '—'
 }});
 
 const App = {{
@@ -324,7 +255,6 @@ const App = {{
     const levels = [...new Set(trialData.map(t => t.level))];
     const firstLevel = levels[0];
     const firstTrial = trialData.find(t => t.level === firstLevel)?.id || trialData[0]?.id || 1;
-    const initSetpoint = this.extractTempSetpoint(firstLevel);
     return {{
       trials: trialData,
       levels,
@@ -332,16 +262,8 @@ const App = {{
       selectedTrialId: firstTrial,
       manualStart: 0,
       manualEnd: 10,
-      gasVolumeMl: 0,
-      gasVolumeUncMl: 0,
-      tempSetC: initSetpoint,
-      tempUncC: 0,
-      tempUncOverride: false,
       stats: blankStats(),
-      clickStats: blankClickStats(),
-      latestWindow: null,
-      latestCsvRow: null,
-      copying: false
+      selectedIndices: []
     }};
   }},
   computed: {{
@@ -355,261 +277,82 @@ const App = {{
   watch: {{
     selectedLevel() {{
       if (!this.filteredTrials.some(t => t.id === this.selectedTrialId)) this.selectedTrialId = this.filteredTrials[0]?.id;
-      const guessed = this.extractTempSetpoint(this.selectedLevel);
-      this.tempSetC = guessed;
       this.$nextTick(this.drawPlot);
     }},
     selectedTrialId() {{
       this.$nextTick(this.drawPlot);
-    }},
-    gasVolumeMl() {{ this.recomputeLatestWindow(); }},
-    gasVolumeUncMl() {{ this.recomputeLatestWindow(); }},
-    tempSetC() {{ this.recomputeLatestWindow(); }},
-    tempUncC() {{
-      this.tempUncOverride = true;
-      this.recomputeLatestWindow();
     }}
   }},
   methods: {{
-    isPositive(v) {{ return Number.isFinite(v) && v > 0; }},
-    formatNumber(v, d=5) {{ return Number.isFinite(v) ? v.toFixed(d) : 'N/A'; }},
-    extractTempSetpoint(levelText) {{
-      const m = String(levelText || '').match(/-?\d+(\.\d+)?/);
-      return m ? Number(m[0]) : NaN;
-    }},
-    useAutoTempUnc() {{
-      this.tempUncOverride = false;
-      this.recomputeLatestWindow();
+    formatNumber(v, d=3) {{
+      return Number.isFinite(v) ? v.toFixed(d) : 'N/A';
     }},
     linearRegression(x, y) {{
       const n = x.length;
-      if (n < 2) return {{ slope: NaN, intercept: NaN, slopeStdErr: NaN, r2: NaN }};
+      if (n < 2) return {{ slope: NaN, intercept: NaN }};
       const xMean = x.reduce((a,b)=>a+b,0)/n;
       const yMean = y.reduce((a,b)=>a+b,0)/n;
       let sxx = 0;
       let sxy = 0;
-      let syy = 0;
       for (let i=0; i<n; i++) {{
         const dx = x[i]-xMean;
-        const dy = y[i]-yMean;
         sxx += dx*dx;
-        sxy += dx*dy;
-        syy += dy*dy;
+        sxy += dx*(y[i]-yMean);
       }}
-      if (sxx === 0) return {{ slope: NaN, intercept: NaN, slopeStdErr: NaN, r2: NaN }};
+      if (sxx === 0) return {{ slope: NaN, intercept: NaN }};
       const slope = sxy / sxx;
       const intercept = yMean - slope*xMean;
-      let sse = 0;
-      for (let i=0; i<n; i++) {{
-        const yHat = slope*x[i] + intercept;
-        const e = y[i] - yHat;
-        sse += e*e;
-      }}
-      const syx = n > 2 ? Math.sqrt(sse / (n - 2)) : NaN;
-      const slopeStdErr = n > 2 ? syx / Math.sqrt(sxx) : NaN;
-      const r2 = syy === 0 ? 1 : 1 - (sse / syy);
-      return {{ slope, intercept, slopeStdErr, r2 }};
+      return {{ slope, intercept }};
     }},
-    getIndicesForManualRange() {{
+    getIndicesForRange(start, end) {{
       const t = this.activeTrial;
       if (!t) return [];
-      const lo = Math.min(this.manualStart, this.manualEnd);
-      const hi = Math.max(this.manualStart, this.manualEnd);
+      const lo = Math.min(start, end);
+      const hi = Math.max(start, end);
       const indices = [];
       for (let i=0; i<t.time_s.length; i++) {{
         if (t.time_s[i] >= lo && t.time_s[i] <= hi) indices.push(i);
       }}
       return indices;
     }},
-    computeWindowFromIndices(indices, modeLabel, x0Hint=null, x1Hint=null) {{
+    applySelection(indices) {{
       const t = this.activeTrial;
-      if (!t || !indices || indices.length === 0) return null;
+      if (!t || indices.length === 0) return;
       const xs = indices.map(i => t.time_s[i]);
       const ys = indices.map(i => t.pressure_kpa[i]);
-      const temps = indices.map(i => t.temperature_c[i]);
-      const startT = Number.isFinite(x0Hint) ? x0Hint : xs[0];
-      const endTForStats = xs[xs.length - 1];
-      const endTHighlight = Number.isFinite(x1Hint) ? x1Hint : endTForStats;
-      const pMin = Math.min(...ys);
-      const pMax = Math.max(...ys);
-      const tMin = Math.min(...temps);
-      const tMax = Math.max(...temps);
-      const tHalfRange = (tMax - tMin) / 2;
-      const tempUncUsedC = this.tempUncOverride && Number.isFinite(this.tempUncC) ? Math.abs(this.tempUncC) : tHalfRange;
-      if (!this.tempUncOverride) this.tempUncC = tHalfRange;
-
+      const ts = indices.map(i => t.temperature_c[i]);
+      const x0 = xs[0];
+      const x1 = xs[xs.length - 1];
+      const p0 = ys[0];
+      const p1 = ys[ys.length - 1];
+      const t0 = ts[0];
+      const t1 = ts[ts.length - 1];
       const reg = this.linearRegression(xs, ys);
-      const dt = endTForStats - xs[0];
-      const dp = ys[ys.length - 1] - ys[0];
-      const vMl = this.gasVolumeMl;
-      const vMlUnc = this.gasVolumeUncMl;
-      const tSetC = this.tempSetC;
-      const tSetK = Number.isFinite(tSetC) ? tSetC + 273.15 : NaN;
-
-      const slopeKpaS = reg.slope;
-      const slopeStdErrKpaS = reg.slopeStdErr;
-      const slopePaS = Number.isFinite(slopeKpaS) ? slopeKpaS * 1000 : NaN;
-      const vM3 = Number.isFinite(vMl) ? vMl * 1e-6 : NaN;
-      const r0 = Number.isFinite(vM3) && Number.isFinite(tSetK) && tSetK > 0 && Number.isFinite(slopePaS)
-        ? (vM3 / (R_GAS * tSetK)) * slopePaS
-        : NaN;
-
-      const relV = this.isPositive(vMl) && Number.isFinite(vMlUnc) ? Math.abs(vMlUnc / vMl) : NaN;
-      const relSlope = Number.isFinite(slopeKpaS) && slopeKpaS !== 0 && Number.isFinite(slopeStdErrKpaS)
-        ? Math.abs(slopeStdErrKpaS / slopeKpaS)
-        : NaN;
-      const relT = Number.isFinite(tSetK) && tSetK > 0 && Number.isFinite(tempUncUsedC)
-        ? Math.abs(tempUncUsedC / tSetK)
-        : NaN;
-
-      let r0Unc = NaN;
-      if (Number.isFinite(r0) && Number.isFinite(relV) && Number.isFinite(relSlope) && Number.isFinite(relT)) {{
-        r0Unc = Math.abs(r0) * Math.sqrt(relV*relV + relSlope*relSlope + relT*relT);
-      }}
-
-      const lnR0 = Number.isFinite(r0) && r0 > 0 ? Math.log(r0) : NaN;
-      const invT = Number.isFinite(tSetK) && tSetK > 0 ? (1 / tSetK) : NaN;
-
-      const row = {{
-        level: t.level,
-        trial: t.trial,
-        startTime: xs[0],
-        endTime: endTForStats,
-        nPoints: indices.length,
-        slope_kPa_s: slopeKpaS,
-        slopeStdErr_kPa_s: slopeStdErrKpaS,
-        V_gas_mL: vMl,
-        T_set_C: tSetC,
-        T_unc_C: tempUncUsedC,
-        r0_mol_s: r0,
-        r0_unc_mol_s: r0Unc,
-        ln_r0: lnR0,
-        inv_T_K_inv: invT
-      }};
-
-      return {{
-        mode: modeLabel,
-        indices,
-        x0: startT,
-        x1: endTHighlight,
-        row,
-        display: {{
-          mode: modeLabel,
-          startTime: `${{xs[0].toFixed(2)}} s`,
-          endTime: `${{endTForStats.toFixed(2)}} s`,
-          points: indices.length,
-          deltaT: Number.isFinite(dt) ? `${{dt.toFixed(2)}} s` : 'N/A',
-          pressureRange: `${{pMin.toFixed(3)}} → ${{pMax.toFixed(3)}} kPa`,
-          deltaP: Number.isFinite(dp) ? `${{dp.toFixed(3)}} kPa` : 'N/A',
-          slope: this.formatNumber(slopeKpaS, 5),
-          slopeStdErr: this.formatNumber(slopeStdErrKpaS, 5),
-          fit: Number.isFinite(reg.slope) ? `P = ${{reg.slope.toFixed(5)}}·t + ${{reg.intercept.toFixed(5)}} (R²=${{this.formatNumber(reg.r2, 4)}})` : 'N/A',
-          tSet: Number.isFinite(tSetC) ? `${{tSetC.toFixed(2)}} °C / ${{(tSetK).toFixed(2)}} K` : 'N/A',
-          tempRange: `${{tMin.toFixed(2)}} → ${{tMax.toFixed(2)}} °C`,
-          tempUnc: Number.isFinite(tempUncUsedC) ? `${{tempUncUsedC.toFixed(3)}} °C` : 'N/A',
-          r0mol: this.formatNumber(r0, 8),
-          r0uncMol: this.formatNumber(r0Unc, 8),
-          r0mmol: this.formatNumber(Number.isFinite(r0) ? r0 * 1000 : NaN, 5),
-          r0uncMmol: this.formatNumber(Number.isFinite(r0Unc) ? r0Unc * 1000 : NaN, 5),
-          lnR0: this.formatNumber(lnR0, 6),
-          invT: this.formatNumber(invT, 8)
-        }}
-      }};
-    }},
-    applyWindowResult(result) {{
-      if (!result) return;
-      this.latestWindow = result;
-      this.latestCsvRow = result.row;
-      this.clickStats = result.display;
+      this.selectedIndices = indices;
       this.stats = {{
-        points: result.display.points,
-        timeRange: `${{result.display.startTime}} → ${{result.display.endTime}}`,
-        pressureRange: result.display.pressureRange,
-        slope: result.display.slope,
-        slopeStdErr: result.display.slopeStdErr,
-        r0mol: result.display.r0mol,
-        r0uncMol: result.display.r0uncMol,
-        r0mmol: result.display.r0mmol,
-        r0uncMmol: result.display.r0uncMmol
+        startTime: `${{this.formatNumber(x0, 2)}} s`,
+        endTime: `${{this.formatNumber(x1, 2)}} s`,
+        dpdt: (x1 - x0) !== 0 ? `${{this.formatNumber((p1 - p0) / (x1 - x0), 5)}} kPa/s` : 'N/A',
+        deltaT: `${{this.formatNumber(x1 - x0, 2)}} s`,
+        deltaP: `${{this.formatNumber(p1 - p0, 3)}} kPa`,
+        pressureRange: `${{this.formatNumber(p0, 3)}} → ${{this.formatNumber(p1, 3)}} kPa`,
+        deltaTemp: `${{this.formatNumber(t1 - t0, 3)}} °C`,
+        tempRange: `${{this.formatNumber(t0, 3)}} → ${{this.formatNumber(t1, 3)}} °C`,
+        equation: Number.isFinite(reg.slope) ? `P = ${{reg.slope.toFixed(5)}}·t + ${{reg.intercept.toFixed(5)}}` : 'N/A'
       }};
-      Plotly.restyle('plot', {{ selectedpoints: [result.indices] }}, [0]);
+      Plotly.restyle('plot', {{ selectedpoints: [indices] }}, [0]);
       Plotly.relayout('plot', {{
         shapes: [{{
           type: 'rect', xref: 'x', yref: 'paper',
-          x0: result.x0, x1: result.x1, y0: 0, y1: 1,
+          x0: Math.min(x0, x1), x1: Math.max(x0, x1), y0: 0, y1: 1,
           fillcolor: 'rgba(64, 92, 245, 0.09)',
           line: {{ width: 0 }}
         }}]
       }});
     }},
-    recomputeLatestWindow() {{
-      if (!this.latestWindow) return;
-      if (this.latestWindow.mode === 'manual') {{
-        const indices = this.getIndicesForManualRange();
-        this.applyWindowResult(this.computeWindowFromIndices(indices, 'manual'));
-      }} else if (this.latestWindow.mode === 'drag') {{
-        const indices = this.latestWindow.indices || [];
-        this.applyWindowResult(this.computeWindowFromIndices(indices, 'drag'));
-      }}
-    }},
     applyManualRange() {{
-      const indices = this.getIndicesForManualRange();
-      this.applyWindowResult(this.computeWindowFromIndices(indices, 'manual'));
-    }},
-    copyWindowResults() {{
-      if (!this.latestCsvRow) return;
-      const r = this.latestCsvRow;
-      const fields = [
-        r.level,
-        r.trial,
-        this.formatNumber(r.startTime, 3),
-        this.formatNumber(r.endTime, 3),
-        r.nPoints,
-        this.formatNumber(r.slope_kPa_s, 8),
-        this.formatNumber(r.slopeStdErr_kPa_s, 8),
-        this.formatNumber(r.V_gas_mL, 4),
-        this.formatNumber(r.T_set_C, 4),
-        this.formatNumber(r.T_unc_C, 4),
-        this.formatNumber(r.r0_mol_s, 10),
-        this.formatNumber(r.r0_unc_mol_s, 10),
-        Number.isFinite(r.ln_r0) ? r.ln_r0.toFixed(10) : 'N/A',
-        this.formatNumber(r.inv_T_K_inv, 10)
-      ].map(v => String(v).replaceAll(',', ';'));
-      const line = fields.join(',');
-      navigator.clipboard.writeText(line);
-    }},
-    downloadCsv() {{
-      if (!this.latestCsvRow) return;
-      const r = this.latestCsvRow;
-      const headers = [
-        'level','trial','startTime','endTime','nPoints','slope_kPa_s','slopeStdErr_kPa_s','V_gas_mL','T_set_C','T_unc_C','r0_mol_s','r0_unc_mol_s','ln(r0)','1/T(K^-1)'
-      ];
-      const row = [
-        r.level,
-        r.trial,
-        this.formatNumber(r.startTime, 6),
-        this.formatNumber(r.endTime, 6),
-        r.nPoints,
-        this.formatNumber(r.slope_kPa_s, 10),
-        this.formatNumber(r.slopeStdErr_kPa_s, 10),
-        this.formatNumber(r.V_gas_mL, 6),
-        this.formatNumber(r.T_set_C, 6),
-        this.formatNumber(r.T_unc_C, 6),
-        this.formatNumber(r.r0_mol_s, 12),
-        this.formatNumber(r.r0_unc_mol_s, 12),
-        Number.isFinite(r.ln_r0) ? r.ln_r0.toFixed(12) : 'N/A',
-        this.formatNumber(r.inv_T_K_inv, 12)
-      ].map(v => `"${{String(v).replaceAll('"','""')}}"`);
-      const csv = `${{headers.join(',')}}\n${{row.join(',')}}\n`;
-      const blob = new Blob([csv], {{ type: 'text/csv;charset=utf-8;' }});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = 'window_results.csv';
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      const indices = this.getIndicesForRange(this.manualStart, this.manualEnd);
+      this.applySelection(indices);
     }},
     drawPlot() {{
       const t = this.activeTrial;
@@ -629,6 +372,7 @@ const App = {{
       const layout = {{
         title: `${{t.level}} — ${{t.trial}}`,
         dragmode: 'select',
+        selectdirection: 'h',
         hovermode: 'closest',
         margin: {{ l: 65, r: 20, t: 50, b: 55 }},
         xaxis: {{ title: 'Time (s)', showgrid: true, gridcolor: '#e9edf6' }},
@@ -639,43 +383,22 @@ const App = {{
       }};
       Plotly.newPlot('plot', [trace], layout, {{ responsive: true }});
       const plotEl = document.getElementById('plot');
-
       plotEl.on('plotly_selected', (eventData) => {{
-        if (!eventData) return;
-        const t = this.activeTrial;
-        if (!t) return;
-        let x0 = NaN;
-        let x1 = NaN;
-        if (eventData.range?.x && eventData.range.x.length === 2) {{
-          x0 = Number(eventData.range.x[0]);
-          x1 = Number(eventData.range.x[1]);
-        }} else if (eventData.points && eventData.points.length > 0) {{
-          const xs = eventData.points.map(p => p.x);
-          x0 = Math.min(...xs);
-          x1 = Math.max(...xs);
-        }}
-        if (!Number.isFinite(x0) || !Number.isFinite(x1)) return;
-        const lo = Math.min(x0, x1);
-        const hi = Math.max(x0, x1);
-        const indices = [];
-        for (let i=0; i<t.time_s.length; i++) {{
-          if (t.time_s[i] >= lo && t.time_s[i] <= hi) indices.push(i);
-        }}
-        this.applyWindowResult(this.computeWindowFromIndices(indices, 'drag', lo, hi));
+        if (!eventData || !eventData.range || !eventData.range.x) return;
+        const x0 = Math.min(eventData.range.x[0], eventData.range.x[1]);
+        const x1 = Math.max(eventData.range.x[0], eventData.range.x[1]);
+        const indices = this.getIndicesForRange(x0, x1);
+        this.applySelection(indices);
       }});
-
       this.stats = blankStats();
-      this.clickStats = blankClickStats();
-      this.latestWindow = null;
-      this.latestCsvRow = null;
-      this.tempUncOverride = false;
-      this.tempUncC = 0;
+      this.selectedIndices = [];
     }}
   }},
   mounted() {{
     this.drawPlot();
   }}
 }};
+
 Vue.createApp(App).mount('#app');
 </script>
 </body>
