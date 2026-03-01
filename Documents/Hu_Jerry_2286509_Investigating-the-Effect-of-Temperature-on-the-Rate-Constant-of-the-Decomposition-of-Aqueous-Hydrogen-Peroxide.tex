@@ -276,7 +276,7 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
     >{\centering\arraybackslash}m{1.0cm}|
     >{\centering\arraybackslash}m{1.0cm}|
     >{\centering\arraybackslash}m{2.0cm}|
-    >{\centering\arraybackslash}m{1.25cm}|
+    >{\centering\arraybackslash}m{1.0cm}|
     >{\centering\arraybackslash}m{2.5cm}|
     >{\centering\arraybackslash}m{2.75cm}|
     >{\centering\arraybackslash}m{2.75cm}|
@@ -286,7 +286,7 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
     \textbf{Level} &
     \textbf{Trial} &
     \textbf{Target / $^\circ$C} &
-    \textbf{Run \#} &
+    \textbf{Run} &
     \textbf{Hot plate / $^\circ$C} &
     \textbf{Start temp /$^\circ$C ($\pm 0.5\ ^\circ$C)} &
     \textbf{End temp / $^\circ$C ($\pm 0.5\ ^\circ$C)} &
@@ -497,31 +497,24 @@ However, the methodology in which the data were collected likely increased the u
 
 % \noindent \underline{\textbf{Note:}} The apparent rate constant is the same as the initial rate of pressure increase.
 
-\subsubsection{Uncertainty in oxygen production rate (THIS IS AI - UPDATE LATER)}
-For each trial, the pressure–time data were analysed over the selected pressure-rise window (from the start of sustained pressure increase to the end of the linear rise). A linear best-fit line was applied to this window to obtain the pressure gradient ($m=\Delta P/\Delta t$) and its slope uncertainty ($\Delta m$) (standard error of slope).
-
-The oxygen production rate was calculated using the ideal gas relationship:
+\subsubsection{Uncertainty in oxygen production rate}
+\indent \indent For each calculated rate, there contains random uncertainties and uncertainties from the instruments. Random uncertainty was propagated using the spread of the five trials' rates at each temperature level using standard deviation, and converted to uncertainty in the mean rate using the standard error of the mean ($\frac{\sigma}{\sqrt{5}}$):
 
 \begin{equation}
-  r=\frac{V_{\text{gas}}}{RT},m
+  \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{n}}
 \end{equation}
 
-where ($V_{\text{gas}}$) is the headspace gas volume, (T) is the set temperature in kelvins, and ($R=8.31\ \text{J K}^{-1}\text{mol}^{-1}$). When (m) was obtained in kPa s($^{-1}$), it was converted to Pa s($^{-1}$) before calculation.
-
-Uncertainty in (r) was propagated from ($V_{\text{gas}}$), (T), and (m). Since ($r \propto V_{\text{gas}}m/T$), the relative uncertainty was:
+\noindent Where $\sigma$ is the standard deviation of the $n=5$ trials. Instrument uncertainty was propagated through the rate calculation:
 
 \begin{equation}
-  \frac{\Delta r}{r}=\sqrt{\left(\frac{\Delta V_{\text{gas}}}{V_{\text{gas}}}\right)^2+\left(\frac{\Delta m}{m}\right)^2+\left(\frac{\Delta T}{T}\right)^2}
+  \Delta{\overline{r}_\text{inst}} = \frac{V_\text{gas}}{RT} \cdot m
 \end{equation}
 
-and the absolute uncertainty:
+\noindent The uncertainty of $m$ was taken from the linear regression of the pressure-time data, and the uncertainty of $V_\text{gas}$ and $T$ were taken from \textit{table \ref{tab:data-processing-uncertainty-propagation-summary-of-uncertainties-by-tool}}. Combined:
 
 \begin{equation}
-  \Delta r=r\left(\frac{\Delta r}{r}\right)
+  \Delta{\overline{r}} = \sqrt{(\Delta{\overline{r}_\text{rand}})^2 + (\Delta{\overline{r}_\text{inst}})^2}
 \end{equation}
-
-Five trials were conducted per temperature level; the mean rate was used for Arrhenius analysis, with random uncertainty represented by the standard error of the mean ($\left(\sigma/\sqrt{5}\right)$).
-
 
 \subsubsection{Uncertainty in the Arrhenius plot (THIS IS AI - UPDATE LATER)}
 \label{sec:data-processing-uncertainty-propagation-uncertainty-in-arrhenius-plot}

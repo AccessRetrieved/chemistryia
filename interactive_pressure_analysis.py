@@ -164,7 +164,7 @@ def build_html(trials: list[TrialSeries]) -> str:
         for i, t in enumerate(trials)
     ]
 
-    return f"""<!doctype html>
+    return """<!doctype html>
 <html lang=\"en\">
 <head>
   <meta charset=\"utf-8\" />
@@ -173,24 +173,25 @@ def build_html(trials: list[TrialSeries]) -> str:
   <script src=\"https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js\"></script>
   <script src=\"https://cdn.plot.ly/plotly-2.35.2.min.js\"></script>
   <style>
-    :root {{ --bg:#f4f6fb; --card:#fff; --ink:#182236; --muted:#5d6980; --accent:#405cf5; --accent-soft:#eef1ff; }}
-    * {{ box-sizing:border-box; }}
-    body {{ margin:0; background:var(--bg); color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; }}
-    .wrap {{ max-width:1300px; margin:1.25rem auto; padding:0 1rem; }}
-    .grid {{ display:grid; grid-template-columns:320px 1fr; gap:1rem; }}
-    .card {{ background:var(--card); border-radius:12px; box-shadow:0 6px 20px rgba(18,25,38,.08); padding:1rem; }}
-    h1 {{ margin:0 0 .75rem; font-size:1.35rem; }}
-    .sub {{ color:var(--muted); font-size:.9rem; margin-bottom:1rem; }}
-    label {{ display:block; font-size:.85rem; color:var(--muted); margin:.6rem 0 .25rem; }}
-    select,input {{ width:100%; padding:.55rem .65rem; border:1px solid #d7ddea; border-radius:8px; }}
-    .row2 {{ display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }}
-    button {{ padding:.55rem .7rem;border:none;border-radius:8px;background:var(--accent);color:white;cursor:pointer; margin-top:.5rem; width:100%; }}
-    #plot {{ height:620px; }}
-    .bottom-panel {{ margin-top:.75rem; border:1px solid #dbe3f6; border-radius:10px; padding:.8rem; background:var(--accent-soft); }}
-    .bottom-title {{ font-weight:600; margin-bottom:.45rem; }}
-    .bottom-grid {{ display:grid; grid-template-columns:repeat(2,minmax(220px,1fr)); gap:.45rem .7rem; font-size:.9rem; }}
-    .muted {{ color:var(--muted); }}
-    @media (max-width: 1000px) {{ .grid {{ grid-template-columns:1fr; }} #plot {{ height:520px; }} .bottom-grid {{ grid-template-columns:1fr; }} }}
+    :root { --bg:#f4f6fb; --card:#fff; --ink:#182236; --muted:#5d6980; --accent:#405cf5; --accent-soft:#eef1ff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter,Segoe UI,Arial,sans-serif; }
+    .wrap { max-width:1300px; margin:1.25rem auto; padding:0 1rem; }
+    .grid { display:grid; grid-template-columns:320px 1fr; gap:1rem; }
+    .card { background:var(--card); border-radius:12px; box-shadow:0 6px 20px rgba(18,25,38,.08); padding:1rem; }
+    h1 { margin:0 0 .75rem; font-size:1.35rem; }
+    .sub { color:var(--muted); font-size:.9rem; margin-bottom:1rem; }
+    label { display:block; font-size:.85rem; color:var(--muted); margin:.6rem 0 .25rem; }
+    select,input { width:100%; padding:.55rem .65rem; border:1px solid #d7ddea; border-radius:8px; }
+    .row2 { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+    .btnrow { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; }
+    button { padding:.55rem .7rem;border:none;border-radius:8px;background:var(--accent);color:white;cursor:pointer; margin-top:.5rem; width:100%; }
+    #plot { height:620px; }
+    .bottom-panel { margin-top:.75rem; border:1px solid #dbe3f6; border-radius:10px; padding:.8rem; background:var(--accent-soft); }
+    .bottom-title { font-weight:600; margin-bottom:.45rem; }
+    .bottom-grid { display:grid; grid-template-columns:repeat(2,minmax(220px,1fr)); gap:.45rem .7rem; font-size:.9rem; }
+    .muted { color:var(--muted); }
+    @media (max-width: 1000px) { .grid { grid-template-columns:1fr; } #plot { height:520px; } .bottom-grid { grid-template-columns:1fr; } }
   </style>
 </head>
 <body>
@@ -201,11 +202,11 @@ def build_html(trials: list[TrialSeries]) -> str:
       <div class=\"sub\">Drag horizontally to select a time window. All points in that time range are included.</div>
       <label>Temperature level</label>
       <select v-model=\"selectedLevel\">
-        <option v-for=\"lv in levels\" :key=\"lv\" :value=\"lv\">{{{{ lv }}}}</option>
+        <option v-for=\"lv in levels\" :key=\"lv\" :value=\"lv\">{{ lv }}</option>
       </select>
       <label>Trial</label>
       <select v-model.number=\"selectedTrialId\">
-        <option v-for=\"t in filteredTrials\" :key=\"t.id\" :value=\"t.id\">{{{{ t.label }}}}</option>
+        <option v-for=\"t in filteredTrials\" :key=\"t.id\" :value=\"t.id\">{{ t.label }}</option>
       </select>
       <label>Manual range (seconds)</label>
       <div class=\"row2\">
@@ -213,6 +214,10 @@ def build_html(trials: list[TrialSeries]) -> str:
         <input type=\"number\" step=\"0.2\" v-model.number=\"manualEnd\" />
       </div>
       <button @click=\"applyManualRange\">Calculate from range</button>
+      <div class=\"btnrow\">
+        <button @click=\"copyWindowResults\">Copy window results</button>
+        <button @click=\"downloadCsv\">Download CSV</button>
+      </div>
       <div class=\"sub\" style=\"margin-top:1rem\">Headspace volume is fixed at 225 mL. Use equation: Δn = (V_gas / RT) × (ΔP/Δt).</div>
     </section>
     <section class=\"card\">
@@ -220,15 +225,17 @@ def build_html(trials: list[TrialSeries]) -> str:
       <div class=\"bottom-panel\">
         <div class=\"bottom-title\">Selected window stats</div>
         <div class=\"bottom-grid\">
-          <div><strong>Start time:</strong> {{{{ stats.startTime }}}}</div>
-          <div><strong>End time:</strong> {{{{ stats.endTime }}}}</div>
-          <div><strong>ΔP/Δt:</strong> {{{{ stats.dpdt }}}}</div>
-          <div><strong>Δt:</strong> {{{{ stats.deltaT }}}}</div>
-          <div><strong>ΔP:</strong> {{{{ stats.deltaP }}}}</div>
-          <div><strong>Pressure range:</strong> {{{{ stats.pressureRange }}}}</div>
-          <div><strong>ΔT:</strong> {{{{ stats.deltaTemp }}}}</div>
-          <div><strong>Temperature range:</strong> {{{{ stats.tempRange }}}}</div>
-          <div><strong>Equation:</strong> {{{{ stats.equation }}}}</div>
+          <div><strong>Start time:</strong> {{ stats.startTime }}</div>
+          <div><strong>End time:</strong> {{ stats.endTime }}</div>
+          <div><strong>ΔP/Δt:</strong> {{ stats.dpdt }}</div>
+          <div><strong>Δt:</strong> {{ stats.deltaT }}</div>
+          <div><strong>ΔP:</strong> {{ stats.deltaP }}</div>
+          <div><strong>Pressure range:</strong> {{ stats.pressureRange }}</div>
+          <div><strong>ΔT:</strong> {{ stats.deltaTemp }}</div>
+          <div><strong>Temperature range:</strong> {{ stats.tempRange }}</div>
+          <div><strong>Equation:</strong> {{ stats.equation }}</div>
+          <div><strong>Slope uncertainty (SE):</strong> {{ stats.slopeSE }}</div>
+          <div><strong>Relative slope uncertainty:</strong> {{ stats.slopeRelUnc }}</div>
           <div class=\"muted\">Use drag or manual range to update values.</div>
         </div>
       </div>
@@ -236,9 +243,9 @@ def build_html(trials: list[TrialSeries]) -> str:
   </div>
 </div>
 <script>
-const trialData = {json.dumps(payload)};
+const trialData = __PAYLOAD__;
 
-const blankStats = () => ({{
+const blankStats = () => ({
   startTime: '—',
   endTime: '—',
   dpdt: '—',
@@ -247,15 +254,17 @@ const blankStats = () => ({{
   pressureRange: '—',
   deltaTemp: '—',
   tempRange: '—',
-  equation: '—'
-}});
+  equation: '—',
+  slopeSE: '—',
+  slopeRelUnc: '—'
+});
 
-const App = {{
-  data() {{
+const App = {
+  data() {
     const levels = [...new Set(trialData.map(t => t.level))];
     const firstLevel = levels[0];
     const firstTrial = trialData.find(t => t.level === firstLevel)?.id || trialData[0]?.id || 1;
-    return {{
+    return {
       trials: trialData,
       levels,
       selectedLevel: firstLevel,
@@ -263,59 +272,72 @@ const App = {{
       manualStart: 0,
       manualEnd: 10,
       stats: blankStats(),
-      selectedIndices: []
-    }};
-  }},
-  computed: {{
-    filteredTrials() {{
+      selectedIndices: [],
+      latestExportRow: null
+    };
+  },
+  computed: {
+    filteredTrials() {
       return this.trials.filter(t => t.level === this.selectedLevel);
-    }},
-    activeTrial() {{
+    },
+    activeTrial() {
       return this.trials.find(t => t.id === this.selectedTrialId) || this.filteredTrials[0];
-    }}
-  }},
-  watch: {{
-    selectedLevel() {{
+    }
+  },
+  watch: {
+    selectedLevel() {
       if (!this.filteredTrials.some(t => t.id === this.selectedTrialId)) this.selectedTrialId = this.filteredTrials[0]?.id;
       this.$nextTick(this.drawPlot);
-    }},
-    selectedTrialId() {{
+    },
+    selectedTrialId() {
       this.$nextTick(this.drawPlot);
-    }}
-  }},
-  methods: {{
-    formatNumber(v, d=3) {{
+    }
+  },
+  methods: {
+    formatNumber(v, d=3) {
       return Number.isFinite(v) ? v.toFixed(d) : 'N/A';
-    }},
-    linearRegression(x, y) {{
+    },
+    linearRegression(x, y) {
       const n = x.length;
-      if (n < 2) return {{ slope: NaN, intercept: NaN }};
+      if (n < 2) return { slope: NaN, intercept: NaN, r2: NaN, slope_stderr: NaN, n_points: n, residual_std: NaN };
       const xMean = x.reduce((a,b)=>a+b,0)/n;
       const yMean = y.reduce((a,b)=>a+b,0)/n;
       let sxx = 0;
       let sxy = 0;
-      for (let i=0; i<n; i++) {{
+      let sst = 0;
+      for (let i=0; i<n; i++) {
         const dx = x[i]-xMean;
+        const dy = y[i]-yMean;
         sxx += dx*dx;
-        sxy += dx*(y[i]-yMean);
-      }}
-      if (sxx === 0) return {{ slope: NaN, intercept: NaN }};
+        sxy += dx*dy;
+        sst += dy*dy;
+      }
+      if (sxx === 0) return { slope: NaN, intercept: NaN, r2: NaN, slope_stderr: NaN, n_points: n, residual_std: NaN };
       const slope = sxy / sxx;
       const intercept = yMean - slope*xMean;
-      return {{ slope, intercept }};
-    }},
-    getIndicesForRange(start, end) {{
+      let sse = 0;
+      for (let i=0; i<n; i++) {
+        const yHat = slope*x[i] + intercept;
+        const e = y[i] - yHat;
+        sse += e*e;
+      }
+      const r2 = sst === 0 ? NaN : 1 - (sse / sst);
+      const residualStd = n > 2 ? Math.sqrt(sse / (n - 2)) : NaN;
+      const slopeStderr = n > 2 ? residualStd / Math.sqrt(sxx) : NaN;
+      return { slope, intercept, r2, slope_stderr: slopeStderr, n_points: n, residual_std: residualStd };
+    },
+    getIndicesForRange(start, end) {
       const t = this.activeTrial;
       if (!t) return [];
       const lo = Math.min(start, end);
       const hi = Math.max(start, end);
       const indices = [];
-      for (let i=0; i<t.time_s.length; i++) {{
+      for (let i=0; i<t.time_s.length; i++) {
         if (t.time_s[i] >= lo && t.time_s[i] <= hi) indices.push(i);
-      }}
+      }
       return indices;
-    }},
-    applySelection(indices) {{
+    },
+    applySelection(indices) {
       const t = this.activeTrial;
       if (!t || indices.length === 0) return;
       const xs = indices.map(i => t.time_s[i]);
@@ -328,82 +350,152 @@ const App = {{
       const t0 = ts[0];
       const t1 = ts[ts.length - 1];
       const reg = this.linearRegression(xs, ys);
+      const slopeRelUnc = Number.isFinite(reg.slope_stderr) && Number.isFinite(reg.slope) && reg.slope !== 0
+        ? Math.abs(reg.slope_stderr / reg.slope)
+        : NaN;
       this.selectedIndices = indices;
-      this.stats = {{
-        startTime: `${{this.formatNumber(x0, 2)}} s`,
-        endTime: `${{this.formatNumber(x1, 2)}} s`,
-        dpdt: (x1 - x0) !== 0 ? `${{this.formatNumber((p1 - p0) / (x1 - x0), 5)}} kPa/s` : 'N/A',
-        deltaT: `${{this.formatNumber(x1 - x0, 2)}} s`,
-        deltaP: `${{this.formatNumber(p1 - p0, 3)}} kPa`,
-        pressureRange: `${{this.formatNumber(p0, 3)}} → ${{this.formatNumber(p1, 3)}} kPa`,
-        deltaTemp: `${{this.formatNumber(t1 - t0, 3)}} °C`,
-        tempRange: `${{this.formatNumber(t0, 3)}} → ${{this.formatNumber(t1, 3)}} °C`,
-        equation: Number.isFinite(reg.slope) ? `P = ${{reg.slope.toFixed(5)}}·t + ${{reg.intercept.toFixed(5)}}` : 'N/A'
-      }};
-      Plotly.restyle('plot', {{ selectedpoints: [indices] }}, [0]);
-      Plotly.relayout('plot', {{
-        shapes: [{{
+      this.stats = {
+        startTime: `${this.formatNumber(x0, 2)} s`,
+        endTime: `${this.formatNumber(x1, 2)} s`,
+        dpdt: (x1 - x0) !== 0 ? `${this.formatNumber((p1 - p0) / (x1 - x0), 5)} kPa/s` : 'N/A',
+        deltaT: `${this.formatNumber(x1 - x0, 2)} s`,
+        deltaP: `${this.formatNumber(p1 - p0, 3)} kPa`,
+        pressureRange: `${this.formatNumber(p0, 3)} → ${this.formatNumber(p1, 3)} kPa`,
+        deltaTemp: `${this.formatNumber(t1 - t0, 3)} °C`,
+        tempRange: `${this.formatNumber(t0, 3)} → ${this.formatNumber(t1, 3)} °C`,
+        equation: Number.isFinite(reg.slope) ? `P = ${reg.slope.toFixed(5)}·t + ${reg.intercept.toFixed(5)}` : 'N/A',
+        slopeSE: `${this.formatNumber(reg.slope_stderr, 6)} kPa/s`,
+        slopeRelUnc: Number.isFinite(slopeRelUnc) ? `${this.formatNumber(slopeRelUnc * 100, 3)} %` : 'N/A'
+      };
+      this.latestExportRow = {
+        level: t.level,
+        trial: t.trial,
+        startTime_s: x0,
+        endTime_s: x1,
+        slope_kPa_s: reg.slope,
+        slopeSE_kPa_s: reg.slope_stderr,
+        slope_rel_unc: slopeRelUnc,
+        r2: reg.r2,
+        n_points: reg.n_points,
+        residual_std_kPa: reg.residual_std,
+        deltaP_kPa: p1 - p0,
+        deltaT_s: x1 - x0
+      };
+      Plotly.restyle('plot', { selectedpoints: [indices] }, [0]);
+      Plotly.relayout('plot', {
+        shapes: [{
           type: 'rect', xref: 'x', yref: 'paper',
           x0: Math.min(x0, x1), x1: Math.max(x0, x1), y0: 0, y1: 1,
           fillcolor: 'rgba(64, 92, 245, 0.09)',
-          line: {{ width: 0 }}
-        }}]
-      }});
-    }},
-    applyManualRange() {{
+          line: { width: 0 }
+        }]
+      });
+    },
+    applyManualRange() {
       const indices = this.getIndicesForRange(this.manualStart, this.manualEnd);
       this.applySelection(indices);
-    }},
-    drawPlot() {{
+    },
+    copyWindowResults() {
+      if (!this.latestExportRow) return;
+      const r = this.latestExportRow;
+      const line = [
+        r.level,
+        r.trial,
+        this.formatNumber(r.startTime_s, 4),
+        this.formatNumber(r.endTime_s, 4),
+        this.formatNumber(r.slope_kPa_s, 8),
+        this.formatNumber(r.slopeSE_kPa_s, 8),
+        this.formatNumber(r.slope_rel_unc, 8),
+        this.formatNumber(r.r2, 6),
+        r.n_points,
+        this.formatNumber(r.residual_std_kPa, 8),
+        this.formatNumber(r.deltaP_kPa, 6),
+        this.formatNumber(r.deltaT_s, 6)
+      ].map(v => String(v).replaceAll(',', ';')).join(',');
+      navigator.clipboard.writeText(line);
+    },
+    downloadCsv() {
+      if (!this.latestExportRow) return;
+      const r = this.latestExportRow;
+      const headers = [
+        'level','trial','startTime_s','endTime_s','slope_kPa_s','slopeSE_kPa_s','slope_rel_unc','r2','n_points','residual_std_kPa','deltaP_kPa','deltaT_s'
+      ];
+      const row = [
+        r.level,
+        r.trial,
+        this.formatNumber(r.startTime_s, 6),
+        this.formatNumber(r.endTime_s, 6),
+        this.formatNumber(r.slope_kPa_s, 10),
+        this.formatNumber(r.slopeSE_kPa_s, 10),
+        this.formatNumber(r.slope_rel_unc, 10),
+        this.formatNumber(r.r2, 10),
+        r.n_points,
+        this.formatNumber(r.residual_std_kPa, 10),
+        this.formatNumber(r.deltaP_kPa, 10),
+        this.formatNumber(r.deltaT_s, 10)
+      ].map(v => `"${String(v).replaceAll('"','""')}"`);
+      const csv = `${headers.join(',')}\n${row.join(',')}\n`;
+      const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'window_results.csv';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    },
+    drawPlot() {
       const t = this.activeTrial;
       if (!t) return;
-      const trace = {{
+      const trace = {
         x: t.time_s,
         y: t.pressure_kpa,
         type: 'scatter',
         mode: 'lines+markers',
-        marker: {{ size: 6, color: '#405cf5' }},
-        line: {{ width: 2, color: '#405cf5' }},
+        marker: { size: 6, color: '#405cf5' },
+        line: { width: 2, color: '#405cf5' },
         customdata: t.temperature_c,
-        selected: {{ marker: {{ color: '#0d1fb5', size: 7 }} }},
-        unselected: {{ marker: {{ opacity: 0.35 }} }},
-        hovertemplate: 'Time: %{{x:.2f}} s<br>Pressure: %{{y:.3f}} kPa<br>Temperature: %{{customdata:.2f}} °C<extra></extra>'
-      }};
-      const layout = {{
-        title: `${{t.level}} — ${{t.trial}}`,
+        selected: { marker: { color: '#0d1fb5', size: 7 } },
+        unselected: { marker: { opacity: 0.35 } },
+        hovertemplate: 'Time: %{x:.2f} s<br>Pressure: %{y:.3f} kPa<br>Temperature: %{customdata:.2f} °C<extra></extra>'
+      };
+      const layout = {
+        title: `${t.level} — ${t.trial}`,
         dragmode: 'select',
         selectdirection: 'h',
         hovermode: 'closest',
-        margin: {{ l: 65, r: 20, t: 50, b: 55 }},
-        xaxis: {{ title: 'Time (s)', showgrid: true, gridcolor: '#e9edf6' }},
-        yaxis: {{ title: 'Pressure (kPa)', showgrid: true, gridcolor: '#e9edf6' }},
+        margin: { l: 65, r: 20, t: 50, b: 55 },
+        xaxis: { title: 'Time (s)', showgrid: true, gridcolor: '#e9edf6' },
+        yaxis: { title: 'Pressure (kPa)', showgrid: true, gridcolor: '#e9edf6' },
         paper_bgcolor: '#ffffff',
         plot_bgcolor: '#ffffff',
         shapes: []
-      }};
-      Plotly.newPlot('plot', [trace], layout, {{ responsive: true }});
+      };
+      Plotly.newPlot('plot', [trace], layout, { responsive: true });
       const plotEl = document.getElementById('plot');
-      plotEl.on('plotly_selected', (eventData) => {{
+      plotEl.on('plotly_selected', (eventData) => {
         if (!eventData || !eventData.range || !eventData.range.x) return;
         const x0 = Math.min(eventData.range.x[0], eventData.range.x[1]);
         const x1 = Math.max(eventData.range.x[0], eventData.range.x[1]);
         const indices = this.getIndicesForRange(x0, x1);
         this.applySelection(indices);
-      }});
+      });
       this.stats = blankStats();
       this.selectedIndices = [];
-    }}
-  }},
-  mounted() {{
+      this.latestExportRow = null;
+    }
+  },
+  mounted() {
     this.drawPlot();
-  }}
-}};
+  }
+};
 
 Vue.createApp(App).mount('#app');
 </script>
 </body>
 </html>
-"""
+""".replace("__PAYLOAD__", json.dumps(payload))
 
 
 def run_server(html_content: str, host: str, port: int, open_browser: bool) -> None:
