@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide"] 1772414433.32759 "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide" 1772414486.63562 0
+["bibtex Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide"] 1772446183.84829 "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide" 1772446496.4107 0
   "./ref.bib" 1770620377.44369 3241 abc77551732489442fa790a01ac7ffb1 ""
   "/usr/local/texlive/2025/texmf-dist/bibtex/bst/natbib/unsrtnat.bst" 1233624470 24550 a41a6405f4de768c43e871d9fbce2bc8 ""
-  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" 1772414486.25268 9624 43363a0b554398c7e737c2671e650b4e "pdflatex"
+  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" 1772446496.14298 8406 18134d84b2c6c3894cfd5537605c8be2 "pdflatex"
   (generated)
   "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl"
   "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.blg"
   (rewritten before read)
-["pdflatex"] 1772414482.83192 "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide" 1772414486.63585 0
-  "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" 1772413619.88545 55863 6841c3d322cac8391eff62d780e18a75 ""
+["pdflatex"] 1772446493.20669 "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf" "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide" 1772446496.41084 0
+  "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" 1772446495.79499 55408 e7597f7f79531aa46f7b9994ad76dd37 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -55,6 +55,7 @@
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb" 1248133631 36094 798f80770b3b148ceedd006d487db67c ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1248133631 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1248133631 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
@@ -226,18 +227,17 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1760937970 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1741450574 3345740 46b66fdb0378f7bf5921b5eabf1762b8 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" 1772414486.25268 9624 43363a0b554398c7e737c2671e650b4e "pdflatex"
-  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl" 1772414433.42054 2341 9eccf0b4ba034ea5dc1b261ed268630c "bibtex Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide"
-  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out" 1772414486.25354 3829 36e832e78f3abef377ebccf26ea57bc1 "pdflatex"
-  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" 1772413619.88545 55863 6841c3d322cac8391eff62d780e18a75 ""
-  "Resources/data_analysis_arrhenius_plot.png" 1772414418.7044 316030 e41c03e2f0b0692329dbe25246eb8bc3 ""
-  "Resources/data_analysis_ki_mass.png" 1772414429.62113 231976 cd2232c6b9492b353ea124349b3c35c0 ""
-  "Resources/data_analysis_main_graph.png" 1772414482.41412 357147 591447f3dbe2b8697ed2b8f979f4e850 ""
+  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux" 1772446496.14298 8406 18134d84b2c6c3894cfd5537605c8be2 "pdflatex"
+  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl" 1772446183.92718 2341 fe9c090af9e7555a65cfd6f66b377c1e "bibtex Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide"
+  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out" 1772446496.1436 3130 85ae2b9e68beb6172fb8285edbe6c925 "pdflatex"
+  "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" 1772446495.79499 55408 e7597f7f79531aa46f7b9994ad76dd37 ""
+  "Resources/data_analysis_arrhenius_plot.png" 1772421035.7315 248226 17f595ea627219801c1ab3342d54b469 ""
+  "Resources/data_analysis_main_graph.png" 1772419378.36337 388515 47bc0e64b946a0951a041e4fd7d57cd6 ""
   "Resources/evaluation_weakness_immersion_circulator.png" 1770618154.7325 60053 658d320fdf462e3862525f0dd690ad62 ""
   "Resources/evaluation_weakness_water_bath.png" 1770618073.48606 93004 f482c1fe7577a5cee55146ed992ee336 ""
   "Resources/example_calculation_data_helper.png" 1772346161.88062 38780 0195a9c342278be3e9557190a50cfd3c ""
   "Resources/example_calculation_time_snapshot.png" 1772347529.64406 659725 357fdae3262e1778d9e1020f1f23fb50 ""
-  "wordcount.tex" 1771290491.15053 5 072471bee303354ff21131dbad80d66f ""
+  "wordcount.tex" 1772435154.58471 5 ae312a69905419f6c5a759345279ef98 ""
   (generated)
   "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux"
   "Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.log"

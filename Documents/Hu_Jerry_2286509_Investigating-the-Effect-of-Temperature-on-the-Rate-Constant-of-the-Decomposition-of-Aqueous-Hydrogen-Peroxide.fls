@@ -372,11 +372,6 @@ INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
-INPUT ./Resources/data_analysis_ki_mass.png
-INPUT ./Resources/data_analysis_ki_mass.png
-INPUT ./Resources/data_analysis_ki_mass.png
-INPUT ./Resources/data_analysis_ki_mass.png
-INPUT ./Resources/data_analysis_ki_mass.png
 INPUT ./Resources/evaluation_weakness_water_bath.png
 INPUT ./Resources/evaluation_weakness_water_bath.png
 INPUT ./Resources/evaluation_weakness_water_bath.png
@@ -408,6 +403,7 @@ INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pf
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb

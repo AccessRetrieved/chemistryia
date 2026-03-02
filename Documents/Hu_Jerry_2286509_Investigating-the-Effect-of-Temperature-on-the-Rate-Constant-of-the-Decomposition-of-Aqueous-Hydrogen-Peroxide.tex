@@ -476,26 +476,6 @@ However, the methodology in which the data were collected likely increased the u
   \Delta{\overline{r}} = \sqrt{(\Delta{\overline{r}_\text{rand}})^2 + (\Delta{\overline{r}_\text{abs, inst}})^2}
 \end{equation}
 
-\subsubsection{Uncertainty in the Arrhenius plot (THIS IS AI - UPDATE LATER)}
-\label{sec:data-processing-uncertainty-propagation-uncertainty-in-arrhenius-plot}
-For Arrhenius analysis, the mean oxygen production rate at each temperature level was used to create a plot of ln(rate) against 1/T (T in kelvins). The vertical uncertainty in ln(rate) was obtained by propagating the rate uncertainty through the natural logarithm. For small relative uncertainties, the uncertainty in ln(rate) can be approximated by:
-
-Uncertainty in ln(rate) $\approx$ $\Delta$(rate) / rate
-
-(If you prefer an exact form, you can also use ln(rate +- $\Delta$rate), but the approximation above is acceptable when $\Delta$rate is small compared with rate.)
-
-The horizontal uncertainty in 1/T comes from the temperature uncertainty. Since 1/T changes with T, the uncertainty was calculated as:
-
-Uncertainty in $(1/T)$ = $\Delta T / T^2$
-
-where $\Delta$T is +-0.5 °C (same magnitude in K) and T is in kelvins.
-
-The activation energy was determined from the gradient of the best-fit line of ln(rate) vs 1/T. Because gradient = -Ea/R, the activation energy was calculated as:
-
-Ea = -(gradient) * R
-
-The uncertainty in Ea was obtained from the uncertainty in the gradient returned by the linear regression of the Arrhenius plot, multiplied by R.
-
 \newpage
 \begin{landscape}
   \subsection{Processed Data}
@@ -525,53 +505,53 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
         \textbf{Rate SD / $\text{mol s}^{-1}$} \\
         \hlineB{5}
   
-        \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{37.8} & \textcolor{red}{60.0} & \textcolor{red}{$1.40 \cdot 10^{-6}$} & \multirow{5}{*}{\underline{\textcolor{red}{$(1.89\pm0.18) \cdot 10^{-6}$}}} & \multirow{5}{*}{\underline{\textcolor{red}{$3.69 \cdot 10^{-7}$}}} \\ \cline{2-7}
-        & 2 & 288.85 & 0.29 & 47.4 & 60.0 & $1.94 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-        & 3 & 287.50 & 0.32 & 30.0 & 60.0 & $2.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-        & 4 & 288.25 & 0.32 & 32.0 & 60.0 & $1.95 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-        & \underline{5} & \underline{288.01} & \underline{0.31} & \underline{29.2} & \underline{60.0} & \underline{$1.74 \cdot 10^{-6}$} &  &  \\ \hlineB{5}
+        \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{37.8} & \textcolor{red}{60.0} & \textcolor{red}{$1.33 \cdot 10^{-6}$} & \multirow{5}{*}{\underline{\textcolor{red}{$(1.80\pm0.17) \cdot 10^{-6}$}}} & \multirow{5}{*}{\underline{\textcolor{red}{$3.52 \cdot 10^{-7}$}}} \\ \cline{2-7}
+        & 2 & 288.85 & 0.29 & 47.4 & 60.0 & $1.85 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & 3 & 287.50 & 0.32 & 30.0 & 60.0 & $2.30 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & 4 & 288.25 & 0.32 & 32.0 & 60.0 & $1.86 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & \underline{5} & \underline{288.01} & \underline{0.31} & \underline{29.2} & \underline{60.0} & \underline{$1.66 \cdot 10^{-6}$} &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{20}  & 1 & 292.15 & 0.30 & 31.8 & 60.0 & $1.67 \cdot 10^{-7}$ & \multirow{5}{*}{$(1.89\pm0.44) \cdot 10^{-6}$} & \multirow{5}{*}{$9.88 \cdot 10^{-7}$} \\ \cline{2-7}
-                & 2 & 294.10 & 0.28 & 28.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 294.30 & 0.29 & 25.6 & 60.0 & $2.26 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 4 & 292.70 & 0.31 & 30.8 & 60.0 & $2.44 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 5 & 292.70 & 0.31 & 32.8 & 60.0 & $1.97 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{20}  & 1 & 292.15 & 0.30 & 31.8 & 60.0 & $1.60 \cdot 10^{-7}$ & \multirow{5}{*}{$(1.80\pm0.42) \cdot 10^{-6}$} & \multirow{5}{*}{$9.44 \cdot 10^{-7}$} \\ \cline{2-7}
+                & 2 & 294.10 & 0.28 & 28.0 & 60.0 & $2.49 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 294.30 & 0.29 & 25.6 & 60.0 & $2.17 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 292.70 & 0.31 & 30.8 & 60.0 & $2.35 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 292.70 & 0.31 & 32.8 & 60.0 & $1.90 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{25}  & 1 & 298.65 & 0.29 & 29.8 & 60.0 & $3.88 \cdot 10^{-6}$ & \multirow{5}{*}{$(3.39\pm0.29) \cdot 10^{-6}$} & \multirow{5}{*}{$6.37 \cdot 10^{-7}$} \\ \cline{2-7}
-                & 2 & 298.70 & 0.29 & 26.6 & 60.0 & $4.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 299.35 & 0.29 & 34.2 & 60.0 & $3.17 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 4 & 297.80 & 0.28 & 24.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 5 & 298.80 & 0.30 & 33.8 & 60.0 & $3.12 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{25}  & 1 & 298.65 & 0.29 & 29.8 & 60.0 & $3.74 \cdot 10^{-6}$ & \multirow{5}{*}{$(3.24\pm0.28) \cdot 10^{-6}$} & \multirow{5}{*}{$6.09 \cdot 10^{-7}$} \\ \cline{2-7}
+                & 2 & 298.70 & 0.29 & 26.6 & 60.0 & $4.04 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 299.35 & 0.29 & 34.2 & 60.0 & $3.05 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 297.80 & 0.28 & 24.0 & 60.0 & $2.52 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 298.80 & 0.30 & 33.8 & 60.0 & $3.01 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{30}  & 1 & 303.25 & 0.33 & 10.0 & 60.0 & $1.10 \cdot 10^{-5}$ & \multirow{5}{*}{$(7.54\pm1.20) \cdot 10^{-6}$} & \multirow{5}{*}{$2.67 \cdot 10^{-6}$} \\ \cline{2-7}
-                & 2 & 301.95 & 0.30 & 13.4 & 60.0 & $5.31 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 304.35 & 0.30 & 7.4  & 60.0 & $9.73 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 4 & 303.35 & 0.30 & 17.0 & 60.0 & $6.42 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 5 & 304.05 & 0.29 & 19.4 & 60.0 & $5.24 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{30}  & 1 & 303.25 & 0.33 & 10.0 & 60.0 & $1.06 \cdot 10^{-5}$ & \multirow{5}{*}{$(7.21\pm1.14) \cdot 10^{-6}$} & \multirow{5}{*}{$2.55 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 301.95 & 0.30 & 13.4 & 60.0 & $5.13 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 304.35 & 0.30 & 7.4  & 60.0 & $9.40 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 303.35 & 0.30 & 17.0 & 60.0 & $6.20 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 304.05 & 0.29 & 19.4 & 60.0 & $5.07 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{35}  & 1 & 308.65 & 0.31 & 7.8  & 60.0 & $1.03 \cdot 10^{-5}$ & \multirow{5}{*}{$(8.59\pm0.93) \cdot 10^{-6}$} & \multirow{5}{*}{$2.07 \cdot 10^{-6}$} \\ \cline{2-7}
-                & 2 & 308.70 & 0.31 & 16.8 & 60.0 & $7.85 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 307.35 & 0.32 & 15.4 & 60.0 & $8.87 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 4 & 308.15 & 0.31 & 11.6 & 60.0 & $1.05 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 5 & 309.05 & 0.29 & 20.6 & 60.0 & $5.44 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{35}  & 1 & 308.65 & 0.31 & 7.8  & 60.0 & $9.99 \cdot 10^{-6}$ & \multirow{5}{*}{$(8.21\pm0.89) \cdot 10^{-6}$} & \multirow{5}{*}{$1.98 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 308.70 & 0.31 & 16.8 & 60.0 & $7.61 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 307.35 & 0.32 & 15.4 & 60.0 & $8.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 308.15 & 0.31 & 11.6 & 60.0 & $1.02 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 309.05 & 0.29 & 20.6 & 60.0 & $5.28 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{40}  & 1 & 313.50 & 0.28 & 11.2 & 60.0 & $9.82 \cdot 10^{-6}$ & \multirow{5}{*}{$(8.89\pm1.21) \cdot 10^{-6}$} & \multirow{5}{*}{$2.70 \cdot 10^{-6}$} \\ \cline{2-7}
-                & 2 & 314.35 & 0.28 & 18.6 & 60.0 & $8.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 312.05 & 0.29 & 16.2 & 60.0 & $6.24 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 4 & 313.65 & 0.28 & 8.6  & 60.0 & $1.31 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 5 & 312.10 & 0.29 & 14.6 & 60.0 & $7.10 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{40}  & 1 & 313.50 & 0.28 & 11.2 & 60.0 & $9.54 \cdot 10^{-6}$ & \multirow{5}{*}{$(8.49\pm1.16) \cdot 10^{-6}$} & \multirow{5}{*}{$2.58 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 314.35 & 0.28 & 18.6 & 60.0 & $7.96 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 312.05 & 0.29 & 16.2 & 60.0 & $6.06 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 313.65 & 0.28 & 8.6  & 60.0 & $1.27 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 312.10 & 0.29 & 14.6 & 60.0 & $6.89 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{45}  & 1 & 318.40 & 0.29 & 7.0  & 60.0 & $1.14 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.29\pm0.27) \cdot 10^{-5}$} & \multirow{5}{*}{$6.06 \cdot 10^{-6}$} \\ \cline{2-7}
-                & 2 & 317.00 & 0.30 & 16.4 & 60.0 & $9.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                & 3 & 317.95 & 0.29 & 4.6  & 60.0 & $1.78 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 4 & 317.75 & 0.29 & 8.6  & 60.0 & $2.03 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 5 & 317.80 & 0.29 & 12.4 & 60.0 & $5.63 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{45}  & 1 & 318.40 & 0.29 & 7.0  & 60.0 & $1.10 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.23\pm0.26) \cdot 10^{-5}$} & \multirow{5}{*}{$5.79 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 317.00 & 0.30 & 16.4 & 60.0 & $9.11 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 317.95 & 0.29 & 4.6  & 60.0 & $1.72 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 4 & 317.75 & 0.29 & 8.6  & 60.0 & $1.96 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 317.80 & 0.29 & 12.4 & 60.0 & $5.45 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
 
-        \multirow{5}{*}{50}  & 1 & 322.45 & 0.31 & 10.4 & 60.0 & $3.09 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.84\pm0.38) \cdot 10^{-5}$} & \multirow{5}{*}{$8.54 \cdot 10^{-6}$} \\ \cline{2-7}
-                & 2 & 322.55 & 0.28 & 11.8 & 60.0 & $1.16 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 3 & 321.70 & 0.29 & 14.0 & 60.0 & $1.19 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 4 & 322.60 & 0.29 & 5.4  & 52.8 & $2.38 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                & 5 & 322.95 & 0.29 & 15.2 & 60.0 & $1.40 \cdot 10^{-5}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{50}  & 1 & 322.45 & 0.31 & 10.4 & 60.0 & $2.99 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.76\pm0.37) \cdot 10^{-5}$} & \multirow{5}{*}{$8.16 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 322.55 & 0.28 & 11.8 & 60.0 & $1.12 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 3 & 321.70 & 0.29 & 14.0 & 60.0 & $1.15 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 4 & 322.60 & 0.29 & 5.4  & 52.8 & $2.30 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 322.95 & 0.29 & 15.2 & 60.0 & $1.35 \cdot 10^{-5}$ &  &  \\ \hlineB{5}
   
     \end{tabular}}
     \caption{Processed data.}
@@ -592,7 +572,7 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
 \noindent The headspace gas volume was calculated as the difference between the flask volume and the solution volume:
 
 \begin{equation}
-  V_\text{gas} = 250\ \text{mL} - 25\ \text{mL} = 225\ \text{mL} \rightarrow 2.25 \cdot 10^{-4}\ \text{m}^3
+  V_\text{gas} = 250\ \text{mL} - 25\ \text{mL} - 10\ \text{mL} = 215\ \text{mL} \rightarrow 2.15 \cdot 10^{-4}\ \text{m}^3
 \end{equation}
 
 \noindent The analysis window for the pressure-time graph was selected as the main region where pressure increased (from the start of sustained pressure increase to the end of the rise). For this trial, the selected interval was $37.8\ \text{s}$ to $60\ \text{s}$:
@@ -620,11 +600,11 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \end{equation}
 
 \begin{equation}
-  r = \frac{2.25 \cdot 10^{-4}\ \text{m}^3}{(8.31\ \text{J}\ \text{K}\ \text{mol}^{-1})(288.15\ \text{K})} \cdot 14.86\ \text{Pa}\ \text{s}^{-1} 
+  r = \frac{2.15 \cdot 10^{-4}\ \text{m}^3}{(8.31\ \text{J}\ \text{K}\ \text{mol}^{-1})(288.15\ \text{K})} \cdot 14.86\ \text{Pa}\ \text{s}^{-1} 
 \end{equation}
 
 \begin{center}
-  $r = 1.40 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$
+  $r = 1.33 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$
 \end{center}
 
 \noindent The process above was repeated to calculated the average rate for the other 4 trials at $15\ ^\circ$C:
@@ -634,7 +614,7 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \end{equation}
 
 \begin{equation}
-  \overline{r} = \frac{(1.40 \cdot 10^{-6}) + (1.94 \cdot 10^{-6}) + (2.41 \cdot 10^{-6}) + (1.95 \cdot 10^{-6})}{4} = 1.88 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}
+  \overline{r} = \frac{(1.33 \cdot 10^{-6}) + (1.85 \cdot 10^{-6}) + (2.30 \cdot 10^{-6}) + (1.86 \cdot 10^{-6})}{4} = 1.82 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
 \noindent \underline{\textbf{Note:}} Trial 5 was not included in the calculations and justified in \textit{section \ref{sec:data-processing}}.
@@ -644,12 +624,12 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \noindent The random uncertainty can then be calculated:
 
 \begin{equation}
-  \sigma = \sqrt{\frac{1}{4}(-0.48 \cdot 10^{-6})^2 + (0.06 \cdot 10^{-6})^2 + (0.53 \cdot 10^{-6})^2 + (0.07 \cdot 10^{-6})^2}
+  \sigma = \sqrt{\frac{1}{4}(-0.49 \cdot 10^{-6})^2 + (0.03 \cdot 10^{-6})^2 + (0.48 \cdot 10^{-6})^2 + (0.04 \cdot 10^{-6})^2}
 \end{equation}
 
-\begin{center}
-  $\sigma = 3.69 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}$
-\end{center}
+\begin{equation*}
+  \sigma = 3.52 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
+\end{equation*}
 
 \begin{equation}
   \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{4}} = 1.65 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
@@ -659,9 +639,9 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 
 \begin{enumerate}
   \item Average temperature range in this level: $0.4\ ^\circ \text{C} \rightarrow $ half-range = $0.2\ ^\circ$C
-  \begin{center}
-    $\Delta{T} = \max{(0.5, 0.2)} = \pm 0.5\ \text{K}$
-  \end{center}
+  \begin{equation*}
+    \Delta{T} = \max{(0.5, 0.2)} = \pm 0.5\ \text{K}
+  \end{equation*}
   \begin{equation}
     \therefore \frac{\Delta{T}}{T} = \frac{0.5\ \text{K}}{288.15\ \text{K}} = 0.001735 \rightarrow 0.174\%
   \end{equation}
@@ -671,28 +651,28 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   \end{equation}
   \item Volume uncertainty: $\pm 0.06\ \text{mL}$:
   \begin{equation}
-    \frac{\Delta{V_\text{gas}}}{V_\text{gas}} = \frac{0.06\ \text{mL}}{225\ \text{mL}} = 0.000267 \rightarrow 0.0267\%
+    \frac{\Delta{V_\text{gas}}}{V_\text{gas}} = \frac{0.06\ \text{mL}}{215\ \text{mL}} = 0.000279 \rightarrow 0.0279\%
   \end{equation}
 \end{enumerate}
 
 \noindent The instrumental uncertainties are then combined:
 
 \begin{equation}
-  \Delta{\overline{r}_\text{rel, inst}} = \sqrt{(0.001735)^2 + (0.0307)^2 + (0.000267)^2} = 0.0308 \rightarrow 3.08\%
+  \Delta{\overline{r}_\text{rel, inst}} = \sqrt{(0.001735)^2 + (0.0307)^2 + (0.000279)^2} = 0.03075 \rightarrow 3.08\%
 \end{equation}
 
 \begin{equation}
-  \therefore \Delta{\overline{r}_\text{abs, inst}} = \overline{r} \cdot \Delta{\overline{r}_\text{rel, inst}} = (1.88 \cdot 10^{-6}) \cdot 0.0308 = 5.79 \cdot 10^{-8}\ \text{mol}\ \text{s}^{-1}
+  \therefore \Delta{\overline{r}_\text{abs, inst}} = \overline{r} \cdot \Delta{\overline{r}_\text{rel, inst}} = (1.82 \cdot 10^{-6}) \cdot 0.03075 = 5.60 \cdot 10^{-8}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
 \noindent Final uncertainty for the average rate since they are independent uncertainties:
 
 \begin{equation}
-  \Delta{\overline{r}} = \sqrt{(1.65 \cdot 10^{-7})^2 + (5.79 \cdot 10^{-8})^2}
+  \Delta{\overline{r}} = \sqrt{(1.65 \cdot 10^{-7})^2 + (5.60 \cdot 10^{-8})^2}
 \end{equation}
 
 \begin{center}
-  $\Delta{\overline{r}} = 1.75 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}$
+  $\Delta{\overline{r}} = 1.74 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}$
 \end{center}
 
 \begin{center}
@@ -709,14 +689,14 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 	                  >{\centering\arraybackslash}m{7cm}|} \hline
 			
 			\textbf{Temperature level / $^\circ \text{C}$} & \textbf{Temperature level / $\text{K}$} & \textbf{Mean \ce{O2} production rate, $\overline{r}$ / $\text{mol}\ \text{s}^{-1}$} \\ \hline
-      15 & 288.15 & $(1.89 \pm 0.18) \cdot 10^{-6}$ \\ \hline
-      20 & 293.15 & $(1.89 \pm 0.44) \cdot 10^{-6}$ \\ \hline
-      25 & 298.15 & $(3.39 \pm 0.29) \cdot 10^{-6}$ \\ \hline
-      30 & 303.15 & $(7.54 \pm 1.20) \cdot 10^{-6}$ \\ \hline
-      35 & 308.15 & $(8.59 \pm 0.93) \cdot 10^{-6}$ \\ \hline
-      40 & 313.15 & $(8.89 \pm 1.21) \cdot 10^{-6}$ \\ \hline
-      45 & 318.15 & $(1.29 \pm 0.27) \cdot 10^{-5}$ \\ \hline
-      50 & 323.15 & $(1.84 \pm 0.38) \cdot 10^{-5}$ \\ \hline
+      15 & 288.15 & $(1.80 \pm 0.17) \cdot 10^{-6}$ \\ \hline
+      20 & 293.15 & $(1.80 \pm 0.42) \cdot 10^{-6}$ \\ \hline
+      25 & 298.15 & $(3.24 \pm 0.28) \cdot 10^{-6}$ \\ \hline
+      30 & 303.15 & $(7.21 \pm 1.14) \cdot 10^{-6}$ \\ \hline
+      35 & 308.15 & $(8.21 \pm 0.89) \cdot 10^{-6}$ \\ \hline
+      40 & 313.15 & $(8.49 \pm 1.16) \cdot 10^{-6}$ \\ \hline
+      45 & 318.15 & $(1.23 \pm 0.26) \cdot 10^{-5}$ \\ \hline
+      50 & 323.15 & $(1.76 \pm 0.37) \cdot 10^{-5}$ \\ \hline
 		\end{tabular}
 	}
 	\caption{Mean oxygen production rate.}
@@ -725,34 +705,36 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 
 \section{Data Analysis}
 \label{sec:data-analysis}
-\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}} were used to create an average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
+\indent \indent Data from \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}} were used to create an average initial rate ($\text{mol}\ \text{s}^{-1}$) vs. temperature ($\text{K}$) graph:
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=16cm]{Resources/data_analysis_main_graph.png}
-	\caption{Graph of average initial rate ($\text{kPa}\ \text{s}^{-1}$) vs. temperature level ($\text{K}$).}
+	\includegraphics[width=\textwidth]{Resources/data_analysis_main_graph.png}
+	\caption{Graph of average rate ($\text{mol}\ \text{s}^{-1}$) vs. temperature level ($\text{K}$).}
 	\label{fig:data-analysis-main-graph}
 \end{figure}
 
-As shown in \textit{figure \ref{fig:data-analysis-main-graph}} above, there is an increasing exponential relationship between the apparent rate constant $k_{app}$ and the temperature of the reaction:
+\noindent As shown above, there is an increasing exponential relationship between the rate of \ce{O2} production and the temperature of the system:
 
 \begin{equation}
   f(x) = 0.0005e^{0.0768x}
 \end{equation}
 
-This supports the collision theory outlined in \textit{section \ref{sec:introduction}}: higher temperature increases the frequency of collisions and the fraction of molecules with sufficient energy to overcome the activation energy, $E_\text{A}$; therefore, the rate of successful reactions are increased. Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variations in mass of \ce{KI}), the measured oxygen production rate is proportional to the rate constant by a constant scale factor difference:
+This supports the collision theory outlined in \textit{section \ref{sec:introduction}}: higher temperature increases the frequency of collisions and the fraction of molecules with sufficient energy to overcome the activation energy; therefore, the rate of successful reactions are increased.
+
+Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variations in the mass of \ce{KI}), the measured oxygen production rate is proportional to the rate constant by a constant scale factor difference:
 
 \begin{equation}
   r = C \cdot k
 \end{equation}
 
-\noindent Where $C$ is the scaling factor between the oxygen production rate and the true rate constant, when initial reactants are constant. This allows $r$ to replace $k$ in the Arrhenius equation:
+\noindent Where $C$ is the scaling factor between the oxygen production rate and the true rate constant, only when initial reactants are constant. This allows $r$ to replace $k$ in the Arrhenius equation:
 
 \begin{equation}
   \ln{(r)} = \ln{(C \cdot k)} = \ln{(C)} + \ln{(k)}
 \end{equation}
 
-\noindent Thus, plotting $\ln{(r)}$ against $\frac{1}{T}$ still yields a straight line with slope $-\frac{E_\text{A}}{R}$, only shifting the intercept by $\ln{(C)}$:
+\noindent Thus, plotting $\ln{(r)}$ against $\frac{1}{T}$ will still yields a straight line with slope $-\frac{E_\text{A}}{R}$, only shifting the intercept by $\ln{(C)}$:
 
 \begin{figure}[H]
 	\centering
@@ -761,22 +743,7 @@ This supports the collision theory outlined in \textit{section \ref{sec:introduc
 	\label{fig:data-analysis-arrhenius-plot}
 \end{figure}
 
-As shown in \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}, the mean \ce{O2} production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$), which corresponds to an increase by a factor of $x$:
-
-\begin{multicols}{2}
-  \noindent \textbf{Calculation:}
-  \begin{equation}
-    x = \frac{\overline{r}_\text{323.15\ \text{K}}}{\overline{r}_\text{288.15\ \text{K}}} = \frac{1.84 \cdot 10^{-5}}{1.89 \cdot 10^{-6}} = 9.74
-  \end{equation}
-
-  \columnbreak
-
-  \noindent \textbf{Uncertainty:}
-  \begin{equation}
-    \frac{\Delta{F}}{F} = \frac{\Delta{\overline{r}_\text{323.15\ \text{K}}}}{\overline{r}_\text{323.15\ \text{K}}} + \frac{\Delta{\overline{r}_\text{288.15\ \text{K}}}}{\overline{r}_\text{288.15\ \text{K}}} 
-  \end{equation}
-
-\end{multicols}
+The linear fit above produced a slope of $-6360\ \text{K}$ and $R^2 = 0.9438$, which indicates a strong linear relationship between $\ln{(r)}$ and $\frac{1}{T}$.
 
 Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln{(k)}$ vs. $\frac{1}{T}$ is $-\frac{E_\text{A}}{R}$. Given that $r \propto k$ in this experiment, the slope is used to find the apparent activation energy:
 
@@ -788,6 +755,60 @@ Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln
   $\therefore E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ \footnote{Uncertainty obtained using Microsoft Excel's LINEST function.}
 \end{center}
 
+Although the overall fit is strong, there are small deviations from the trendline relative to other points that occur at, for example, the fifth datapoint ($35\ ^\circ \text{C}$). A possible explanation for this is the silghtly higher average mass of \ce{KI} at that level specifically. The average mass was $0.31\ \text{g}$ compared to an average of $0.29$ or $0.30\ \text{g}$ at other temperature levels. A slightly larger \ce{KI} mass increases the amount of \ce{I-}, which can increase the \ce{O2} production rate and $\ln{(\overline{r})}$ for that level.
+
+At the same time, the mean \ce{O2} production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$) (\textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}), which corresponds to an increase by a factor of $x$:
+
+\begin{multicols}{2}
+  \noindent \textbf{Calculation:}
+  \begin{equation*}
+    x = \frac{\overline{r}_\text{323.15\ \text{K}}}{\overline{r}_\text{288.15\ \text{K}}} = \frac{1.84 \cdot 10^{-5}}{1.89 \cdot 10^{-6}}
+  \end{equation*}
+
+  \vspace{-\baselineskip}
+  \begin{equation*}
+    x = 9.74
+  \end{equation*}
+
+  \columnbreak
+
+  \noindent \textbf{Uncertainty:}
+  \begin{equation*}
+    \frac{\Delta{F}}{F} = \frac{\Delta{\overline{r}_\text{323.15\ \text{K}}}}{\overline{r}_\text{323.15\ \text{K}}} + \frac{\Delta{\overline{r}_\text{288.15\ \text{K}}}}{\overline{r}_\text{288.15\ \text{K}}}
+  \end{equation*}
+
+  \vspace{-\baselineskip}
+  \begin{equation*}
+    \frac{\Delta{F}}{F} = \frac{0.38}{1.84} + \frac{0.18}{1.89} = 0.302
+  \end{equation*}
+
+  \vspace{-\baselineskip}
+  \begin{equation*}
+    \Delta{F} = 0.302 \cdot 9.74 = 2.94
+  \end{equation*}
+\end{multicols}
+
+\begin{center}
+  $\Downarrow$
+\end{center}
+
+\vspace{-\baselineskip}
+\begin{equation}
+  \therefore x = 9.74 \pm 2.94
+\end{equation}
+
+This increase by almost 10 times supports the research question, that higher temperature increases the rate constant.
+
+Because of the deviation in the fifth datapoint (explained earlier), a graph of the mass of \ce{KI} vs. rate per trial was plotted to check whether small variations in the mass of \ce{KI} had an effect on the reaction rate. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary cause of the observed temperature dependence of $\overline{r}$, and that the higher average \ce{KI} mass in the $35\ ^\circ \text{C}$ was only regional to that level.
+
+\section{Conclusion}
+\label{sec:conclusion}
+\indent \indent This investigation aims to examine the relationship between reaction temperature and the rate constant for the \ce{KI}-catalyzed decomposition reaction of \ce{H2O2}, determined from the rate of \ce{O2} pressure increase in a sealed flask. The processed data confirms that increasing temperature increases the apparent rate constant, consistent with the Arrhenius model and collision theory. Across the experimental range of the data, the mean oxygen production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$), corresponding to a $9.74 \pm 2.94$ increase in rate. The Arrhenius plot yielded an activation energy of $E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ for the catalyzed pathway. Compared to accepted scientific values, the uncatalyzed decomposition of \ce{H2O2} has an $E_\text{A}$ of approximately $75\ \text{kJ}\ \text{mol}^{-1}$, while the catalyzed pathway lowers it to approximately $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$. However, the experimental value of $52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ falls $3$ to $3.5\ \text{kJ}\ \text{mol}^{-1}$ below the accepted catalyzed range, which could be attributed to the systematic underestimation of the initial rate at higher temperatures: the reaction occurs at a faster rate at higher temperature levels; thus, some \ce{O2_{(g)}} could have escaped before the flask was fully sealed. This reduces the pressure-time slope, which compresses the range of $\ln{(\overline{r})}$ values and flattens the slope of the Arrhenius plot, leading to a lower $E_\text{A}$.
+
+Overall, this investigation confirms that increasing temperature does increase the measured rate constant for the \ce{KI}-catalyzed decomposition of \ce{H2O2}; the exponential relationship between temperature and rate, the almost tenfold increase in rate over a $35\ ^\circ \text{C}$ range in reaction temperature, and the linear relationship depicted in the Arrhenius plot are all consistent with the collision theory and the Arrhenius model, that \ce{KI} provides an alternative reaction pathway that requires less energy.
+
+\section{Evaluation}
+\label{sec:evaluation}
 
 
 \
@@ -796,91 +817,11 @@ Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln
 
 \
 
-The apparent rate constant $k_{app}$ was defined in \textit{section \ref{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}} to represent the initial rate of the reaction within the first 15 seconds after the reaction begins. Given that the initial amounts of \ce{H2O2} and \ce{I-} were held constant across all trials (with minor variations in the mass of \ce{KI}), $k_{app}$ is proportional to the actual rate constant $k$ for the reaction, by a constant scale factor difference:
-
-\begin{equation}
-  k_{app} = C \cdot k,
-\end{equation}
-
-\noindent Where $C$ is the constant scaling factor between the apparent rate constant and the true rate constant. As shown in \textit{table \ref{tab:processed-data}} and \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}, the apparent rate constant increases from an average of $0.01023 \pm 0.00194\ \text{kPa}\ \text{s}^{-1}$ at $15 ^\circ \text{C}$ ($288.15 \text{K}$) to an average of $0.10081 \pm 0.02089\ \text{kPa}\ \text{s}^{-1}$ at $50 ^\circ \text{C}$ ($323.15 \text{K}$), which is an increase by a factor of $9.85$. This supports my initial hypothesis that higher temperature increases the frequency of collisions and the fraction of molecules with energy $\geq \text{E}_\text{A}$. To better model how the reaction temperature impacts the rate constant, the Arrhenius equation from \textit{equation \ref{eq:arrhenius-equation}} was used to analyze the data, given that $k_{app} \propto k$:
-
-\begin{equation}
-  k_{app} = A_{app} \cdot e^{-\frac{E_{A}}{RT}}
-\end{equation}
-
-\noindent An Arrhenius plot of $\ln{(k_{app})}$ vs. $\frac{1}{T}$ was created by taking the natural logarithms on both sides:
-
-\begin{equation}
-  \ln{(k_{app})} = -\frac{E_{A}}{R} \cdot (\frac{1}{T}) + \ln{(A_{app})}
-\end{equation}
-
-\noindent Recall from \textit{section \ref{sec:introduction-background-concepts}} that the slope of the Arrhenius plot is $-\frac{E_{A}}{R}$ and the y-intercept is $\ln{(A)}$. The Arrhenius equation can then be rearranged, where $m$ is the slope of the Arrhenius plot, and $b$ is the y-intercept:
-
-\begin{equation}
-  \ln{(k_{app})} = m \cdot (\frac{1}{T}) + b
-\end{equation}
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Resources/data_analysis_arrhenius_plot.png}
-	\caption{Arrhenius plot, graph of $\ln{k_{app}}$ vs. $\frac{1}{T} \cdot 10^{3}$.}
-	\label{fig:data-analysis-arrhenius-plot}
-\end{figure}
-
-\noindent However, because the x-axis of the graph uses $\frac{1}{T} \cdot 10^{-3}$ rather than $\frac{1}{T}$, the slope must be multiplied by $1000$ to be correct:
-
-\begin{equation}
-  \ln{(k_{app})} = (m \cdot 1000) \cdot (\frac{1}{T}) + b
-\end{equation}
-
-\noindent Plugging in the values from \textit{figure \ref{fig:data-analysis-arrhenius-plot}}:
-
-\begin{equation}
-  \ln{(k_{app})} = (-7.2974 \cdot 10^{3}) \cdot (\frac{1}{T}) + 18.815
-\end{equation}
-
-\noindent Given that the slope $m = -\frac{E_{A}}{R}$, the activation energy $E_{A}$ can be calculated using $R = 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} \footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}$:
-
-\begin{equation}
-  E_{A} = |-m \cdot R| = 7.2974 \cdot 10^{3} \cdot 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} = 60641.4\ \text{J}\ \text{mol}^{-1}
-\end{equation}
-
-\begin{equation}
-  \therefore E_{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}
-\end{equation}
-
-\noindent Thus, the $\text{E}_\text{A}$ for the \ce{KI}-catalyzed decomposition reaction is $60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$. Note that the uncertainty for activation energy was obtained from Excel's LINEST function.
-
-A graph of the mass of \ce{KI} vs. $k_{app}$ was also plotted to check whether small variations in the mass of \ce{KI} had an effect on the apparent rate constant. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary cause of the observed temperature dependence of $k_{app}$:
-
-\begin{figure}[H]
-	\centering
-	\includegraphics[width=\textwidth]{Resources/data_analysis_ki_mass.png}
-	\caption{Graph of mass of \ce{KI} vs. $k_{app}$ for all trials.}
-	\label{fig:data-analysis-ki-mass}
-\end{figure}
-
-\section{Conclusion}
-\label{sec:conclusion}
-\indent \indent This investigation aims to examine the relationship between reaction temperature and the initial rate of the \ce{KI}-catalyzed decomposition reaction of hydrogen peroxide, \ce{H2O2}, where the initial rate ($k_{app}$) was determined from the initial slope of pressure ($\text{kPa}$) vs. time ($\text{s}$) in a sealed flask. The experimental data showed that higher temperatures increased both the collision frequency and the fraction of molecules with kinetic energy $\text{KE} \geq \text{E}_\text{A}$, leading to a larger initial pressure-rise rate as oxygen is produced. The hypothesis in \textit{section \ref{sec:introduction-hypothesis}} predicting an \textbf{exponential relationship} between temperature and the apparent rate constant was \textbf{supported} by the data.
-
-Moreover, given that the apparent rate constant is proportional to the actual rate constant as apparatus setup and initial reactant amounts were held constant, the Arrhenius plot and graph was used, which resulted in an activation energy of $\text{E}_\text{A} = 60.6 \pm 9.4\ \text{kJ}\ \text{mol}^{-1}$ for the \ce{KI}-catalyzed pathway. This value is consistent with accepted scientific values online: a lab published by MIT OpenCourseware and the Chemistry LibreTexts reports an uncatalyzed $\text{E}_\text{A}$ at about $75\ \text{kJ}\ \text{mol}^{-1}$, while iodide catalysts lowers it to about $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$ \cite{MIT_OCW_SteamingGun2}\cite{Purdue_Chemed_H2O2}, which is consistent with the experimental data within uncertainty.
-
-Overall, increasing the reaction temperature does increase the measured rate constant for this reaction, as the \ce{KI} provides an alternative reaction pathway that requires less energy.
-
-\section{Evaluation}
-\label{sec:evaluation}
-
-\subsection{Strengths}
-\label{sec:evaluation-strengths}
 \indent \indent A key strength was controlling variables.The same apparatus (flask, stopper, tubing, pressure sensor) was used throughout, and the initial reactant amounts were held constant, so changes in the reaction rate are primarily due to temperature. Minor fluctuations in the mass of \ce{KI} were present, but as \textit{figure \ref{fig:data-analysis-ki-mass}} has proved, they are not the dominant influence on $k_{app}$.
 
 Another strength was replication. Learning from past mistakes in other IB Science investigations, conducting five trials per temperature level allowed mean values to be used, reducing random error and making the trend in $k_{app}$ vs. temperature less dependent on a single trial. It also improved stability when a trial and using mean values reduced the impact of random variations between trials and increased stability when a trial needs to be excluded (i.e. due to missing source data or other experimental errors).
 
 % \indent \indent A further strength is the use of continuous sensor-based data collection to determine $k_{\text{app}}$ from a defined early-time window. Because the pressure sensor produced many datapoints over the measurement interval, the calculated slopes were less dependent on individual noisy readings and could better represent a consistent rate proxy than a simple two-point calculation.
-
-\subsection{Weaknesses \& Limitations}
-\label{sec:evaluation-weaknesses-and-limitations}
 \indent \indent A major methodological limitation was maitaining a stable and uniform water bath temperature during the $60\ \text{seconds}$ collection period. While most trials started and ended within $1 ^\circ \text{C}$ of the target temperature, gradual drift could occur amidst the collection period due to heat loss to surroundings. Moreover, from personal experience, the temperature probe may not have perfectly represented the temperature of the entire water bath; readings often drifted when blocks of ice drifted nearby. To reduce this limitation, a laboratory thermostatic water bath with internal circulation would provide a more uniform temperature control. However, the high cost of such equipment made it impractical for this investigation.
 
 \begin{figure}[H]
