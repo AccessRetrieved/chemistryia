@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 MAR 2026 06:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 MAR 2026 06:59
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **"/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex"
 (/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex
@@ -122,8 +123,7 @@ Now handling font encoding PD1 ...
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 \Hy@SavedSpaceFactor=\count279
-
-(/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2024-11-05 v7.01l Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
@@ -448,8 +448,7 @@ Package: ifmtarg 2018/04/16 v1.2b check for an empty argument
 Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
 ))
 Package: pgf 2023-01-15 v3.1.10 (3.1.10)
- (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/basiclayer/pgfcore.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/systemlayer/pgfsys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/systemlayer/pgfsys.code.tex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
  (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
 \pgfkeys@pathtoks=\toks31
@@ -502,8 +501,7 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@stack@operation=\toks39
 ) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.basic.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.trigonometric.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.random.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.comparison.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.base.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.round.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.misc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerarithmetics.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
 \c@pgfmathroundto@lastzeros=\count331
-))
-(/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfint.code.tex) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgf@picminx=\dimen261
 \pgf@picmaxx=\dimen262
@@ -579,8 +577,7 @@ Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
 \pgf@nodesepend=\dimen286
 ) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18.sty
 Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
-)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty
-(/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
+)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgffor.sty (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/latex/pgf/math/pgfmath.sty (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)) (/usr/local/texlive/2025/texmf-dist/tex/generic/pgf/utilities/pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen287
 \pgffor@skip=\dimen288
@@ -680,8 +677,7 @@ Package: soul-ori 2023-06-14 v3.1 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen315
 \SOUL@uldp=\dimen316
 \SOUL@ulht=\dimen317
-)
-(/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/local/texlive/2025/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )) (/usr/local/texlive/2025/texmf-dist/tex/latex/shipunov/boldline.sty
 Package: boldline 2008/02/04 v0.2 Adjust line width in tables
@@ -769,37 +765,23 @@ Package caption Info: End \AtBeginDocument code.
 
 Package chemgreek Info: Activating mapping `default' on line 44.
 
-runsystem(wc=$(texcount "/Users/jerryhu/Library/CloudStorage/OneDrive-WhiteRockChristianAcademy/12/Chemistry HL/Chemistry IA/Documents/Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.tex" | grep "Words in text" | sed -E "s/[^0-9]+//g"); if [ -f wordcount_flag.txt ]; then prev=$(cat wordcount_flag.txt); else prev=0; fi; if [ "$wc" -gt 3000 ] && [ "$prev" -eq 0 ]; then osascript -e 'display alert "Word Count Exceeded" message "Your IA is now over 3000 words."'; echo 1 > wordcount_flag.txt; elif [ "$wc" -le 3000 ]; then echo 0 > wordcount_flag.txt; fi; echo $wc > wordcount.tex)...executed.
 
- (./wordcount.tex)
 
 [1
 
-{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
- (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-))
-\tf@toc=\write5
-\openout5 = `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.toc'.
-
-
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.67 \newpage
-              [1]
+{/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (1.21147pt too wide) in paragraph at lines 74--75
 []\OT1/cmr/m/n/10 The de-com-po-si-tion re-ac-tion of hy-dro-gen per-ox-ide to form oxy-gen and wa-ter is a ther-mo-dy-nam-i-cally favourable
  []
 
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 76.
+(/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 76.
+ (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
 
 
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
@@ -813,7 +795,7 @@ l.117 \begin{equation}
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [4]
-Overfull \hbox (8.13359pt too wide) in paragraph at lines 272--341
+Overfull \hbox (8.13359pt too wide) in paragraph at lines 267--336
  [][] 
  []
 
@@ -822,12 +804,12 @@ Overfull \hbox (8.13359pt too wide) in paragraph at lines 272--341
 [5]
 
 [6]
-Overfull \hbox (0.79535pt too wide) in paragraph at lines 426--426
+Overfull \hbox (0.79535pt too wide) in paragraph at lines 419--419
  []|\OT1/cmr/bx/n/10 Level| 
  []
 
 
-Overfull \hbox (3.83997pt too wide) in paragraph at lines 426--426
+Overfull \hbox (3.83997pt too wide) in paragraph at lines 419--419
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
@@ -836,7 +818,7 @@ Overfull \hbox (3.83997pt too wide) in paragraph at lines 426--426
 [7]
 
 [8]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 554--554
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 547--547
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
@@ -845,15 +827,15 @@ Overfull \hbox (2.41725pt too wide) in paragraph at lines 554--554
 [9
 
 ]
-<Resources/example_calculation_data_helper.png, id=231, 666.49pt x 626.34pt>
+<Resources/example_calculation_data_helper.png, id=201, 666.49pt x 626.34pt>
 File: Resources/example_calculation_data_helper.png Graphic file (type png)
 <use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 574.
+Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 567.
 (pdftex.def)             Requested size: 341.43306pt x 320.8723pt.
-<Resources/example_calculation_time_snapshot.png, id=233, 1006.743pt x 656.343pt>
+<Resources/example_calculation_time_snapshot.png, id=203, 1006.743pt x 656.343pt>
 File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
 <use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 583.
+Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 576.
 (pdftex.def)             Requested size: 500.484pt x 326.28787pt.
 
 
@@ -864,18 +846,18 @@ Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used o
 [11 <./Resources/example_calculation_time_snapshot.png>]
 
 [12]
-<Resources/data_analysis_main_graph.png, id=270, 745.695pt x 499.758pt>
+<Resources/data_analysis_main_graph.png, id=240, 745.695pt x 499.758pt>
 File: Resources/data_analysis_main_graph.png Graphic file (type png)
 <use Resources/data_analysis_main_graph.png>
-Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 701.
+Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 694.
 (pdftex.def)             Requested size: 500.484pt x 335.41566pt.
 
 
 [13 <./Resources/data_analysis_main_graph.png>]
-<Resources/data_analysis_arrhenius_plot.png, id=280, 851.034pt x 493.845pt>
+<Resources/data_analysis_arrhenius_plot.png, id=250, 851.034pt x 493.845pt>
 File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
 <use Resources/data_analysis_arrhenius_plot.png>
-Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 730.
+Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 723.
 (pdftex.def)             Requested size: 500.484pt x 290.42409pt.
 
 
@@ -915,12 +897,12 @@ Underfull \hbox (badness 2856) in paragraph at lines 37--39
 )
 
 [18]
-Overfull \hbox (0.48714pt too wide) in paragraph at lines 828--829
+Overfull \hbox (0.48714pt too wide) in paragraph at lines 821--822
 []\OT1/cmr/m/n/10 The Mi-crosoft Ex-cel file for the com-plete raw data can be found at: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
 
-Overfull \hbox (0.6538pt too wide) in paragraph at lines 832--833
+Overfull \hbox (0.6538pt too wide) in paragraph at lines 825--826
 []\OT1/cmr/m/n/10 All source code and raw data are open-source, avail-able to view on: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
@@ -932,21 +914,21 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out' has not changed.
-(rerunfilecheck)             Checksum: 80F403165D221CB106A28CCBF0FCD508;3505.
+(rerunfilecheck)             Checksum: 6EB73939C1FC41106BC2846102CDB39B;2867.
  ) 
 Here is how much of TeX's memory you used:
- 25843 strings out of 473190
- 496245 string characters out of 5715801
- 977447 words of memory out of 5000000
- 48502 multiletter control sequences out of 15000+600000
+ 25827 strings out of 473190
+ 495427 string characters out of 5715801
+ 976353 words of memory out of 5000000
+ 48495 multiletter control sequences out of 15000+600000
  569553 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,89p,1882b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (21 pages, 1244243 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (20 pages, 1239653 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 388 compressed objects within 4 object streams
- 122 named destinations out of 1000 (max. 500000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 358 compressed objects within 4 object streams
+ 119 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 
