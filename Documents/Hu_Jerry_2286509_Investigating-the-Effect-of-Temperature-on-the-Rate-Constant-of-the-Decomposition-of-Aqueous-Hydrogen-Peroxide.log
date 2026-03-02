@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 MAR 2026 16:43
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 MAR 2026 17:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -861,21 +861,21 @@ LaTeX Warning: Reference `sec:data-processing-uncertainty-propagation-uncertaint
 
 LaTeX Warning: Reference `sec:introduction-background-concepts' on page 15 undefined on input line 761.
 
-<Resources/data_analysis_arrhenius_plot.png, id=280, 731.679pt x 500.853pt>
+<Resources/data_analysis_arrhenius_plot.png, id=280, 850.158pt x 484.647pt>
 File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
 <use Resources/data_analysis_arrhenius_plot.png>
 Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 769.
-(pdftex.def)             Requested size: 500.484pt x 342.60077pt.
+(pdftex.def)             Requested size: 500.484pt x 285.31805pt.
 
 
 [15]
 
 [16 <./Resources/data_analysis_arrhenius_plot.png>]
-<Resources/data_analysis_ki_mass.png, id=304, 840.96pt x 463.623pt>
+<Resources/data_analysis_ki_mass.png, id=304, 598.089pt x 463.623pt>
 File: Resources/data_analysis_ki_mass.png Graphic file (type png)
 <use Resources/data_analysis_ki_mass.png>
 Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 802.
-(pdftex.def)             Requested size: 500.484pt x 275.91924pt.
+(pdftex.def)             Requested size: 500.484pt x 387.97629pt.
 
 
 LaTeX Warning: Reference `sec:introduction-hypothesis' on page 17 undefined on input line 809.
@@ -883,12 +883,12 @@ LaTeX Warning: Reference `sec:introduction-hypothesis' on page 17 undefined on i
 
 
 [17 <./Resources/data_analysis_ki_mass.png>]
-<Resources/evaluation_weakness_water_bath.png, id=316, 380.42125pt x 379.4175pt>
+<Resources/evaluation_weakness_water_bath.png, id=314, 380.42125pt x 379.4175pt>
 File: Resources/evaluation_weakness_water_bath.png Graphic file (type png)
 <use Resources/evaluation_weakness_water_bath.png>
 Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 834.
 (pdftex.def)             Requested size: 170.71652pt x 170.26735pt.
-<Resources/evaluation_weakness_immersion_circulator.png, id=317, 357.335pt x 361.35pt>
+<Resources/evaluation_weakness_immersion_circulator.png, id=315, 357.335pt x 361.35pt>
 File: Resources/evaluation_weakness_immersion_circulator.png Graphic file (type png)
 <use Resources/evaluation_weakness_immersion_circulator.png>
 Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 841.
@@ -965,7 +965,7 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (22 pages, 1653678 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (22 pages, 1626239 bytes).
 PDF statistics:
  491 PDF objects out of 1000 (max. 8388607)
  399 compressed objects within 4 object streams
