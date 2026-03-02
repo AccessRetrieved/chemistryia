@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 MAR 2026 13:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  1 MAR 2026 16:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -785,15 +785,15 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.113 
-       [1]
+l.110 \begin{equation}
+                       [1]
 
 [2]
 
 [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [4]
-Overfull \hbox (8.13359pt too wide) in paragraph at lines 275--344
+Overfull \hbox (8.13359pt too wide) in paragraph at lines 274--343
  [][] 
  []
 
@@ -802,12 +802,12 @@ Overfull \hbox (8.13359pt too wide) in paragraph at lines 275--344
 [5]
 
 [6]
-Overfull \hbox (0.79535pt too wide) in paragraph at lines 429--429
+Overfull \hbox (0.79535pt too wide) in paragraph at lines 428--428
  []|\OT1/cmr/bx/n/10 Level| 
  []
 
 
-Overfull \hbox (3.83997pt too wide) in paragraph at lines 429--429
+Overfull \hbox (3.83997pt too wide) in paragraph at lines 428--428
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
@@ -818,7 +818,7 @@ Overfull \hbox (3.83997pt too wide) in paragraph at lines 429--429
 [8]
 
 [9]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 616--616
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 576--576
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
@@ -827,72 +827,77 @@ Overfull \hbox (2.41725pt too wide) in paragraph at lines 616--616
 [10
 
 ]
-<Resources/example_calculation_data_helper.png, id=239, 666.49pt x 626.34pt>
+<Resources/example_calculation_data_helper.png, id=227, 666.49pt x 626.34pt>
 File: Resources/example_calculation_data_helper.png Graphic file (type png)
 <use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 642.
+Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 602.
 (pdftex.def)             Requested size: 341.43306pt x 320.8723pt.
-<Resources/example_calculation_time_snapshot.png, id=241, 1006.743pt x 656.343pt>
-File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
-<use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 651.
-(pdftex.def)             Requested size: 500.484pt x 326.28787pt.
 
 
 [11
 
  <./Resources/example_calculation_data_helper.png>]
+<Resources/example_calculation_time_snapshot.png, id=237, 1006.743pt x 656.343pt>
+File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
+<use Resources/example_calculation_time_snapshot.png>
+Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 611.
+(pdftex.def)             Requested size: 500.484pt x 326.28787pt.
+
 
 [12 <./Resources/example_calculation_time_snapshot.png>]
-<Resources/data_analysis_main_graph.png, id=264, 743.724pt x 498.663pt>
+
+[13]
+<Resources/data_analysis_main_graph.png, id=268, 743.724pt x 498.663pt>
 File: Resources/data_analysis_main_graph.png Graphic file (type png)
 <use Resources/data_analysis_main_graph.png>
-Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 733.
+Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 732.
 (pdftex.def)             Requested size: 455.24408pt x 305.23402pt.
 
 
-[13]
-
-LaTeX Warning: Reference `sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant' on page 14 undefined on input line 744.
-
-
-
 [14 <./Resources/data_analysis_main_graph.png>]
-<Resources/data_analysis_arrhenius_plot.png, id=285, 731.679pt x 500.853pt>
+
+LaTeX Warning: Reference `sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant' on page 15 undefined on input line 743.
+
+
+LaTeX Warning: Reference `sec:introduction-background-concepts' on page 15 undefined on input line 761.
+
+<Resources/data_analysis_arrhenius_plot.png, id=280, 731.679pt x 500.853pt>
 File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
 <use Resources/data_analysis_arrhenius_plot.png>
-Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 770.
+Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 769.
 (pdftex.def)             Requested size: 500.484pt x 342.60077pt.
 
 
-[15 <./Resources/data_analysis_arrhenius_plot.png>]
-<Resources/data_analysis_ki_mass.png, id=299, 840.96pt x 463.623pt>
+[15]
+
+[16 <./Resources/data_analysis_arrhenius_plot.png>]
+<Resources/data_analysis_ki_mass.png, id=304, 840.96pt x 463.623pt>
 File: Resources/data_analysis_ki_mass.png Graphic file (type png)
 <use Resources/data_analysis_ki_mass.png>
-Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 803.
+Package pdftex.def Info: Resources/data_analysis_ki_mass.png  used on input line 802.
 (pdftex.def)             Requested size: 500.484pt x 275.91924pt.
 
 
-LaTeX Warning: Reference `sec:introduction-hypothesis' on page 16 undefined on input line 810.
+LaTeX Warning: Reference `sec:introduction-hypothesis' on page 17 undefined on input line 809.
 
 
 
-[16 <./Resources/data_analysis_ki_mass.png>]
-
-[17]
-<Resources/evaluation_weakness_water_bath.png, id=320, 380.42125pt x 379.4175pt>
+[17 <./Resources/data_analysis_ki_mass.png>]
+<Resources/evaluation_weakness_water_bath.png, id=316, 380.42125pt x 379.4175pt>
 File: Resources/evaluation_weakness_water_bath.png Graphic file (type png)
 <use Resources/evaluation_weakness_water_bath.png>
-Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 835.
+Package pdftex.def Info: Resources/evaluation_weakness_water_bath.png  used on input line 834.
 (pdftex.def)             Requested size: 170.71652pt x 170.26735pt.
-<Resources/evaluation_weakness_immersion_circulator.png, id=321, 357.335pt x 361.35pt>
+<Resources/evaluation_weakness_immersion_circulator.png, id=317, 357.335pt x 361.35pt>
 File: Resources/evaluation_weakness_immersion_circulator.png Graphic file (type png)
 <use Resources/evaluation_weakness_immersion_circulator.png>
-Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 842.
+Package pdftex.def Info: Resources/evaluation_weakness_immersion_circulator.png  used on input line 841.
 (pdftex.def)             Requested size: 170.71652pt x 172.6355pt.
 
 
-[18 <./Resources/evaluation_weakness_water_bath.png> <./Resources/evaluation_weakness_immersion_circulator.png>] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
+[18]
+
+[19 <./Resources/evaluation_weakness_water_bath.png> <./Resources/evaluation_weakness_immersion_circulator.png>] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 10.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
@@ -921,19 +926,19 @@ Underfull \hbox (badness 2856) in paragraph at lines 37--39
 
 )
 
-[19]
-Overfull \hbox (35.83443pt too wide) in paragraph at lines 869--870
+[20]
+Overfull \hbox (35.83443pt too wide) in paragraph at lines 868--869
 []\OT1/cmr/m/n/10 The Mi-crosoft Ex-cel file for the com-plete raw data can be found at GitHub: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
 
-Overfull \hbox (36.00108pt too wide) in paragraph at lines 873--874
+Overfull \hbox (36.00108pt too wide) in paragraph at lines 872--873
 []\OT1/cmr/m/n/10 All source code and raw data are open-source, avail-able to view on GitHub: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
 
 
-[20] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
+[21] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
@@ -943,13 +948,13 @@ L3 programming layer <2025-01-18>
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out' has not changed.
-(rerunfilecheck)             Checksum: 5452EF5099B7DA04EDD6F87A90AC427A;4224.
+(rerunfilecheck)             Checksum: 36E832E78F3ABEF377EBCCF26EA57BC1;3829.
  ) 
 Here is how much of TeX's memory you used:
- 25886 strings out of 473190
- 497146 string characters out of 5715801
- 976987 words of memory out of 5000000
- 48538 multiletter control sequences out of 15000+600000
+ 25888 strings out of 473190
+ 497116 string characters out of 5715801
+ 977851 words of memory out of 5000000
+ 48533 multiletter control sequences out of 15000+600000
  571096 words of font info for 81 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,20n,89p,1243b,726s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -960,10 +965,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (21 pages, 1652091 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (22 pages, 1653678 bytes).
 PDF statistics:
- 490 PDF objects out of 1000 (max. 8388607)
+ 491 PDF objects out of 1000 (max. 8388607)
  399 compressed objects within 4 object streams
- 128 named destinations out of 1000 (max. 500000)
- 272 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 named destinations out of 1000 (max. 500000)
+ 248 words of extra memory for PDF output out of 10000 (max. 10000000)
 

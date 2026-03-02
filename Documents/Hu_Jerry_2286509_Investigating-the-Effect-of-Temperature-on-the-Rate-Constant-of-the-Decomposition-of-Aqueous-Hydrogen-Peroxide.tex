@@ -82,20 +82,16 @@
   \ce{2H2O2_{(aq)} ->[\ce{KI}] 2H2O_{(l)} + O2_{(g)}}
 \end{equation}
 
-\subsection{Background Concepts}
-\label{sec:introduction-background-concepts}
-% \subsubsection{The Collision Theory.}
-% \label{sec:introduction-background-concepts-collision-theory}
-\indent \indent The collision theory states that a chemical reaction can only occur when particles collide with sufficient energy and the correct orientation. As the temperature of the reaction increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction and the reaction constant. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
+% \subsection{Background Concepts}
+% \label{sec:introduction-background-concepts}
+The collision theory states that a chemical reaction can only occur when particles collide with sufficient energy and the correct orientation. As the temperature of the reaction increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction and the reaction constant. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
 
 \begin{equation}
   k = A \cdot e^{- \frac{E_{A}}{RT}}
 \label{eq:arrhenius-equation}
 \end{equation}
 
-\noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature, in Kelvins.
-
-Taking the natural logarithm on both sides of the equation will yield a linear relationship:
+\noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature, in Kelvins. Taking the natural logarithm on both sides of the equation will yield a linear relationship:
 
 \begin{equation}
   \ln{(K)} = - \frac{E_{A}}{RT} + \ln{(A)}
@@ -124,7 +120,7 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
 
 % \noindent Given that the initial concentration of \ce{H2O2} and the amount of catalyst added were held constant across all trials, the calculated rate constant can be compared across temperature levels.
 
-\noindent Where $T$ is the set temperature (K) for a specific trial, and $V_\text{gas}$ is the gas volume inside the sealed flask ($V_\text{gas} = V_\text{total volume} - V_\text{solution}$).
+\noindent Where $T$ is the target temperature (K) for a specific trial, and $V_\text{gas}$ is the gas volume inside the sealed flask ($V_\text{gas} = V_\text{total volume} - V_\text{solution}$).
 
 \begin{center}
   $\ast$~$\ast$~$\ast$
@@ -136,8 +132,12 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
   \textit{How does the temperature affect the rate constant for the \ce{KI}-catalyzed decomposition of aqueous hydrogen peroxide, determined from the rate of increase of gas pressure in a sealed flask?}
 \end{center}
 
-\subsection{Justification}
-\label{sec:justification}
+\begin{center}
+  $\ast$~$\ast$~$\ast$
+\end{center}
+
+% \subsection{Justification}
+% \label{sec:justification}
 \indent \indent Given that the rate constant of the decomposition of aqueous \ce{H2O2} is expected change with temperature, increasing $T$ should increase the fraction of particles reacting with enough energy to overcome the $E_{A}$, so that a greater proportion of particles can collide, leading to a reaction. Though \ce{KI} acts as a catalyst (provides an alternative pathway that has a lower $E_{A}$), the elementary steps still needs to overcome an $E_{A}$. Thus, the rate constant $k$ should increase with temperature, according to Arrhenius's equation (approximate linear relationship of $\ln{(k)}$ vs. $1/T$).
 
 \section{Experimental Design}
@@ -255,8 +255,7 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
 \begin{enumerate}
   \item Disessemble the apparatus.
   \item Save the file on the LabQuest, and download the data to a computer.
-  \item Neutralize the waste solution by adding a small amount of sodium thiosulfate, then dispose the waste solution down the drain with running water.
-  \item Return used glassware to the dirty bin, and return all equipment.
+  \item Neutralize the waste solution by adding a small amount of sodium thiosulfate, then dispose the waste solution down the drain with running water. Return all equipments.
 \end{enumerate}
 
 % \noindent \underline{\textbf{Note:}} If table turns yellow, wipe down with a paper towel, some water, and a few crystals of sodium thiosulfate.
@@ -264,8 +263,8 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
 \section{Data Collection}
 \label{sec:data-collection}
 
-\subsection{Data Tables}
-\label{sec:data-collection-data-tables}
+% \subsection{Data Tables}
+% \label{sec:data-collection-data-tables}
 
 \begin{table}[H]
   \centering
@@ -454,49 +453,6 @@ Taking the natural logarithm on both sides of the equation will yield a linear r
 
 However, the methodology in which the data were collected likely increased the uncertainties; for example, temperature varied during the $60\ \text{s}$ data collection period, and the probe may not have reflected the solution temperature. Moreover, though marked, the manual insertion depth of the stopper could have introduced small headspace variations. Thus, while linear interpolation with $\Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x$ could have been used as the temperature probe's uncertainty, a conservative $\pm 0.5\ ^\circ$C was used for all temperature measurements.
 
-% \subsubsection{Uncertainty in rate constant}
-% \label{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}
-% \indent \indent The rate constant was calculated as the slope of a linear best-fit trendline to the pressure-time graph over a fixed \textit{15 second} interval, starting at the first continuous rise in pressure after the rubber stopper was replaced \footnote{\textbf{First continuous rise:} The first datapoint was counted as the start interval after a consecutive rise in the next adjacent 3 datapoints}. The reaction rate equation for the decomposition reaction of hydrogen peroxide (\ce{H2O2}) and potassium iodide (\ce{KI}) can be expressed in the general form, where $r$ is the reaction rate and $k$ is the rate constant:
-
-% \begin{equation}
-%   r = k[\ce{H2O2}]^{m}[\ce{I-}]^{n}
-% \end{equation}
-
-% \noindent Given that the moles of \ce{H2O2} and the amount of \ce{KI} were held constant for all trials, the reaction rate is directly proportional to the rate constant $k$ with temperature. Moreover, according to the ideal gas relationship ($PV = nRT$), pressure inside the sealed flask is proportional to the moles of \ce{O2} produced:
-
-% \begin{equation}
-%   P \propto n
-% \end{equation}
-
-% \noindent Thus, an apparent rate constant $k_{app}$ can be defined using the initial rate of pressure increase:
-
-% \begin{equation}
-%   k_{app} = \frac{\Delta{P}}{\Delta{t}}
-% \label{eq:k_app-equation}
-% \end{equation}
-
-% \begin{equation}
-%   k_{app} \propto k
-% \end{equation}
-
-% \noindent As there are 5 trials per temperature level, a mean apparent rate constant was calculated to represent the rate constant at each temperature::
-
-% \begin{equation}
-%   \overline{k}_{\mathrm{app}} = (\frac{1}{n}) \cdot \sum_{i=1}^{n} k_{\mathrm{app},i}, \quad (n=5)
-% \end{equation}
-
-% \noindent The random uncertainty in the mean $k_{app}$ value was then calculated:
-
-% \begin{equation}
-%   \Delta{\overline{k}_{\mathrm{app}}} = \frac{\sigma}{\sqrt{n}}
-% \end{equation}
-
-% \noindent Where $\sigma$ is the standard deviation of the 5 $k_{app}$ values, and $n$ is the number of trials. This was included because random uncertainties (caused by small variations in, for example, plastic film sealing, mixing time, etc.) can be reduced by taking average, but systematic uncertainties (i.e. constant volunmetric tolerance from using the same pipette) does not average out.
-
-% \
-
-% \noindent \underline{\textbf{Note:}} The apparent rate constant is the same as the initial rate of pressure increase.
-
 \subsubsection{Uncertainty in oxygen production rate}
 \indent \indent For each calculated rate, there contains random uncertainties and uncertainties from the instruments. Random uncertainty was propagated using the spread of the five trials' rates at each temperature level using standard deviation, and converted to uncertainty in the mean rate using the standard error of the mean ($\frac{\sigma}{\sqrt{5}}$):
 
@@ -504,16 +460,20 @@ However, the methodology in which the data were collected likely increased the u
   \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{n}}
 \end{equation}
 
-\noindent Where $\sigma$ is the standard deviation of the $n=5$ trials. Instrument uncertainty was propagated through the rate calculation:
+\noindent Where $\sigma$ is the standard deviation of the trials. Instrument uncertainty was propagated through the rate calculation:
 
 \begin{equation}
-  \Delta{\overline{r}_\text{inst}} = \frac{V_\text{gas}}{RT} \cdot m
+  \Delta{\overline{r}_\text{rel, inst}} = \sqrt{(\frac{\Delta{V}_\text{gas}}{V_\text{gas}})^2 + (\frac{\Delta{\overline{m}}}{\overline{m}})^2 + (\frac{\Delta{T}}{T})^2} 
+\end{equation}
+
+\begin{equation}
+  \Delta{\overline{r}_\text{abs, inst}} = \overline{r} \cdot \Delta{\overline{r}_\text{rel, inst}}
 \end{equation}
 
 \noindent The uncertainty of $m$ was taken from the linear regression of the pressure-time data, and the uncertainty of $V_\text{gas}$ and $T$ were taken from \textit{table \ref{tab:data-processing-uncertainty-propagation-summary-of-uncertainties-by-tool}}. Combined:
 
 \begin{equation}
-  \Delta{\overline{r}} = \sqrt{(\Delta{\overline{r}_\text{rand}})^2 + (\Delta{\overline{r}_\text{inst}})^2}
+  \Delta{\overline{r}} = \sqrt{(\Delta{\overline{r}_\text{rand}})^2 + (\Delta{\overline{r}_\text{abs, inst}})^2}
 \end{equation}
 
 \subsubsection{Uncertainty in the Arrhenius plot (THIS IS AI - UPDATE LATER)}
@@ -554,7 +514,7 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
       >{\centering\arraybackslash}m{3.8cm}|
       >{\centering\arraybackslash}m{3.5cm}|
     } \hlineB{5}
-        \textbf{Temp / $^\circ \text{C}$ ($\pm 0.5~^\circ\text{C}$)} &
+        \textbf{Temp / $^\circ \text{C}$} &
         \textbf{Trial} &
         \textbf{Average temp / K ($\pm 0.5~^\circ\text{C}$)} &
         \textbf{Mass of \ce{KI} / $\text{g}$ ($\pm 0.01~\text{g}$)} &
@@ -565,53 +525,53 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
         \textbf{Rate SD / $\text{mol s}^{-1}$} \\
         \hlineB{5}
   
-        \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{37.8} & \textcolor{red}{60.0} & \textcolor{red}{$1.40 \cdot 10^{-6}$} & \multirow{5}{*}{\underline{\textcolor{red}{$(1.887\pm0.165) \cdot 10^{-6}$}}} & \multirow{5}{*}{\underline{\textcolor{red}{$3.69 \cdot 10^{-7}$}}} \\ \cline{2-7}
-                            & 2 & 288.85 & 0.29 & 47.4 & 60.0 & $1.94 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 287.50 & 0.32 & 30.0 & 60.0 & $2.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 288.25 & 0.32 & 32.0 & 60.0 & $1.95 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & \underline{5} & \underline{288.01} & \underline{0.31} & \underline{29.2} & \underline{60.0} & \underline{$1.74 \cdot 10^{-6}$} &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{20}  & 1 & 292.15 & 0.30 & 31.8 & 60.0 & $1.67 \cdot 10^{-7}$ & \multirow{5}{*}{$(1.885\pm0.442) \cdot 10^{-6}$} & \multirow{5}{*}{$9.88 \cdot 10^{-7}$} \\ \cline{2-7}
-                            & 2 & 294.10 & 0.28 & 28.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 294.30 & 0.29 & 25.6 & 60.0 & $2.26 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 292.70 & 0.31 & 30.8 & 60.0 & $2.44 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 5 & 292.70 & 0.31 & 32.8 & 60.0 & $1.97 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{25}  & 1 & 298.65 & 0.29 & 29.8 & 60.0 & $3.88 \cdot 10^{-6}$ & \multirow{5}{*}{$(3.390\pm0.285) \cdot 10^{-6}$} & \multirow{5}{*}{$6.37 \cdot 10^{-7}$} \\ \cline{2-7}
-                            & 2 & 298.70 & 0.29 & 26.6 & 60.0 & $4.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 299.35 & 0.29 & 34.2 & 60.0 & $3.17 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 297.80 & 0.28 & 24.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 5 & 298.80 & 0.30 & 33.8 & 60.0 & $3.12 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{30}  & 1 & 303.25 & 0.33 & 10.0 & 60.0 & $1.10 \cdot 10^{-5}$ & \multirow{5}{*}{$(7.543\pm1.193) \cdot 10^{-6}$} & \multirow{5}{*}{$2.67 \cdot 10^{-6}$} \\ \cline{2-7}
-                            & 2 & 301.95 & 0.30 & 13.4 & 60.0 & $5.31 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 304.35 & 0.30 & 7.4  & 60.0 & $9.73 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 303.35 & 0.30 & 17.0 & 60.0 & $6.42 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 5 & 304.05 & 0.29 & 19.4 & 60.0 & $5.24 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{35}  & 1 & 308.65 & 0.31 & 7.8  & 60.0 & $1.03 \cdot 10^{-5}$ & \multirow{5}{*}{$(8.594\pm0.926) \cdot 10^{-6}$} & \multirow{5}{*}{$2.07 \cdot 10^{-6}$} \\ \cline{2-7}
-                            & 2 & 308.70 & 0.31 & 16.8 & 60.0 & $7.85 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 307.35 & 0.32 & 15.4 & 60.0 & $8.87 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 308.15 & 0.31 & 11.6 & 60.0 & $1.05 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 5 & 309.05 & 0.29 & 20.6 & 60.0 & $5.44 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{40}  & 1 & 313.50 & 0.28 & 11.2 & 60.0 & $9.82 \cdot 10^{-6}$ & \multirow{5}{*}{$(8.886\pm1.208) \cdot 10^{-6}$} & \multirow{5}{*}{$2.70 \cdot 10^{-6}$} \\ \cline{2-7}
-                            & 2 & 314.35 & 0.28 & 18.6 & 60.0 & $8.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 312.05 & 0.29 & 16.2 & 60.0 & $6.24 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 4 & 313.65 & 0.28 & 8.6  & 60.0 & $1.31 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 5 & 312.10 & 0.29 & 14.6 & 60.0 & $7.10 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{45}  & 1 & 318.40 & 0.29 & 7.0  & 60.0 & $1.14 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.291\pm0.271) \cdot 10^{-5}$} & \multirow{5}{*}{$6.06 \cdot 10^{-6}$} \\ \cline{2-7}
-                            & 2 & 317.00 & 0.30 & 16.4 & 60.0 & $9.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
-                            & 3 & 317.95 & 0.29 & 4.6  & 60.0 & $1.78 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 4 & 317.75 & 0.29 & 8.6  & 60.0 & $2.03 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 5 & 317.80 & 0.29 & 12.4 & 60.0 & $5.63 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
-  
-        \multirow{5}{*}{50}  & 1 & 322.45 & 0.31 & 10.4 & 60.0 & $3.09 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.843\pm0.382) \cdot 10^{-5}$} & \multirow{5}{*}{$8.54 \cdot 10^{-6}$} \\ \cline{2-7}
-                            & 2 & 322.55 & 0.28 & 11.8 & 60.0 & $1.16 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 3 & 321.70 & 0.29 & 14.0 & 60.0 & $1.19 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 4 & 322.60 & 0.29 & 5.4  & 52.8 & $2.38 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
-                            & 5 & 322.95 & 0.29 & 15.2 & 60.0 & $1.40 \cdot 10^{-5}$ &  &  \\ \hlineB{5}
+        \multirow{5}{*}{\textcolor{red}{15}}  & \textcolor{red}{1} & \textcolor{red}{287.90} & \textcolor{red}{0.30} & \textcolor{red}{37.8} & \textcolor{red}{60.0} & \textcolor{red}{$1.40 \cdot 10^{-6}$} & \multirow{5}{*}{\underline{\textcolor{red}{$(1.89\pm0.18) \cdot 10^{-6}$}}} & \multirow{5}{*}{\underline{\textcolor{red}{$3.69 \cdot 10^{-7}$}}} \\ \cline{2-7}
+        & 2 & 288.85 & 0.29 & 47.4 & 60.0 & $1.94 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & 3 & 287.50 & 0.32 & 30.0 & 60.0 & $2.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & 4 & 288.25 & 0.32 & 32.0 & 60.0 & $1.95 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+        & \underline{5} & \underline{288.01} & \underline{0.31} & \underline{29.2} & \underline{60.0} & \underline{$1.74 \cdot 10^{-6}$} &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{20}  & 1 & 292.15 & 0.30 & 31.8 & 60.0 & $1.67 \cdot 10^{-7}$ & \multirow{5}{*}{$(1.89\pm0.44) \cdot 10^{-6}$} & \multirow{5}{*}{$9.88 \cdot 10^{-7}$} \\ \cline{2-7}
+                & 2 & 294.10 & 0.28 & 28.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 294.30 & 0.29 & 25.6 & 60.0 & $2.26 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 292.70 & 0.31 & 30.8 & 60.0 & $2.44 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 292.70 & 0.31 & 32.8 & 60.0 & $1.97 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{25}  & 1 & 298.65 & 0.29 & 29.8 & 60.0 & $3.88 \cdot 10^{-6}$ & \multirow{5}{*}{$(3.39\pm0.29) \cdot 10^{-6}$} & \multirow{5}{*}{$6.37 \cdot 10^{-7}$} \\ \cline{2-7}
+                & 2 & 298.70 & 0.29 & 26.6 & 60.0 & $4.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 299.35 & 0.29 & 34.2 & 60.0 & $3.17 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 297.80 & 0.28 & 24.0 & 60.0 & $2.60 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 298.80 & 0.30 & 33.8 & 60.0 & $3.12 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{30}  & 1 & 303.25 & 0.33 & 10.0 & 60.0 & $1.10 \cdot 10^{-5}$ & \multirow{5}{*}{$(7.54\pm1.20) \cdot 10^{-6}$} & \multirow{5}{*}{$2.67 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 301.95 & 0.30 & 13.4 & 60.0 & $5.31 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 304.35 & 0.30 & 7.4  & 60.0 & $9.73 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 303.35 & 0.30 & 17.0 & 60.0 & $6.42 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 5 & 304.05 & 0.29 & 19.4 & 60.0 & $5.24 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{35}  & 1 & 308.65 & 0.31 & 7.8  & 60.0 & $1.03 \cdot 10^{-5}$ & \multirow{5}{*}{$(8.59\pm0.93) \cdot 10^{-6}$} & \multirow{5}{*}{$2.07 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 308.70 & 0.31 & 16.8 & 60.0 & $7.85 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 307.35 & 0.32 & 15.4 & 60.0 & $8.87 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 308.15 & 0.31 & 11.6 & 60.0 & $1.05 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 309.05 & 0.29 & 20.6 & 60.0 & $5.44 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{40}  & 1 & 313.50 & 0.28 & 11.2 & 60.0 & $9.82 \cdot 10^{-6}$ & \multirow{5}{*}{$(8.89\pm1.21) \cdot 10^{-6}$} & \multirow{5}{*}{$2.70 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 314.35 & 0.28 & 18.6 & 60.0 & $8.19 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 312.05 & 0.29 & 16.2 & 60.0 & $6.24 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 4 & 313.65 & 0.28 & 8.6  & 60.0 & $1.31 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 312.10 & 0.29 & 14.6 & 60.0 & $7.10 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{45}  & 1 & 318.40 & 0.29 & 7.0  & 60.0 & $1.14 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.29\pm0.27) \cdot 10^{-5}$} & \multirow{5}{*}{$6.06 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 317.00 & 0.30 & 16.4 & 60.0 & $9.41 \cdot 10^{-6}$ &  &  \\ \cline{2-7}
+                & 3 & 317.95 & 0.29 & 4.6  & 60.0 & $1.78 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 4 & 317.75 & 0.29 & 8.6  & 60.0 & $2.03 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 317.80 & 0.29 & 12.4 & 60.0 & $5.63 \cdot 10^{-6}$ &  &  \\ \hlineB{5}
+
+        \multirow{5}{*}{50}  & 1 & 322.45 & 0.31 & 10.4 & 60.0 & $3.09 \cdot 10^{-5}$ & \multirow{5}{*}{$(1.84\pm0.38) \cdot 10^{-5}$} & \multirow{5}{*}{$8.54 \cdot 10^{-6}$} \\ \cline{2-7}
+                & 2 & 322.55 & 0.28 & 11.8 & 60.0 & $1.16 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 3 & 321.70 & 0.29 & 14.0 & 60.0 & $1.19 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 4 & 322.60 & 0.29 & 5.4  & 52.8 & $2.38 \cdot 10^{-5}$ &  &  \\ \cline{2-7}
+                & 5 & 322.95 & 0.29 & 15.2 & 60.0 & $1.40 \cdot 10^{-5}$ &  &  \\ \hlineB{5}
   
     \end{tabular}}
     \caption{Processed data.}
@@ -623,7 +583,7 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
 
 \subsection{Example Calculation}
 \label{sec:data-processing-example-calculation}
-\indent \indent Consider $15\ ^\circ$C trial 1 as an example (marked as \textcolor{red}{red}) in \textit{table \ref{tab:processed-data}}. The average temperature for this trial was:
+\indent \indent Consider $15\ ^\circ$C trial 1 as an example (marked as \textcolor{red}{red}) in \textit{table \ref{tab:processed-data}}. The average temperature for this trial will be used to determine $\Delta{T}$:
 
 \begin{equation}
   T = 14.75 ^\circ \text{C} + 273.15 = 287.9 \text{K}
@@ -640,8 +600,8 @@ The uncertainty in Ea was obtained from the uncertainty in the gradient returned
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=12cm]{Resources/example_calculation_data_helper.png}
-	\caption{Data helper.}
-	\label{fig:data-processing-example-calculation-data-helper}
+	\caption{Pressure-time graph.}
+	\label{fig:data-processing-example-calculation-pressure-time-graph}
 \end{figure}
 
 This window was chosen because the pressure before $t_\text{start} = 37.8\ \text{s}$ showed negligible change in pressure, while the pressure after $t_\text{start}$ increased consistently, due to \ce{O2_{(g)}} production. A linear regression with $y = mx + b$ was then fitted to the 111 datapoints in the selected window:
@@ -649,8 +609,8 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Resources/example_calculation_time_snapshot.png}
-	\caption{15-second snapshot.}
-	\label{fig:data-processing-example-calculation-15-second-snapshot}
+	\caption{Selected analysis window.}
+	\label{fig:data-processing-example-calculation-selected-analysis-window}
 \end{figure}
 
 \noindent Note that the slope $m$ was recorded as $0.01486\ \text{kPa}\ \text{s}^{-1}$, which converts to $14.86\ \text{Pa}\ \text{s}^{-1}$. The rate of \ce{O2} production was then calculated from the ideal gas relationship. For a constant headspace volume:
@@ -681,7 +641,7 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 
 \
 
-\noindent The standard deviation and the uncertainty in average rate can then be calculated:
+\noindent The random uncertainty can then be calculated:
 
 \begin{equation}
   \sigma = \sqrt{\frac{1}{4}(-0.48 \cdot 10^{-6})^2 + (0.06 \cdot 10^{-6})^2 + (0.53 \cdot 10^{-6})^2 + (0.07 \cdot 10^{-6})^2}
@@ -692,9 +652,48 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \end{center}
 
 \begin{equation}
-  \Delta{\overline{r}} = \frac{\sigma}{\sqrt{4}} = 1.65 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
+  \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{4}} = 1.65 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
+\noindent \textbf{Calculating instrumental uncertainty from known variables:}
+
+\begin{enumerate}
+  \item Average temperature range in this level: $0.4\ ^\circ \text{C} \rightarrow $ half-range = $0.2\ ^\circ$C
+  \begin{center}
+    $\Delta{T} = \max{(0.5, 0.2)} = \pm 0.5\ \text{K}$
+  \end{center}
+  \begin{equation}
+    \therefore \frac{\Delta{T}}{T} = \frac{0.5\ \text{K}}{288.15\ \text{K}} = 0.001735 \rightarrow 0.174\%
+  \end{equation}
+  \item Average slope uncertainty (from Microsoft Excel's Regression tool): $\pm 0.457\ \text{Pa}\ \text{s}^{-1}$
+  \begin{equation}
+    \frac{\Delta{m}}{m} = \frac{0.457\ \text{Pa}}{14.86\ \text{Pa}} = 0.0307 \rightarrow 3.07\%
+  \end{equation}
+  \item Volume uncertainty: $\pm 0.06\ \text{mL}$:
+  \begin{equation}
+    \frac{\Delta{V_\text{gas}}}{V_\text{gas}} = \frac{0.06\ \text{mL}}{225\ \text{mL}} = 0.000267 \rightarrow 0.0267\%
+  \end{equation}
+\end{enumerate}
+
+\noindent The instrumental uncertainties are then combined:
+
+\begin{equation}
+  \Delta{\overline{r}_\text{rel, inst}} = \sqrt{(0.001735)^2 + (0.0307)^2 + (0.000267)^2} = 0.0308 \rightarrow 3.08\%
+\end{equation}
+
+\begin{equation}
+  \therefore \Delta{\overline{r}_\text{abs, inst}} = \overline{r} \cdot \Delta{\overline{r}_\text{rel, inst}} = (1.88 \cdot 10^{-6}) \cdot 0.0308 = 5.79 \cdot 10^{-8}\ \text{mol}\ \text{s}^{-1}
+\end{equation}
+
+\noindent Final uncertainty for the average rate since they are independent uncertainties:
+
+\begin{equation}
+  \Delta{\overline{r}} = \sqrt{(1.65 \cdot 10^{-7})^2 + (5.79 \cdot 10^{-8})^2}
+\end{equation}
+
+\begin{center}
+  $\Delta{\overline{r}} = 1.75 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}$
+\end{center}
 
 \begin{center}
   $\ast$~$\ast$~$\ast$
@@ -710,14 +709,14 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 	                  >{\centering\arraybackslash}m{7cm}|} \hline
 			
 			\textbf{Temperature level / $^\circ \text{C}$} & \textbf{Temperature level / $\text{K}$} & \textbf{Mean \ce{O2} production rate, $\overline{r}$ / $\text{mol}\ \text{s}^{-1}$} \\ \hline
-      15 & 288.15 & $(1.887 \pm 0.165) \cdot 10^{-6} $ \\ \hline
-      20 & 293.15 & $(1.885 \pm 0.442) \cdot 10^{-6}$ \\ \hline
-      25 & 298.15 & $(3.390 \pm 0.285) cdot 10^{-6}$ \\ \hline
-      30 & 303.15 & $(7.543 \pm 1.193) cdot 10^{-6}$ \\ \hline
-      35 & 308.15 & $(8.594 \pm 0.926) cdot 10^{-6}$ \\ \hline
-      40 & 313.15 & $(8.886 \pm 1.208) cdot 10^{-6}$ \\ \hline
-      45 & 318.15 & $(1.291 \pm 0.271) cdot 10^{-5}$ \\ \hline
-      50 & 323.15 & $(1.843 \pm 0.382) cdot 10^{-5}$ \\ \hline
+      15 & 288.15 & $(1.89 \pm 0.18) \cdot 10^{-6}$ \\ \hline
+      20 & 293.15 & $(1.89 \pm 0.44) \cdot 10^{-6}$ \\ \hline
+      25 & 298.15 & $(3.39 \pm 0.29) \cdot 10^{-6}$ \\ \hline
+      30 & 303.15 & $(7.54 \pm 1.20) \cdot 10^{-6}$ \\ \hline
+      35 & 308.15 & $(8.59 \pm 0.93) \cdot 10^{-6}$ \\ \hline
+      40 & 313.15 & $(8.89 \pm 1.21) \cdot 10^{-6}$ \\ \hline
+      45 & 318.15 & $(1.29 \pm 0.27) \cdot 10^{-5}$ \\ \hline
+      50 & 323.15 & $(1.84 \pm 0.38) \cdot 10^{-5}$ \\ \hline
 		\end{tabular}
 	}
 	\caption{Mean oxygen production rate.}

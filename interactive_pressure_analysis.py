@@ -364,7 +364,7 @@ const App = {
         deltaTemp: `${this.formatNumber(t1 - t0, 3)} °C`,
         tempRange: `${this.formatNumber(t0, 3)} → ${this.formatNumber(t1, 3)} °C`,
         equation: Number.isFinite(reg.slope) ? `P = ${reg.slope.toFixed(5)}·t + ${reg.intercept.toFixed(5)}` : 'N/A',
-        slopeSE: `${this.formatNumber(reg.slope_stderr, 6)} kPa/s`,
+        slopeSE: `${this.formatNumber(reg.slope_stderr, 6) * 1000} Pa/s`,
         slopeRelUnc: Number.isFinite(slopeRelUnc) ? `${this.formatNumber(slopeRelUnc * 100, 3)} %` : 'N/A'
       };
       this.latestExportRow = {
