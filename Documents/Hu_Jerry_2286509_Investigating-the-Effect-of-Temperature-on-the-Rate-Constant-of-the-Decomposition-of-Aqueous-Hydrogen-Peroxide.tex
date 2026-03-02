@@ -740,6 +740,62 @@ As shown in \textit{figure \ref{fig:data-analysis-main-graph}} above, there is a
   f(x) = 0.0005e^{0.0768x}
 \end{equation}
 
+This supports the collision theory outlined in \textit{section \ref{sec:introduction}}: higher temperature increases the frequency of collisions and the fraction of molecules with sufficient energy to overcome the activation energy, $E_\text{A}$; therefore, the rate of successful reactions are increased. Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variations in mass of \ce{KI}), the measured oxygen production rate is proportional to the rate constant by a constant scale factor difference:
+
+\begin{equation}
+  r = C \cdot k
+\end{equation}
+
+\noindent Where $C$ is the scaling factor between the oxygen production rate and the true rate constant, when initial reactants are constant. This allows $r$ to replace $k$ in the Arrhenius equation:
+
+\begin{equation}
+  \ln{(r)} = \ln{(C \cdot k)} = \ln{(C)} + \ln{(k)}
+\end{equation}
+
+\noindent Thus, plotting $\ln{(r)}$ against $\frac{1}{T}$ still yields a straight line with slope $-\frac{E_\text{A}}{R}$, only shifting the intercept by $\ln{(C)}$:
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Resources/data_analysis_arrhenius_plot.png}
+	\caption{Graph of $\ln{(\overline{r})}$ vs. $\frac{1}{T}$.}
+	\label{fig:data-analysis-arrhenius-plot}
+\end{figure}
+
+As shown in \textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}, the mean \ce{O2} production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$), which corresponds to an increase by a factor of $x$:
+
+\begin{multicols}{2}
+  \noindent \textbf{Calculation:}
+  \begin{equation}
+    x = \frac{\overline{r}_\text{323.15\ \text{K}}}{\overline{r}_\text{288.15\ \text{K}}} = \frac{1.84 \cdot 10^{-5}}{1.89 \cdot 10^{-6}} = 9.74
+  \end{equation}
+
+  \columnbreak
+
+  \noindent \textbf{Uncertainty:}
+  \begin{equation}
+    \frac{\Delta{F}}{F} = \frac{\Delta{\overline{r}_\text{323.15\ \text{K}}}}{\overline{r}_\text{323.15\ \text{K}}} + \frac{\Delta{\overline{r}_\text{288.15\ \text{K}}}}{\overline{r}_\text{288.15\ \text{K}}} 
+  \end{equation}
+
+\end{multicols}
+
+Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln{(k)}$ vs. $\frac{1}{T}$ is $-\frac{E_\text{A}}{R}$. Given that $r \propto k$ in this experiment, the slope is used to find the apparent activation energy:
+
+\begin{equation}
+  E_\text{A} = |-m \cdot R| = 6360\ \text{K} \cdot 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} = 52851.6\ \text{J}\ \text{mol}^{-1} \rightarrow 52.9\ \text{kJ}\ \text{mol}^{-1}
+\end{equation}
+
+\begin{center}
+  $\therefore E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ \footnote{Uncertainty obtained using Microsoft Excel's LINEST function.}
+\end{center}
+
+
+
+\
+
+\hrule
+
+\
+
 The apparent rate constant $k_{app}$ was defined in \textit{section \ref{sec:data-processing-uncertainty-propagation-uncertainty-in-rate-constant}} to represent the initial rate of the reaction within the first 15 seconds after the reaction begins. Given that the initial amounts of \ce{H2O2} and \ce{I-} were held constant across all trials (with minor variations in the mass of \ce{KI}), $k_{app}$ is proportional to the actual rate constant $k$ for the reaction, by a constant scale factor difference:
 
 \begin{equation}
