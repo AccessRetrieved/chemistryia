@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 MAR 2026 04:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.3.8)  2 MAR 2026 05:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -789,88 +789,99 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.89 
-      [1]
+l.67 \newpage
+              [1]
+Overfull \hbox (1.21147pt too wide) in paragraph at lines 74--75
+[]\OT1/cmr/m/n/10 The de-com-po-si-tion re-ac-tion of hy-dro-gen per-ox-ide to form oxy-gen and wa-ter is a ther-mo-dy-nam-i-cally favourable
+ []
 
-[2] [3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.110 
+       [1]
+
+[2]
+
+[3{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
 
 [4]
-
-[5]
-Overfull \hbox (8.13359pt too wide) in paragraph at lines 275--344
+Overfull \hbox (8.13359pt too wide) in paragraph at lines 272--341
  [][] 
  []
 
 
 
-[6]
+[5]
 
-[7]
-Overfull \hbox (0.79535pt too wide) in paragraph at lines 429--429
+[6]
+Overfull \hbox (0.79535pt too wide) in paragraph at lines 426--426
  []|\OT1/cmr/bx/n/10 Level| 
  []
 
 
-Overfull \hbox (3.83997pt too wide) in paragraph at lines 429--429
+Overfull \hbox (3.83997pt too wide) in paragraph at lines 426--426
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
 
+
+[7]
 
 [8]
-
-[9]
-Overfull \hbox (2.41725pt too wide) in paragraph at lines 557--557
+Overfull \hbox (2.41725pt too wide) in paragraph at lines 554--554
  []|\OT1/cmr/bx/n/10 Trial| 
  []
 
+
+
+[9
+
+]
+<Resources/example_calculation_data_helper.png, id=235, 666.49pt x 626.34pt>
+File: Resources/example_calculation_data_helper.png Graphic file (type png)
+<use Resources/example_calculation_data_helper.png>
+Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 574.
+(pdftex.def)             Requested size: 341.43306pt x 320.8723pt.
+<Resources/example_calculation_time_snapshot.png, id=237, 1006.743pt x 656.343pt>
+File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
+<use Resources/example_calculation_time_snapshot.png>
+Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 583.
+(pdftex.def)             Requested size: 500.484pt x 326.28787pt.
 
 
 [10
 
-]
-<Resources/example_calculation_data_helper.png, id=238, 666.49pt x 626.34pt>
-File: Resources/example_calculation_data_helper.png Graphic file (type png)
-<use Resources/example_calculation_data_helper.png>
-Package pdftex.def Info: Resources/example_calculation_data_helper.png  used on input line 583.
-(pdftex.def)             Requested size: 341.43306pt x 320.8723pt.
-
-
-[11
-
  <./Resources/example_calculation_data_helper.png>]
-<Resources/example_calculation_time_snapshot.png, id=248, 1006.743pt x 656.343pt>
-File: Resources/example_calculation_time_snapshot.png Graphic file (type png)
-<use Resources/example_calculation_time_snapshot.png>
-Package pdftex.def Info: Resources/example_calculation_time_snapshot.png  used on input line 592.
-(pdftex.def)             Requested size: 500.484pt x 326.28787pt.
 
+[11 <./Resources/example_calculation_time_snapshot.png>]
 
-[12 <./Resources/example_calculation_time_snapshot.png>]
-
-[13]
-<Resources/data_analysis_main_graph.png, id=279, 745.695pt x 499.758pt>
+[12]
+<Resources/data_analysis_main_graph.png, id=274, 745.695pt x 499.758pt>
 File: Resources/data_analysis_main_graph.png Graphic file (type png)
 <use Resources/data_analysis_main_graph.png>
-Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 713.
+Package pdftex.def Info: Resources/data_analysis_main_graph.png  used on input line 701.
 (pdftex.def)             Requested size: 500.484pt x 335.41566pt.
 
 
-[14 <./Resources/data_analysis_main_graph.png>]
-<Resources/data_analysis_arrhenius_plot.png, id=289, 851.034pt x 493.845pt>
+[13 <./Resources/data_analysis_main_graph.png>]
+<Resources/data_analysis_arrhenius_plot.png, id=285, 851.034pt x 493.845pt>
 File: Resources/data_analysis_arrhenius_plot.png Graphic file (type png)
 <use Resources/data_analysis_arrhenius_plot.png>
-Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 742.
+Package pdftex.def Info: Resources/data_analysis_arrhenius_plot.png  used on input line 730.
 (pdftex.def)             Requested size: 500.484pt x 290.42409pt.
 
 
-[15 <./Resources/data_analysis_arrhenius_plot.png>]
+[14 <./Resources/data_analysis_arrhenius_plot.png>]
+
+[15]
 
 [16]
 
-[17]
-
-[18] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
+[17] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 9.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2024/11/19 v2.5n Standard LaTeX font definitions
@@ -899,37 +910,34 @@ Underfull \hbox (badness 2856) in paragraph at lines 37--39
 
 )
 
-[19]
-Overfull \hbox (35.83443pt too wide) in paragraph at lines 840--841
+[18]
+Overfull \hbox (35.83443pt too wide) in paragraph at lines 826--827
 []\OT1/cmr/m/n/10 The Mi-crosoft Ex-cel file for the com-plete raw data can be found at GitHub: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
 
-Overfull \hbox (36.00108pt too wide) in paragraph at lines 844--845
+Overfull \hbox (36.00108pt too wide) in paragraph at lines 830--831
 []\OT1/cmr/m/n/10 All source code and raw data are open-source, avail-able to view on GitHub: [][]$\OT1/cmtt/m/n/10 https : / / github . com / AccessRetrieved /
  []
 
 
 
-[20] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
+[19] (./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.aux)
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.out' has not changed.
-(rerunfilecheck)             Checksum: 9638EFDDF98BCBDFF5BBF1D88348B0C8;3768.
+(rerunfilecheck)             Checksum: C749C8D26AE7B00D6EF4C6BB319D19A0;3505.
  ) 
 Here is how much of TeX's memory you used:
- 25862 strings out of 473190
- 496421 string characters out of 5715801
- 977492 words of memory out of 5000000
+ 25857 strings out of 473190
+ 496382 string characters out of 5715801
+ 977430 words of memory out of 5000000
  48509 multiletter control sequences out of 15000+600000
  571405 words of font info for 82 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,20n,89p,2044b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{Hfootnote.3} has been referenced but does not exist, replaced by a fixed one
-
+ 84i,20n,89p,1964b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
 
@@ -937,10 +945,10 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist,
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
 
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (21 pages, 1282213 bytes).
+Output written on Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.pdf (21 pages, 1277549 bytes).
 PDF statistics:
- 499 PDF objects out of 1000 (max. 8388607)
- 409 compressed objects within 5 object streams
- 129 named destinations out of 1000 (max. 500000)
+ 491 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
+ 124 named destinations out of 1000 (max. 500000)
  209 words of extra memory for PDF output out of 10000 (max. 10000000)
 

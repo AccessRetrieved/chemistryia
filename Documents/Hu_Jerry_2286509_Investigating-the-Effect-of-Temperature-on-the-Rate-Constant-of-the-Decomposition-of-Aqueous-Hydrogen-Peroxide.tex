@@ -63,21 +63,21 @@
   \small Word count:\realwordcount / 3000
 \end{titlepage}
 
+\tableofcontents
 \newpage
 
-\tableofcontents
 \doublespacing
 \setcounter{page}{1}
 
 \section{Introduction (503 words)}
 \label{sec:introduction}
-\indent \indent The decomposition reaction of hydrogen peroxide (\ce{H2O2}) to form oxygen and water is a thermodynamically favorable process, but unless catalyzed, it proceeds at an extremely slow rate at room temperature.
+\indent \indent The decomposition reaction of hydrogen peroxide to form oxygen and water is a thermodynamically favourable process, but unless catalyzed, it proceeds at an extremely slow rate at room temperature.
 
-\begin{center}
+\begin{equation}
   \ce{2H2O2_{(aq)} -> 2H2O_{(l)} + O2_{(g)}}
-\end{center}
+\end{equation}
 
-\noindent In this investigation, potassium iodide (\ce{KI}) was used as a catalyst so that the reaction (specifically, the formation of oxygen gas) inside the system can occur at a measurable rate within a practical time frame. This investigation aims to explore how temperature impacts the rate constant for the catalyzed decomposition reaction of aqeuous hydrogen peroxide. The rate of the reaction is observed indirectly by measuring the initial rate of increase in gas pressure inside a sealed flask, as oxygen gas (\ce{O2_{(g)}}) builds up.
+\noindent In this investigation, potassium iodide was used as a catalyst so that the reaction (specifically, the formation of $\ce{O2_{(g)}}$) inside the system can occur at a measurable rate within a practical time frame. This investigation aims to explore how temperature impacts the rate constant for the catalyzed decomposition reaction of aqeuous hydrogen peroxide. The rate of the reaction is observed indirectly by measuring the rate of increase in gas pressure inside a sealed flask, as \ce{O2_{(g)}} builds up.
 
 \begin{equation}
   \ce{2H2O2_{(aq)} ->[\ce{KI}] 2H2O_{(l)} + O2_{(g)}}
@@ -85,20 +85,20 @@
 
 % \subsection{Background Concepts}
 % \label{sec:introduction-background-concepts}
-The collision theory states that a chemical reaction can only occur when particles collide with sufficient energy and the correct orientation. As the temperature of the reaction increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction and the reaction constant. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
+The collision theory states that a chemical reaction can only occur when particles collide with sufficient energy and the correct orientation. As the temperature of the reaction increase, reacting particles have greater average kinetic energy. This increase in the particle's collision ferquency and the increase in the probability of collisions with energy \textit{equal or greater than} the activation energy ($\text{E}_\text{A}$). Thus, increasing the temperature of the reaction is expected to increase the rate of the reaction. The temperature dependence of a rate constant can be modelled by the Arrhenius equation:
 
 \begin{equation}
   k = A \cdot e^{- \frac{E_{A}}{RT}}
 \label{eq:arrhenius-equation}
 \end{equation}
 
-\noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature, in Kelvins. Taking the natural logarithm on both sides of the equation will yield a linear relationship:
+\noindent Where $k$ is the rate constant, $A$ is the frequency factor, $E_{A}$ is the activation energy, $R$ is the gas constant ($8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1}$)\footnote{Value obtained from IB Chemistry Data Booklet, version 1.0 (first assessment 2025).}, and $T$ is the temperature (Kelvins). Taking the natural logarithm on both sides of the equation will yield a linear relationship:
 
 \begin{equation}
   \ln{(K)} = - \frac{E_{A}}{RT} + \ln{(A)}
 \end{equation}
 
-\noindent Where the slope of the linear graph is $- \frac{E_{A}}{R}$, and the y-intercept is $\ln{A}$. Because this experiment uses pressure measurements rather than concentration measurements, the ideal gas law can be used to relate pressure with the amount of oxygen produced:
+\noindent Where the slope of the linear graph is $- \frac{E_{A}}{R}$ and the y-intercept is $\ln{(A)}$. As this experiment uses pressure measurements rather than concentration measurements, the ideal gas law can be used to relate pressure to the amount of oxygen produced:
 
 % As oxygen gas (\ce{O2_{(g)}}) forms in the sealed flask of approximate constant gas volume, the pressure increases. Assuming ideal gas behaviour, the pressure should increase as $n$ (the number of moles of gas) increases, but $V$ (volume) stays constant:
 
@@ -139,17 +139,17 @@ The collision theory states that a chemical reaction can only occur when particl
 
 % \subsection{Justification}
 % \label{sec:justification}
-\indent \indent Given that the rate constant of the decomposition of aqueous \ce{H2O2} is expected change with temperature, increasing $T$ should increase the fraction of particles reacting with enough energy to overcome the $E_{A}$, so that a greater proportion of particles can collide, leading to a reaction. Though \ce{KI} acts as a catalyst (provides an alternative pathway that has a lower $E_{A}$), the elementary steps still needs to overcome an $E_{A}$. Thus, the rate constant $k$ should increase with temperature, according to Arrhenius's equation (approximate linear relationship of $\ln{(k)}$ vs. $1/T$).
+Given that the rate constant of the decomposition of aqueous \ce{H2O2} is expected change with temperature, increasing $T$ should increase the fraction of particles reacting with enough energy to overcome the $E_\text{A}$, so that a greater proportion of particles can collide, leading to a reaction. Though \ce{KI} acts as a catalyst (provides an alternative pathway that has a lower $E_\text{A}$), the elementary steps still needs to overcome an $E_{A}$. Thus, the rate constant $k$ should increase with temperature, according to Arrhenius's equation (approximate linear relationship of $\ln{(k)}$ vs. $1/T$).
 
 \section{Experimental Design (205 words)}
 \label{sec:research-design}
-\indent \indent This experiment was designed to isolate the temperature of the water bath as the sole independent variable affecting the pressure for the \ce{KI}-catalyzed decomposition reaction of aqueous \ce{H2O2}. Oxygen gas produced during the reaction increased the pressure inside a sealed $250\ \text{mL}$ flask. Thus, the increase in the rate of the initial pressure value was used to determine the rate constant at each temperature. A water bath was used to equilibrate the reaction system to within $1 ^\circ \text{C}$ of the target temperature. The masses of \ce{KI} were pre-measured and recorded before data collection, and sealed with plastic wrap and rubber band to prevent exposure to moisture.
+\indent \indent This experiment was designed to isolate the temperature of the water bath as the sole variable affecting the pressure for the \ce{KI}-catalyzed decomposition reaction of aqueous \ce{H2O2}. Oxygen gas produced during the reaction increased the pressure inside a sealed $250\ \text{mL}$ flask. A water bath was used to equilibrate the reaction system to within $1 ^\circ \text{C}$ of the target temperature. The masses of \ce{KI} were pre-measured and recorded before data collection, and sealed with plastic wrap and rubber band to prevent exposure to moisture.
 
 \
 
 % \subsection{Variables}
 % \label{sec:research-design-variables}
-\noindent \underline{\textbf{Independent variable:}} Temperature of the reaction system. The \ce{H2O2} in the sealed flask was equilibrated to the target temperature using a water bath before the start of each trial. The temperature was monitored using a Vernier Temperature Probe; trials were only started once the water bath temperature reached within $1\ ^\circ\text{C}$ of the target temperature.
+\noindent \underline{\textbf{Independent variable:}} Temperature of the reaction system. The \ce{H2O2} in the sealed flask was equilibrated to the target temperature using a water bath before the start of each trial. The temperature was monitored using a Vernier Temperature Probe.
 
 \
 
@@ -157,7 +157,7 @@ The collision theory states that a chemical reaction can only occur when particl
 
 \
 
-\noindent \underline{\textbf{Controlled variable:}} Initial amount of reactants, total volume of gas space in the sealed flask, environmental conditions, sampling settings, and apparatus setup were all kept constant. Variables were kept constant to reduce variations in the  rate.
+\noindent \underline{\textbf{Controlled variable:}} Initial amount of reactants, total volume of gas space in the sealed flask, environmental conditions, sampling settings, and apparatus setup were all kept constant to reduce variations in the rate.
 
 \subsection{Materials (63 words)}
 \label{sec:research-design-materials}
@@ -174,7 +174,7 @@ The collision theory states that a chemical reaction can only occur when particl
   \item Glass bowl
   \item Rubber stoppers
   \item Vernier equipments (Gas Pressure Sensor, Temperature Probe, LabQuest)
-  \item $25\ \text{mL}$ Pipette + suction bulb
+  \item $25\ \text{mL}$ Pipette, suction bulb
   \item $10\ \text{mL}$ graduated cylinder
   \item Digital balance
   \item Metal stick from ring stand
@@ -189,7 +189,6 @@ The collision theory states that a chemical reaction can only occur when particl
   \item 3\% hydrogen peroxide, \ce{H2O2} (aqueous)
   \item Potassium iodide, \ce{KI} (solid)
   \item Distilled water
-  \item Ice
 \end{itemize}
 
 \end{multicols}
@@ -197,66 +196,64 @@ The collision theory states that a chemical reaction can only occur when particl
 \subsection{Procedure (712 words)}
 \label{sec:research-design-procedure}
 
-\subsubsection{Part I: Setup}
+\subsubsection{Setup.}
 \label{sec:research-design-procedure-setup}
 \begin{enumerate}
-  \item Obtain safety goggles and lab coat.
+  % \item Obtain safety goggles and lab coat.
   \item Gather the required items from \textit{section \ref{sec:research-design-materials}} to work station.
-  \item Connect the gas pressure sensor to the LabQuest, and attach the plastic tubing to the pressure sensor.
-  \item Connect the other end to the rubber stopper, and close the valve on the stopper.
-  \item Secure the $250\ \text{mL}$ flask on the ring stand using a ring clamp, so that it remains stable throughout data collection.
-  \item Add $25\ \text{mL}$ of distilled water to the $250\ \text{mL}$ flask (to represent \ce{H2O2} during setup).
-  \item Place the glass bowl on the hot plate and add water so that it submerges the $25\ \text{mL}$ water inside the flask.
+  \item Connect the gas pressure sensor to the LabQuest and attach the plastic tubing to the sensor and rubber stopper.
+  \item Secure the $250\ \text{mL}$ flask on the ring stand using a ring clamp so that it remains stable throughout data collection.
+  \item Add $25\ \text{mL}$ of water to the $250\ \text{mL}$ flask (to represent \ce{H2O2} during setup).
+  \item Place the glass bowl on the hot plate and add water so that it submerges the $25\ \text{mL}$ water line inside the flask.
   \item Draw a horizontal line on the neck of the reaction flask to standardize the insertion depth of the rubber stopper in every trial.
   \begin{itemize}
     \item This ensures that the headspace gas volume ($V_\text{gas}$) remain constant between trials.
     \item Before inserting the rubber stopper each time, add a few drops of water to the rubber stopper to improve the sealing.
   \end{itemize}
-  \item Ensure the temperature probe is not touching the bottom of the glass bowl or the sides of the flask. Secure the temperature probe using a ring clamp (to standardize the placement between trials)
+  \item Ensure the temperature probe is not touching the bottom of the glass bowl or the sides of the flask. Secure the temperature probe using a ring clamp.
   \item Set the LabQuest to record at \textit{5 samples / second}, for a total of \textit{60 seconds} for each trial.
 \end{enumerate}
 
-\subsubsection{Part II: Preparation of materials}
+\subsubsection{Prepare materials.}
 \label{sec:research-design-procedure-preparation-of-materials}
 \begin{enumerate}
-  \item Pour a large amount of aqueous \ce{H2O2} into a clean $600\ \text{mL}$ beaker to use as the master solution for all trials. Excess can be poured back laterusing a funnel.
-  \item Prepare potassium iodide portions for each trial:
+  \item Pour aqueous \ce{H2O2} into a clean $600\ \text{mL}$ beaker to use as the master solution. Excess can be poured back later using a funnel.
+  \item Prepare \ce{KI} for each trial:
   \begin{enumerate}
-    \item Using a digital scale, weigh $0.30\ \text{g}$ of solid \ce{KI} into individual plastic cups.
-    \item Label each cup with its corresponding temperature level and trial number.
+    \item Weigh $0.30\ \text{g}$ of \ce{KI_{(s)}} into individual plastic cups, and label each cup with its corresponding temperature level and trial number.
     \item Seal each cup using a piece of plastic film, and secure it with rubber band to reduce exposure to moisture from air.
   \end{enumerate}
-  \item Fill another clean $600\ \text{mL}$ beaker with ice. This will be used to lower the temperature of the water bath.
+  \item Fill another clean $600\ \text{mL}$ beaker with ice to lower the temperature of the water bath.
 \end{enumerate}
 
-\subsubsection{Part III: Calibration}
+\subsubsection{Calibration.}
 \label{sec:research-design-procedure-Calibration}
 \begin{enumerate}
-  \item Open the valve on the rubber stopper so that the pressure sensor is open to the atmosphere. Record the atmospheric pressure for $10\ \text{seconds}$ and record the average pressure ($\text{kPa}$).
-  \item Wash the $25\ \text{mL}$ pipette with aqueous \ce{H2O2} to avoid contamination, then dispose into the waste beaker.
+  \item Open the valve on the rubber stopper, start recording the atmospheric pressure for $10\ \text{seconds}$, and record the average pressure ($\text{kPa}$).
+  \item Wash the $25\ \text{mL}$ pipette with \ce{H2O2_{(aq)}} to avoid contamination.
 \end{enumerate}
 
-\noindent \underline{\textbf{Note:}}  An airtight-sealing calibration was not conducted because the experiment relies on finding the change in pressure over time. The pressure readings would be consistently lower than the actual pressure in the case of a minor leak, which does not affect the rate of change in pressure.
+\noindent \underline{\textbf{Note:}}  An airtight-sealing calibration was not conducted because the experiment relies on finding $\Delta{P}$ over time. Pressure would be consistently lower than the actual pressure in the case of a minor leak, which does not affect the rate of change in pressure.
 
-\subsubsection{Part IV: Experiment}
+\subsubsection{Experiment.}
 \label{sec:research-design-procedure-experiment}
 \begin{enumerate}
   \item Adjust the water bath temperature to the target temperature.
   \item Pipette $25\ \text{mL}$ of \ce{H2O2} to a clean $250\ \text{mL}$ beaker. Once the temperature of the water bath reaches within $1\ ^\circ\text{C}$ of the target temperature, pour the \ce{H2O2} into the reaction flask. Keep the reaction flask in the water bath to maintain consistency.
-  \item Measure $5\ \text{mL}$ of distilled water using a $10\ \text{mL}$ graduated cylinder, and pour into the plastic cup containing the pre-weighed \ce{KI} for the trial. Stir to dissolve the \ce{KI}. Repeat twice, so that there is a total of $10\ \text{mL}$ of \ce{KI} solution.
-  \item Start the data collection and collect a $3\ \text{second}$ baseline with the flask sealed. Then, remove the rubber stopper, and quickly add the \ce{KI} solution into the reaction flask, and immediately seal the flask.
-  \item Swirl the flask gently for \textit{5\ \text{seconds}}, then keep the flask still for the remainder of the run.
+  \item Measure $5\ \text{mL}$ of distilled water using a $10\ \text{mL}$ graduated cylinder, and pour into the plastic cup containing the pre-weighed \ce{KI} for the trial. Swirl to dissolve the \ce{KI}. Repeat twice, so that there are $10\ \text{mL}$ of \ce{KI} solution.
+  \item Start the data collection and collect a $3\ \text{second}$ baseline with the flask sealed. Then, remove the rubber stopper and quickly add the \ce{KI} solution into the reaction flask, and immediately seal the flask.
+  \item Swirl the flask for \textit{5\ \text{seconds}}, then keep the flask still for the remaining time.
   \item After data collection ends, save the run, and record the LabQuest run number with the corresponding trial.
   \item Dispose the solution into the waste beaker, and rinse the reaction flask once using tap water, then rinse again with distilled water.
-  \item Repeat \textit{steps 1-7} for each trial at each temperature level, for a total of \textit{40 trials}.
+  \item Repeat \textit{steps 1-7} for each trial at each temperature level.
 \end{enumerate}
 
-\subsubsection{Part V: Cleanup}
+\subsubsection{Cleanup.}
 \label{sec:research-design-procedure-cleanup}
 \begin{enumerate}
   \item Disessemble the apparatus.
-  \item Save the file on the LabQuest, and download the data to a computer.
-  \item Neutralize the waste solution by adding a small amount of sodium thiosulfate, then dispose the waste solution down the drain with running water. Return all equipments.
+  \item Save the file on the LabQuest.
+  \item Neutralize the waste solution by adding a small amount of sodium thiosulfate, then dispose the waste solution down the drain with running water.
 \end{enumerate}
 
 % \noindent \underline{\textbf{Note:}} If table turns yellow, wipe down with a paper towel, some water, and a few crystals of sodium thiosulfate.
@@ -452,10 +449,10 @@ The collision theory states that a chemical reaction can only occur when particl
 	\label{tab:data-processing-uncertainty-propagation-summary-of-uncertainties-by-tool}
 \end{table}
 
-However, the methodology in which the data were collected likely increased the uncertainties; for example, temperature varied during the $60\ \text{s}$ data collection period, and the probe may not have reflected the solution temperature. Moreover, though marked, the manual insertion depth of the stopper could have introduced small headspace variations. Thus, while linear interpolation with $\Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x$ could have been used as the temperature probe's uncertainty, a conservative $\pm 0.5\ ^\circ$C was used for all temperature measurements.
+However, the methodology in which the data were collected likely increased the uncertainties; for example, temperature varied during the $60\ \text{s}$ data collection period, and the probe may not have reflected the solution temperature. Moreover, though marked, the manual insertion depth of the stopper could have introduced small variations. Thus, while linear interpolation with $\Delta{T}(x) = 0.20 + \frac{0.50 - 0.20}{100} \cdot x$ could have been used as the temperature probe's uncertainty, a conservative $\pm 0.5\ ^\circ$C was used for all temperature measurements.
 
 \subsubsection{Uncertainty in oxygen production rate}
-\indent \indent For each calculated rate, there contains random uncertainties and uncertainties from the instruments. Random uncertainty was propagated using the spread of the five trials' rates at each temperature level using standard deviation, and converted to uncertainty in the mean rate using the standard error of the mean ($\frac{\sigma}{\sqrt{5}}$):
+\indent \indent For each calculated rate, there are random and instrumental uncertainties. Random uncertainty was propagated using the spread of the five trials' rates at each temperature level using standard deviation, and converted to uncertainty in the mean rate using the standard error of the mean ($\frac{\sigma}{\sqrt{5}}$):
 
 \begin{equation}
   \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{n}}
@@ -560,23 +557,17 @@ However, the methodology in which the data were collected likely increased the u
   \end{table}
 \end{landscape}
 
-\noindent \underline{\textbf{Note:}} Trial 5 of $15 ^\circ \text{C}$ (\underline{underlined}) was removed from calculations because the source data could not be located on the LabQuest. Run 8 from the LabQuest indicated a target temperature of $293.15 \text{K}$, which contradicts with trial 5's target temperature of $288.15\ \text{K}$.
+\noindent \underline{\textbf{Note:}} The \underline{underlined} trial was removed from calculations because the source data could not be located on the LabQuest. Run 8 from the LabQuest indicated a target temperature of $293.15 \text{K}$.
 
 \subsection{Example Calculation}
 \label{sec:data-processing-example-calculation}
-\indent \indent Consider $15\ ^\circ$C trial 1 as an example (marked as \textcolor{red}{red}) in \textit{table \ref{tab:processed-data}}. The average temperature for this trial will be used to determine $\Delta{T}$:
+\indent \indent Consider $15\ ^\circ \text{C}$, trial 1 as an example (marked \textcolor{red}{red}) in \textit{table \ref{tab:processed-data}}. The headspace gas volume was calculated as the difference between the flask volume and the solution volume:
 
 \begin{equation}
-  T = 14.75 ^\circ \text{C} + 273.15 = 287.9 \text{K}
+  V_\text{gas} = 250\ \text{mL} - (25\ \text{mL} + 10\ \text{mL}) = 215\ \text{mL} \rightarrow 2.15 \cdot 10^{-4}\ \text{m}^3
 \end{equation}
 
-\noindent The headspace gas volume was calculated as the difference between the flask volume and the solution volume:
-
-\begin{equation}
-  V_\text{gas} = 250\ \text{mL} - 25\ \text{mL} - 10\ \text{mL} = 215\ \text{mL} \rightarrow 2.15 \cdot 10^{-4}\ \text{m}^3
-\end{equation}
-
-\noindent The analysis window for the pressure-time graph was selected as the main region where pressure increased (from the start of sustained pressure increase to the end of the rise). For this trial, the selected interval was $37.8\ \text{s}$ to $60\ \text{s}$:
+\noindent The analysis window for the pressure-time graph was selected as the main region where pressure increased (from the start of continuous pressure increase to the end of the rise). For this trial, the selected interval was $37.8\ \text{s}$ to $60\ \text{s}$:
 
 \begin{figure}[H]
 	\centering
@@ -590,7 +581,7 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=\textwidth]{Resources/example_calculation_time_snapshot.png}
-	\caption{Selected analysis window.}
+	\caption{Analysis window.}
 	\label{fig:data-processing-example-calculation-selected-analysis-window}
 \end{figure}
 
@@ -618,16 +609,13 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   \overline{r} = \frac{(1.33 \cdot 10^{-6}) + (1.85 \cdot 10^{-6}) + (2.30 \cdot 10^{-6}) + (1.86 \cdot 10^{-6})}{4} = 1.82 \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
-\noindent \underline{\textbf{Note:}} Trial 5 was not included in the calculations and justified in \textit{section \ref{sec:data-processing}}.
-
-\
-
 \noindent The random uncertainty can then be calculated:
 
 \begin{equation}
   \sigma = \sqrt{\frac{1}{4}(-0.49 \cdot 10^{-6})^2 + (0.03 \cdot 10^{-6})^2 + (0.48 \cdot 10^{-6})^2 + (0.04 \cdot 10^{-6})^2}
 \end{equation}
 
+\vspace{-\baselineskip}
 \begin{equation*}
   \sigma = 3.52 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
 \end{equation*}
@@ -636,10 +624,10 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   \Delta{\overline{r}_\text{rand}} = \frac{\sigma}{\sqrt{4}} = 1.65 \cdot 10^{-7}\ \text{mol}\ \text{s}^{-1}
 \end{equation}
 
-\noindent \textbf{Calculating instrumental uncertainty from known variables:}
+\noindent \textbf{Calculating instrumental uncertainty:}
 
 \begin{enumerate}
-  \item Average temperature range in this level: $0.4\ ^\circ \text{C} \rightarrow $ half-range = $0.2\ ^\circ$C
+  \item Average temperature range: $0.4\ ^\circ \text{C} \rightarrow $ half-range = $0.2\ ^\circ$C
   \begin{equation*}
     \Delta{T} = \max{(0.5, 0.2)} = \pm 0.5\ \text{K}
   \end{equation*}
@@ -656,7 +644,7 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   \end{equation}
 \end{enumerate}
 
-\noindent The instrumental uncertainties are then combined:
+\noindent Combined:
 
 \begin{equation}
   \Delta{\overline{r}_\text{rel, inst}} = \sqrt{(0.001735)^2 + (0.0307)^2 + (0.000279)^2} = 0.03075 \rightarrow 3.08\%
@@ -680,7 +668,7 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   $\ast$~$\ast$~$\ast$
 \end{center}
 
-\noindent The approach from above was used to calculate the apparent rate constant for the other 8 temperature levels:
+\noindent The approach from above was used for the other temperature levels:
 
 \begin{table}[H]
 	\centering
@@ -721,15 +709,15 @@ This window was chosen because the pressure before $t_\text{start} = 37.8\ \text
   f(x) = 0.0005e^{0.0768x}
 \end{equation}
 
-This supports the collision theory outlined in \textit{section \ref{sec:introduction}}: higher temperature increases the frequency of collisions and the fraction of molecules with sufficient energy to overcome the activation energy; therefore, the rate of successful reactions are increased.
+This supports the collision theory outlined in \textit{section \ref{sec:introduction}}: higher temperature increases the frequency of collisions and the fraction of molecules with sufficient energy to overcome the $E_\text{A}$; therefore, the rate of successful reactions are increased.
 
-Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variations in the mass of \ce{KI}), the measured oxygen production rate is proportional to the rate constant by a constant scale factor difference:
+Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variations in the mass of \ce{KI}), the measured rate is proportional to the rate constant by a constant scale factor difference $C$ when initial reactants are constant:
 
 \begin{equation}
   r = C \cdot k
 \end{equation}
 
-\noindent Where $C$ is the scaling factor between the oxygen production rate and the true rate constant, only when initial reactants are constant. This allows $r$ to replace $k$ in the Arrhenius equation:
+\noindent This allows $r$ to replace $k$ in the Arrhenius equation:
 
 \begin{equation}
   \ln{(r)} = \ln{(C \cdot k)} = \ln{(C)} + \ln{(k)}
@@ -746,19 +734,19 @@ Given that \ce{[H2O2]} and the mass of \ce{KI} were held constant (minor variati
 
 The linear fit above produced a slope of $-6360\ \text{K}$ and $R^2 = 0.9438$, which indicates a strong linear relationship between $\ln{(r)}$ and $\frac{1}{T}$.
 
-Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln{(k)}$ vs. $\frac{1}{T}$ is $-\frac{E_\text{A}}{R}$. Given that $r \propto k$ in this experiment, the slope is used to find the apparent activation energy:
+Recall from \textit{equation \ref{eq:arrhenius-equation}} that the slope of $\ln{(k)}$ vs. $\frac{1}{T}$ is $-\frac{E_\text{A}}{R}$. Given that $r \propto k$, the slope is used to find the apparent $E_\text{A}$:
 
 \begin{equation}
   E_\text{A} = |-m \cdot R| = 6360\ \text{K} \cdot 8.31\ \text{J}\ \text{K}^{-1}\ \text{mol}^{-1} = 52851.6\ \text{J}\ \text{mol}^{-1} \rightarrow 52.9\ \text{kJ}\ \text{mol}^{-1}
 \end{equation}
 
 \begin{center}
-  $\therefore E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ \footnote{Uncertainty obtained using Microsoft Excel's LINEST function.}
+  $\therefore E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$
 \end{center}
 
-Although the overall fit is strong, there are small deviations from the trendline relative to other points that occur at, for example, the fifth datapoint ($35\ ^\circ \text{C}$). A possible explanation for this is the silghtly higher average mass of \ce{KI} at that level specifically. The average mass was $0.31\ \text{g}$ compared to an average of $0.29$ or $0.30\ \text{g}$ at other temperature levels. A slightly larger \ce{KI} mass increases the amount of \ce{I-}, which can increase the \ce{O2} production rate and $\ln{(\overline{r})}$ for that level.
+Although the overall fit is strong, there are small deviations from the trendline that occur at, for example, the fifth datapoint ($35\ ^\circ \text{C}$). A possible explanation for this is the silghtly higher average mass of \ce{KI} at that level specifically. The average mass was $0.32\ \text{g}$ compared to an average of $0.29$ or $0.30\ \text{g}$ at other temperature levels. A slightly larger \ce{KI} mass increases the amount of \ce{I-}, which can increase the \ce{O2} production rate and $\ln{(\overline{r})}$ for that level.
 
-At the same time, the mean \ce{O2} production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$) (\textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}), which corresponds to an increase by a factor of $x$:
+In general, the mean \ce{O2} production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$) (\textit{table \ref{tab:data-processing-example-calculation-oxygen-production-rate}}), which corresponds to an increase by a factor of $x$:
 
 \begin{multicols}{2}
   \noindent \textbf{Calculation:}
@@ -798,29 +786,27 @@ At the same time, the mean \ce{O2} production rate increased from $\overline{r} 
   \therefore x = 9.74 \pm 2.94
 \end{equation}
 
-This increase by almost 10 times supports the research question, that higher temperature increases the rate constant.
-
-Because of the deviation in the fifth datapoint (explained earlier), a graph of the mass of \ce{KI} vs. rate per trial was plotted to check whether small variations in the mass of \ce{KI} had an effect on the reaction rate. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary cause of the observed temperature dependence of $\overline{r}$, and that the higher average \ce{KI} mass in the $35\ ^\circ \text{C}$ was only regional to that level.
+This increase by almost 10 times shows that higher temperature does increase the rate constant. Because of the deviation in the fifth datapoint (explained earlier), a graph of the mass of \ce{KI} vs. rate per trial was plotted to check whether small variations in the mass of \ce{KI} had an effect on the reaction rate. However, no clear relationship was observed, which shows that the small variations in the mass of \ce{KI} was not the primary cause of the observed temperature dependence of $\overline{r}$, and that the higher average \ce{KI} mass in the $35\ ^\circ \text{C}$ was only regional to that level.
 
 \section{Conclusion (281 words)}
 \label{sec:conclusion}
-\indent \indent This investigation aims to examine the relationship between reaction temperature and the rate constant for the \ce{KI}-catalyzed decomposition reaction of \ce{H2O2}, determined from the rate of \ce{O2} pressure increase in a sealed flask. The processed data confirms that increasing temperature increases the apparent rate constant, consistent with the Arrhenius model and collision theory. Across the experimental range of the data, the mean oxygen production rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$), corresponding to a $9.74 \pm 2.94$ increase in rate. The Arrhenius plot yielded an activation energy of $E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ for the catalyzed pathway. Compared to accepted scientific values, the uncatalyzed decomposition of \ce{H2O2} has an $E_\text{A}$ of approximately $75\ \text{kJ}\ \text{mol}^{-1}$, while the catalyzed pathway lowers it to approximately $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$. However, the experimental value of $52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ falls $3$ to $3.5\ \text{kJ}\ \text{mol}^{-1}$ below the accepted catalyzed range, which could be attributed to the systematic underestimation of the initial rate at higher temperatures: the reaction occurs at a faster rate at higher temperature levels; thus, some \ce{O2_{(g)}} could have escaped before the flask was fully sealed. This reduces the pressure-time slope, which compresses the range of $\ln{(\overline{r})}$ values and flattens the slope of the Arrhenius plot, leading to a lower $E_\text{A}$.
+\indent \indent This investigation aims to examine the relationship between reaction temperature and the rate constant for the \ce{KI}-catalyzed decomposition reaction of \ce{H2O2}, determined from the rate of \ce{O2} pressure increase in a sealed flask. The processed data confirms that increasing temperature increases the apparent rate constant, consistent with the Arrhenius model and collision theory. Across the experimented range, the rate increased from $\overline{r} = (1.89 \pm 0.18) \cdot 10^{-6}\ \text{mol}\ \text{s}^{-1}$ at $288.15\ \text{K}$ ($15\ ^\circ \text{C}$) to $\overline{r} = (1.84 \pm 0.38) \cdot 10^{-5}\ \text{mol}\ \text{s}^{-1}$ at $323.15\ \text{K}$ ($50\ ^\circ \text{C}$), corresponding to a $9.74 \pm 2.94$ increase in rate. The Arrhenius plot yielded an activation energy of $E_\text{A} = 52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ for the catalyzed pathway. Compared to accepted scientific values, the uncatalyzed decomposition of \ce{H2O2} has an $E_\text{A}$ of approximately $75\ \text{kJ}\ \text{mol}^{-1}$, while the catalyzed pathway lowers it to approximately $56$ to $56.5\ \text{kJ}\ \text{mol}^{-1}$. However, the experimental value of $52.9 \pm 0.6\ \text{kJ}\ \text{mol}^{-1}$ falls $3$ to $3.5\ \text{kJ}\ \text{mol}^{-1}$ below the accepted catalyzed range, which could be attributed to the systematic underestimation of the initial rate at higher temperatures: the reaction occurs at a faster rate at higher temperature levels; thus, some \ce{O2_{(g)}} could have escaped before the flask was fully sealed. This reduces the pressure-time slope, which compresses the range of $\ln{(\overline{r})}$ values, leading to a lower $E_\text{A}$.
 
-Overall, this investigation confirms that increasing temperature does increase the measured rate constant for the \ce{KI}-catalyzed decomposition of \ce{H2O2}; the exponential relationship between temperature and rate, the almost tenfold increase in rate over a $35\ ^\circ \text{C}$ range in reaction temperature, and the linear relationship depicted in the Arrhenius plot are all consistent with the collision theory and the Arrhenius model, that \ce{KI} provides an alternative reaction pathway that requires less energy.
+Overall, this investigation confirms that increasing temperature does increase the measured rate constant for the \ce{KI}-catalyzed decomposition of \ce{H2O2}; the exponential relationship between temperature and rate, the almost 10x increase in rate over a $35\ ^\circ \text{C}$ range in reaction temperature, and the linear relationship depicted in the Arrhenius plot are all consistent with the collision theory and the Arrhenius model, that \ce{KI} provides an alternative reaction pathway that requires less energy.
 
 \section{Evaluation (733 words)}
 \label{sec:evaluation}
-\indent \indent Given that \ce{KI} was prepared in plastic cups before the experiment, a key strengths lies in pre-sealing each \ce{KI} portion with plastic wrap and rubber band immediately after weighing. Potassium iodide is hygroscopic \footnote{\textbf{Hygroscopic:} a substance that readily absorbs moisture from the air.} \cite{PotassiumIodideUSP}, which means that its mass would increase without proportionally increase its number of moles of \ce{I-}, if left exposed to air. If the pre-weighed \ce{KI} portions were left unsealed between preparation and the experiment, the effective catalyst concentration would have varied unpredictably between trials, introducing more random variation into the measured rate constant.
+\indent \indent Given that \ce{KI} was prepared in plastic cups before the experiment, a key strengths lies in pre-sealing each \ce{KI} portion with plastic wrap and rubber band immediately after weighing. Potassium iodide is hygroscopic \footnote{\textbf{Hygroscopic:} a substance that readily absorbs moisture from the air.} \cite{PotassiumIodideUSP}, which means that its mass would increase without proportionally increasing its moles of \ce{I-} if left exposed to air. If the pre-weighed \ce{KI} portions were left unsealed between preparation and the experiment, the effective catalyst concentration would have varied unpredictably between trials, introducing more random variation into the measured rate.
 
-The first weakness was the transfer of \ce{H2O2} from its original brown bottle into a clear glass beaker during each day of experiment, following the experimental procedure in \textit{section \ref{sec:research-design-procedure-preparation-of-materials}}. The provided \ce{H2O2} solution was specifically stored in brown bottles to prevent decomposition triggered by UV radiation and exposure to light, which causes \ce{H2O2} to break down into \ce{H2O} and \ce{O2} (not considered during experimental design). The LED lights in the laboratory emit some UV radiation, and exposing the \ce{H2O2} to this radiation for 1-2 hours per day for over the course of five days could have gradually reduced the concentration of the stock solution within each session. However, because the order of trials was non-systematic (order of data collection jumped between temperature levels, due to revisiting earlier levels across different days), the slight decrease in concentration likely did not have an effect on the results. It would have caused random variation to the initial \ce{[H2O2]} across trials, which impacted the standard deviation value within each temperature level, rather than causing a systematic bias in the Arrhenius slope. Moreover, as visible bubbling during the experiment was not observed, its effect on the overall uncertainty is likely weak. To eliminate this in future iterations, the \ce{H2O2} should be pipetted directly from the brown bottle wrapped with foil, or conducting the experiment in a dark, sealed room.
+The first weakness was the transfer of \ce{H2O2} from its original brown bottle into a clear glass beaker during each day of experiment, following the experimental procedure in \textit{section \ref{sec:research-design-procedure-preparation-of-materials}}. The provided \ce{H2O2} solution was specifically stored in brown bottles to prevent decomposition triggered by UV radiation and exposure to light, which causes \ce{H2O2} to break down into \ce{H2O} and \ce{O2} (not considered during experimental design). The LED lights in the laboratory emit some UV radiation, and exposing the \ce{H2O2} to this radiation for 1-2 hours per day for over the course of five days could have gradually reduced the concentration of the stock solution within each session. However, because the order of trials was not systematic (order of data collection jumped between temperature levels, due to revisiting earlier levels across different days), the slight decrease in concentration likely did not have an effect on the results. It would have caused random variation to the initial \ce{[H2O2]} across trials, which impacted the standard deviation value within each temperature level, rather than causing a systematic bias in the Arrhenius slope. Moreover, as visible bubbling during the experiment was not observed, its effect on the overall uncertainty is likely weak. To eliminate this in future iterations, the \ce{H2O2} should be pipetted directly from the brown bottle wrapped with foil, or conducting the experiment in a dark, sealed room.
 
-The second weakness was the use of two separate stock \ce{H2O2} solutions during the experiment. The first bottle was already half-used when received from the teacher, meaning that it had been opened and stored for an unknown period before this experiment. Given that \ce{H2O2} degrade over time even when stored in brown bottles \cite{ExpirationShelfLife}, the concentration of the first bottle is likely lower than the second bottle, opened fresh. Given that the duration of which the first bottle was opened before this investigation and which trial used the first bottle is unknown, this weakness introduces random uncertainty in the initial \ce{[H2O2]}. Moreover, because the rate constant $r = C \cdot k$ depends on the initial \ce{[H2O2]} being constant across trials, the measured rate could be driven by not only temperature, but also the initial \ce{[H2O2]}. To overcome this weakness in the future, only new \ce{H2O2} stock solutions should be used.
+The second weakness was the use of two separate stock \ce{H2O2} solutions. The first bottle was already half-used when received, meaning that it had been opened and stored for an unknown period before this experiment. Given that \ce{H2O2} degrade over time even when stored in brown bottles \cite{ExpirationShelfLife}, the concentration of the first bottle is likely lower than the second new bottle. Given that the duration of which the first bottle was opened before this investigation and which trial used the first bottle is unknown, this weakness introduces random uncertainty in the initial \ce{[H2O2]}. Moreover, because the rate constant $r = C \cdot k$ depends on the initial \ce{[H2O2]} being constant across trials, the measured rate could be driven by not only temperature, but also the initial \ce{[H2O2]}. To overcome this weakness in the future, only new \ce{H2O2} stock solutions should be used.
 
 The third weakness was the reaction temperature inside the flask. The solution inside the flask may not have fully equilibrated with the bath during the fitted interval due to the addition of the catalyst (prepared by dissolving solid \ce{KI} in room-temperature water), which would increase the spread of data in $\overline{r}$. This can be improved by pre-equilibrating the \ce{KI} solution in the same bath, and measure the temperature inside the flask using a 3-hole stopper with a sealed port for the temperature probe.
 
-The last weakness was caused by the mismatch of the pressure sensor's instrumental uncertainty and the magnitude of the pressure changes measured. The Verneir Gas Pressure Sensor has an uncertainty of $\pm 4\ \text{kPa}$ \cite{GasPressureSensor}. However, some trials had a $\Delta{P}$ below $1\ \text{kPa}$. For example, at $15\ ^\circ \text{C}$, the average $\Delta{P}$ over the analysis window was approximately $0.4\ \text{kPa}$, which is an order of magnitude below the sensor's uncertainty. Thus, the pressure readings at lower temperature levels would be indistinguishable compared to noise. However, given that linear regression over multiple datapoints averaged out random noise, this likely had a minor impact on the results relative to other uncertainty sources. To address this in future iterations, a higher-precision pressure sensor or a differential pressure sensor should be used.
+The last weakness was caused by the mismatch of the pressure sensor's instrumental uncertainty and the magnitude of the pressure changes measured. The Vernier Gas Pressure Sensor has an uncertainty of $\pm 4\ \text{kPa}$ \cite{GasPressureSensor}. However, some trials had a $\Delta{P}$ below $1\ \text{kPa}$. For example, at $15\ ^\circ \text{C}$, the average $\Delta{P}$ over the analysis window was approximately $0.4\ \text{kPa}$, which is an order of magnitude below the sensor's uncertainty. Thus, the pressure readings at lower temperature levels would be indistinguishable compared to noise. However, given that linear regression over multiple datapoints averaged out most random noise, this likely had a minor impact on the results relative to other uncertainty sources. To address this in future iterations, a higher-precision pressure sensor or a differential pressure sensor should be used.
 
-Overall, this was a successful investigation, as the results were consistent with scientific theories and models, and all objectives were met. By implementing these improvements in future iterations, a more complete characterization of how the reaction temperature influences the inital reaction rate of the decomposition reaction of hydrogen peroxide.
+% Overall, this was a successful investigation, as the results were consistent with scientific theories and models, and all objectives were met. By implementing these improvements in future iterations, a more complete characterization of how the reaction temperature influences the inital reaction rate of the decomposition reaction of hydrogen peroxide.
 
 %Bibliography
 %TC:ignore
