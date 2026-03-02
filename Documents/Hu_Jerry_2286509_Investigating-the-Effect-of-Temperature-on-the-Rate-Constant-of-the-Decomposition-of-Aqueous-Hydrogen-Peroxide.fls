@@ -372,16 +372,7 @@ INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
 INPUT ./Resources/data_analysis_arrhenius_plot.png
-INPUT ./Resources/evaluation_weakness_water_bath.png
-INPUT ./Resources/evaluation_weakness_water_bath.png
-INPUT ./Resources/evaluation_weakness_water_bath.png
-INPUT ./Resources/evaluation_weakness_water_bath.png
-INPUT ./Resources/evaluation_weakness_water_bath.png
-INPUT ./Resources/evaluation_weakness_immersion_circulator.png
-INPUT ./Resources/evaluation_weakness_immersion_circulator.png
-INPUT ./Resources/evaluation_weakness_immersion_circulator.png
-INPUT ./Resources/evaluation_weakness_immersion_circulator.png
-INPUT ./Resources/evaluation_weakness_immersion_circulator.png
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT ./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 INPUT ./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
 INPUT Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Constant-of-the-Decomposition-of-Aqueous-Hydrogen-Peroxide.bbl
@@ -395,6 +386,7 @@ INPUT ./Hu_Jerry_2286509_Investigating-the-Effect-of-Temperature-on-the-Rate-Con
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
+INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
